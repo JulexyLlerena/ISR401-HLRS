@@ -1,0 +1,530 @@
+% PFC/E1/main.tex
+% TA-PFC-E1: Proyecto Fin de Curso, entrega 1
+% Compilacion: pdflatex main -> bibtex main -> pdflatex main -> pdflatex main
+
+\documentclass[11pt,a4paper]{article}
+
+% PAQUETES
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{url}
+\usepackage{seqsplit}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+\setstretch{1.1}
+\setlength{\parskip}{4pt}
+
+% CONFIGURACIONES Y COMANDOS
+
+% Marcador de contenido por completar (eliminar todos antes de entregar)
+\newcommand{\pendiente}[1]{\textcolor{red}{[#1]}}
+
+% Figura con respaldo: si el archivo no existe, muestra un recuadro y compila igual
+\newcommand{\figuraopcional}[3]{%
+  \IfFileExists{figuras/#1}
+  {\includegraphics[width=#2]{figuras/#1}}
+  {\fbox{\parbox{#2}{\centering\vspace{2cm}
+  \pendiente{#3}\vspace{2cm}}}}%
+}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{UTEQ \textperiodcentered{} Ingeniería de Requerimientos (ISR-401)}
+\rhead{TA-PFC-E1}
+\cfoot{\thepage}
+
+\begin{document}
+
+% PORTADA
+
+\begin{titlepage}
+    \centering
+
+    {\large \textbf{UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}}\\[0.3cm]
+    {\large Facultad de Ciencias de la Computación}\\
+    {\large Carrera de Software}\\[1.5cm]
+
+    {\Large \textbf{INGENIERÍA DE REQUERIMIENTOS}}\\[0.5cm]
+    {\large ISR-401}\\[1.5cm]
+
+    {\LARGE \textbf{TA-PFC-E1}}\\[0.9cm]
+
+    \rule{0.85\textwidth}{0.5pt}\\[0.5cm]
+
+    {\large \textbf{Proyecto Fin de Curso, entrega 1: visión, alcance, partes interesadas, contexto y plan de elicitación}}\\[0.3cm]
+
+    {\normalsize Grupo: \textbf{HLRS}}\\
+
+    \rule{0.85\textwidth}{0.5pt}\\[1.5cm]
+
+    \begin{flushleft}
+        \textbf{Integrantes:}
+        \begin{itemize}[noitemsep,topsep=2pt]
+            \item Herrera Moran Gilmar Javier
+            \item Llerena Abril Angelina Julexy
+            \item Rivera Rodriguez Joseph Jeremy
+            \item Saltos Tello Joseph Orlando
+        \end{itemize}
+
+        \vspace{0.2cm}
+
+        \textbf{Nivel:} Cuarto\\[0.4cm]
+        \textbf{Paralelo:} A\\[0.4cm]
+        \textbf{Docente:} Gleiston Cicerón Guerrero Ulloa, PhD\\[0.4cm]
+        \textbf{Modalidad:} Grupal\\[0.4cm]
+        \textbf{Fecha límite de entrega:} sábado 21 de noviembre de 2026, 23:59
+    \end{flushleft}
+
+    \vfill
+
+    {\large Quevedo -- Ecuador}\\
+    {\large 2026}
+
+\end{titlepage}
+
+% INDICES
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+% 1. INTRODUCCION Y ORGANIZACION
+
+\section{Introducción}
+
+\pendiente{Propósito de la entrega, contexto del PFC y organización del documento, en tercera persona. Referenciar la norma donde corresponda.}
+
+\section{Organización real}
+
+\subsection{Descripción de la organización}
+
+\pendiente{Nombre, sector, ubicación (Quevedo o Los Ríos), tamaño, servicios y estructura.}
+
+\subsection{Problema identificado}
+
+\pendiente{Problema que puede resolverse con software, con evidencia de la organización (no genérico).}
+
+\subsection{Acuerdo con la organización}
+
+\pendiente{Resumen de la carta de aceptación y del primer contacto. La carta firmada se conserva en la carpeta institucional privada; en el repositorio consta únicamente su registro en \path{evidencias/MANIFIESTO.md} (ver Tabla~\ref{tab:manifiesto}).}
+
+% 2. VISION Y ALCANCE
+
+\section{Visión y alcance}
+
+\subsection{Declaración de visión}
+
+\pendiente{Una declaración de visión del sistema.}
+
+\subsection{Objetivos de negocio}
+
+Los objetivos de negocio se presentan en la Tabla~\ref{tab:objetivos}; todos son medibles y verificables.
+
+\begin{table}[H]
+\centering
+\caption{Objetivos de negocio medibles.}
+\label{tab:objetivos}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
+\toprule
+ID & Objetivo & Indicador & Meta & Fuente de verificación \\
+\midrule
+OBJ-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+OBJ-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+OBJ-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Alcance}
+
+\subsubsection{Incluido en el sistema}
+
+\pendiente{Funcionalidades, procesos, usuarios y datos que entran.}
+
+\subsubsection{Excluido del sistema}
+
+\pendiente{Lo que no entra, redactado sin ambigüedades.}
+
+\subsection{Restricciones conocidas}
+
+\pendiente{Restricciones técnicas, normativas, presupuestarias, de tiempo y organizacionales.}
+
+% 3. PARTES INTERESADAS
+
+\section{Partes interesadas}
+
+\subsection{Identificación}
+
+Se identifican al menos ocho partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}), conforme a.
+
+\begin{table}[H]
+\centering
+\caption{Partes interesadas, interés, influencia y disponibilidad.}
+\label{tab:interesados}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
+\toprule
+ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+\midrule
+PI-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-04 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-05 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-06 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-07 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-08 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Matriz poder--interés}
+
+\begin{figure}[H]
+\centering
+\figuraopcional{matriz_poder_interes.pdf}{0.85\textwidth}{Exportar la matriz poder--interés desde modelos/}
+\caption{Matriz poder--interés de las partes interesadas.}
+\label{fig:poder-interes}
+\end{figure}
+
+La Figura~\ref{fig:poder-interes} ubica a cada parte interesada en su cuadrante.
+
+\pendiente{Interpretación de la matriz.}
+
+\subsection{Estrategia de participación}
+
+La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada parte interesada según su cuadrante en la matriz.
+
+\begin{table}[H]
+\centering
+\caption{Estrategia de participación por parte interesada.}
+\label{tab:estrategia}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+ID & Cuadrante & Estrategia de participación & Frecuencia y canal \\
+\midrule
+PI-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-04 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-05 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-06 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-07 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-08 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% 4. CONTEXTO
+
+\section{Contexto del sistema}
+
+\subsection{Límite del sistema y diagrama de contexto}
+
+\begin{figure}[H]
+\centering
+\figuraopcional{diagrama_contexto.pdf}{0.9\textwidth}{Exportar el diagrama de contexto desde modelos/}
+\caption{Diagrama de contexto del sistema.}
+\label{fig:contexto}
+\end{figure}
+
+La Figura~\ref{fig:contexto} muestra el sistema, sus actores externos y los flujos de información.
+
+\pendiente{Explicación del límite del sistema.}
+
+\subsection{Perspectivas del sílabo}
+
+La Tabla~\ref{tab:perspectivas} resume los hallazgos obtenidos en la organización para cada una de las ocho perspectivas del sílabo.
+
+\begin{table}[H]
+\centering
+\caption{Las ocho perspectivas del sílabo con hallazgos de la organización real.}
+\label{tab:perspectivas}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+N.º & Perspectiva (según sílabo) & Hallazgo en la organización & Evidencia \\
+\midrule
+1 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+2 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+3 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+4 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+5 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+6 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+7 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+8 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% 5. PLAN DE ELICITACION
+
+\section{Plan de elicitación}
+
+\subsection{Selección de técnicas}
+
+La selección de técnicas se fundamenta en la fuente y en el tipo de conocimiento que se busca obtener. La Tabla~\ref{tab:tecnicas} la presenta por parte interesada.
+
+\begin{table}[H]
+\centering
+\caption{Técnica de elicitación por parte interesada y justificación.}
+\label{tab:tecnicas}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+ID & Técnica & Tipo de conocimiento / fuente & Justificación \\
+\midrule
+PI-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-04 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-05 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-06 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-07 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+PI-08 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Cronograma de sesiones}
+
+Las sesiones de elicitación se programan según la Tabla~\ref{tab:sesiones}.
+
+\begin{table}[H]
+\centering
+\caption{Cronograma de sesiones de elicitación.}
+\label{tab:sesiones}
+\small
+\begin{tabularx}{\textwidth}{@{}lllYY@{}}
+\toprule
+Sesión & Fecha & Duración & Participantes (roles) & Técnica e instrumento \\
+\midrule
+S1 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+S2 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+S3 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+S4 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Instrumentos}
+
+Los instrumentos completos se encuentran en \path{PFC/E1/instrumentos/} y se resumen a continuación.
+
+\subsubsection{Guion de entrevista}
+
+\pendiente{Objetivo, estructura, preguntas clave y relación con los objetivos de negocio (OBJ-01 a OBJ-03).}
+
+\subsubsection{Cuestionario}
+
+\pendiente{Objetivo, población, tipo de preguntas y escala.}
+
+\subsubsection{Guía de observación o de taller}
+
+\pendiente{Objetivo, aspectos a observar o dinámica del taller, registro de resultados.}
+
+\subsection{Trazabilidad entre partes interesadas, técnicas e instrumentos}
+
+La Tabla~\ref{tab:trazabilidad} relaciona cada objetivo de negocio con las partes interesadas, las técnicas y los instrumentos correspondientes.
+
+\begin{table}[H]
+\centering
+\caption{Trazabilidad entre objetivos, partes interesadas, técnicas e instrumentos.}
+\label{tab:trazabilidad}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Objetivo & Partes interesadas & Técnica & Instrumento \\
+\midrule
+OBJ-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+OBJ-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+OBJ-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% 6. ETICA Y DATOS
+
+\section{Ética y protección de datos}
+
+\subsection{Consentimiento informado}
+
+El modelo de consentimiento informado se incluye en el Anexo~\ref{anx:consentimiento}. Se elabora conforme a la Ley Orgánica de Protección de Datos Personales y su reglamento.
+
+\subsection{Anonimización de datos}
+
+\pendiente{Procedimiento: códigos de participante, eliminación de datos identificables, tratamiento de transcripciones.}
+
+\subsection{Custodia de evidencias}
+
+\pendiente{Carpeta institucional privada (cuenta @uteq.edu.ec) compartida con el docente, responsables, control de acceso y plazo de conservación. En el repositorio se publica solo el manifiesto con nombre de archivo, fecha, duración y huella SHA-256 (Tabla~\ref{tab:manifiesto}).}
+
+\subsection{Principios éticos}
+
+\pendiente{Aplicación del Código de Ética de la ACM.}
+
+% 7. GESTION DEL PROYECTO
+
+\section{Gestión del proyecto}
+
+\subsection{Roles del equipo}
+
+Los roles y responsabilidades de los integrantes se detallan en la Tabla~\ref{tab:roles}.
+
+\begin{table}[H]
+\centering
+\caption{Roles y responsabilidades del equipo.}
+\label{tab:roles}
+\small
+\begin{tabularx}{\textwidth}{@{}lYY@{}}
+\toprule
+Integrante & Rol & Responsabilidades \\
+\midrule
+Herrera Moran Gilmar Javier & \pendiente{...} & \pendiente{...} \\
+Llerena Abril Angelina Julexy & \pendiente{...} & \pendiente{...} \\
+Rivera Rodriguez Joseph Jeremy & \pendiente{...} & \pendiente{...} \\
+Saltos Tello Joseph Orlando & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Cronograma hasta la semana 17}
+
+La Tabla~\ref{tab:cronograma} presenta las actividades, productos y responsables del PFC hasta la semana 17.
+
+\begin{table}[H]
+\centering
+\caption{Cronograma del PFC hasta la semana 17.}
+\label{tab:cronograma}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Semana & Actividad & Producto & Responsable \\
+\midrule
+4 & Entrega 1 (esta entrega) & \pendiente{...} & \pendiente{...} \\
+5 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+6 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+7 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+8 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+9 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+10 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+11 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+12 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+13 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+14 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+15 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+16 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+17 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Plan de comunicación con la organización}
+
+La comunicación con la organización se planifica según la Tabla~\ref{tab:comunicacion}.
+
+\begin{table}[H]
+\centering
+\caption{Plan de comunicación con la organización.}
+\label{tab:comunicacion}
+\small
+\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
+\toprule
+Información & Destinatario (rol) & Canal & Frecuencia & Responsable \\
+\midrule
+\pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Registro de riesgos}
+
+Los riesgos se formulan de manera específica para la organización y el proyecto, siguiendo los principios de gestión de. La Tabla~\ref{tab:riesgos} los registra junto con su respuesta y responsable.
+
+\begin{table}[H]
+\centering
+\caption{Registro de riesgos.}
+\label{tab:riesgos}
+\small
+\begin{tabularx}{\textwidth}{@{}lYcccYY@{}}
+\toprule
+ID & Riesgo & Prob. & Impacto & Nivel & Respuesta & Responsable \\
+\midrule
+R-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+R-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+R-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% 8. ANALISIS Y CONCLUSIONES
+
+\section{Análisis crítico}
+
+\pendiente{Interpretación de lo realizado, alternativas consideradas (por ejemplo, técnicas descartadas), limitaciones de la entrega y coherencia entre partes interesadas, técnicas e instrumentos.}
+
+\section{Conclusiones}
+
+\pendiente{Conclusiones derivadas de lo realizado en la organización, sin afirmaciones genéricas.}
+
+% 9. DECLARACION DE USO DE IA
+
+\section{Declaración de uso de inteligencia artificial}
+
+\pendiente{Si se usó una herramienta de IA solo como apoyo (ortografía o errores de compilación), indicar: herramienta, versión, propósito y cómo se verificó lo obtenido. Si no se usó, declararlo expresamente.}
+
+
+% ANEXOS
+
+\appendix
+
+\section{Modelo de consentimiento informado}
+\label{anx:consentimiento}
+
+\pendiente{Título del estudio, responsable y contacto institucional, finalidad, participación voluntaria, derecho a retirarse, tratamiento y plazo de conservación de datos, anonimización, derechos del titular (acceso, rectificación, eliminación), y espacio para firma y fecha, sin publicar ningún consentimiento firmado.}
+
+\section{Registro de evidencias (manifiesto)}
+\label{anx:manifiesto}
+
+La Tabla~\ref{tab:manifiesto} registra las evidencias privadas.
+
+\begin{table}[H]
+\centering
+\caption{Manifiesto de evidencias privadas.}
+\label{tab:manifiesto}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}YYllY@{}}
+\toprule
+Archivo & Descripción & Fecha & Duración & SHA-256 \\
+\midrule
+\pendiente{...} & Carta de aceptación & \pendiente{...} & --- & \pendiente{hash SHA-256} \\
+\pendiente{...} & Registro de primer contacto & \pendiente{...} & \pendiente{...} & \pendiente{hash SHA-256} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Instrumentos de elicitación}
+
+\pendiente{Referencia a los archivos de PFC/E1/instrumentos/ (guion de entrevista, cuestionario, guía de observación o taller).}
+
+\end{document}
