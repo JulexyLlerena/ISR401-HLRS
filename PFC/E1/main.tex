@@ -118,7 +118,6 @@ Esta entrega establece una planificación preliminar de las actividades de ingen
 La documentación se estructura considerando los procesos de ingeniería de requisitos y la identificación de las partes interesadas, el contexto y las necesidades del sistema, de acuerdo con los lineamientos de la norma ISO/IEC/IEEE 29148:2018 \cite{iso29148}.
 
 
-```latex
 \section{Organización real}
 
 \subsection{Descripción de la organización}
@@ -206,20 +205,58 @@ Pruebas funcionales y reportes generados. \\
 \end{tabularx}
 \end{table}
 
-
 \subsection{Alcance}
 
 \subsubsection{Incluido en el sistema}
 
-\pendiente{Funcionalidades, procesos, usuarios y datos que entran.}
+El sistema será una aplicación web que ayudará a gestionar las actividades del establecimiento. En su primera versión contará con los siguientes módulos:
+
+\begin{itemize}
+    \item \textbf{Gestión de clientes:} permitirá registrar, consultar y actualizar la información necesaria para atender a los clientes.
+    \item \textbf{Gestión de proveedores:} permitirá registrar y consultar la información de los proveedores.
+    \item \textbf{Gestión de usuarios:} permitirá el ingreso del propietario al sistema como único usuario administrador.
+    \item \textbf{Gestión de productos:} permitirá registrar y actualizar los productos terminados, así como consultar su disponibilidad.
+    \item \textbf{Gestión de pedidos personalizados:} permitirá registrar las características solicitadas por el cliente, el estado del pedido, los valores pagados y pendientes, y la fecha prevista de entrega.
+    \item \textbf{Gestión de ventas:} permitirá registrar y consultar las ventas de productos terminados y de pedidos personalizados que ya hayan sido entregados.
+    \item \textbf{Gestión de pagos y abonos:} permitirá registrar los pagos realizados y los valores que aún estén pendientes.
+    \item \textbf{Gestión de entregas:} permitirá registrar y llevar un seguimiento de las entregas de los pedidos.
+    \item \textbf{Reportes:} permitirá generar resúmenes de información sobre pedidos, ventas, pagos y entregas.
+\end{itemize}
+
 
 \subsubsection{Excluido del sistema}
 
-\pendiente{Lo que no entra, redactado sin ambigüedades.}
+Para esta primera etapa, no se incluirán las siguientes funcionalidades:
+
+\begin{itemize}
+    \item Control de inventario de materiales e insumos; únicamente se manejará el inventario de productos terminados.
+    \item Acceso de los clientes al sistema para realizar o consultar pedidos.
+    \item Integración con entidades bancarias y plataformas de pago externas.
+    \item Procesamiento automático de transacciones bancarias.
+    \item Gestión contable y tributaria completa del establecimiento.
+    \item Administración de nómina y cálculo de remuneraciones.
+    \item Comercio electrónico público con carrito de compras y pasarela de pago.
+    \item Aplicación móvil nativa independiente.
+    \item Control automatizado de maquinaria o procesos físicos de fabricación.
+    \item Integración con servicios externos de transporte o mensajería.
+\end{itemize}
+
+Estas exclusiones podrán revisarse si durante el análisis de las necesidades se determina que alguna funcionalidad es necesaria y se justifica su incorporación.
 
 \subsection{Restricciones conocidas}
 
-\pendiente{Restricciones técnicas, normativas, presupuestarias, de tiempo y organizacionales.}
+Para el desarrollo del proyecto se han considerado las siguientes restricciones:
+
+\begin{itemize}
+    \item \textbf{Tiempo:} el desarrollo se realizará dentro del período académico establecido para la asignatura.
+    \item \textbf{Disponibilidad:} las actividades de levantamiento de requisitos dependerán de los horarios y del tiempo disponible del propietario y de los demás participantes.
+    \item \textbf{Recursos:} la propuesta deberá adaptarse a los recursos técnicos y humanos disponibles para el desarrollo del proyecto académico.
+    \item \textbf{Acceso a información:} no se solicitarán contraseñas, datos bancarios ni listados completos de clientes o proveedores.
+    \item \textbf{Privacidad:} la información personal y confidencial se manejará respetando los principios de protección de datos aplicables.
+    \item \textbf{Conectividad:} al ser una aplicación web, será necesario contar con conexión a internet para utilizarla.
+    \item \textbf{Validación:} las funcionalidades y sus prioridades deberán revisarse con el propietario y los demás participantes del proyecto.
+\end{itemize}
+
 
 % 3. PARTES INTERESADAS
 
