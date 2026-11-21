@@ -25,7 +25,8 @@
 \usepackage{amssymb}
 % hyperref se carga al final para evitar conflictos con otros paquetes
 \usepackage[hidelinks]{hyperref}
-
+\usepackage{makecell}
+\usepackage{seqsplit}
 
 \setstretch{1.1}
 \setlength{\parskip}{4pt}
@@ -738,27 +739,69 @@ Adicionalmente, se empleó como apoyo Claude (Anthropic), en su versión vigente
 
 \appendix
 
-% Anexo B. Registro de evidencias
+
+% Anexo A. Registro de evidencias
 
 \section{Registro de evidencias (manifiesto)}
 \label{anx:manifiesto}
 
-La Tabla~\ref{tab:manifiesto} registra las evidencias privadas.
+La Tabla~\ref{tab:manifiesto} registra las evidencias privadas
+utilizadas durante el primer contacto. Los archivos originales
+se conservan en un espacio institucional privado de UTEQ,
+compartido con el docente.
+
 
 \begin{table}[H]
-\centering
-\caption{Manifiesto de evidencias privadas.}
-\label{tab:manifiesto}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{}YYllY@{}}
-\toprule
-Archivo & Descripción & Fecha & Duración & SHA-256 \\
-\midrule
-\pendiente{...} & Carta de aceptación & \pendiente{...} & --- & \pendiente{hash SHA-256} \\
-\pendiente{...} & Registro de primer contacto & \pendiente{...} & \pendiente{...} & \pendiente{hash SHA-256} \\
-\bottomrule
-\end{tabularx}
+	\centering
+	\caption{Manifiesto de evidencias privadas.}
+	\label{tab:manifiesto}
+	\scriptsize
+	\renewcommand{\arraystretch}{1.6}
+	\setlength{\tabcolsep}{3pt}
+	
+	\begin{tabularx}{\textwidth}{
+			@{}
+			>{\raggedright\arraybackslash}p{2.5cm}
+			>{\raggedright\arraybackslash}X
+			>{\centering\arraybackslash}p{1.5cm}
+			>{\centering\arraybackslash}p{1cm}
+			>{\raggedright\arraybackslash}p{3cm}
+			@{}
+		}
+		\toprule
+		\textbf{Archivo} &
+		\textbf{Descripción} &
+		\textbf{Fecha} &
+		\textbf{Duración} &
+		\textbf{SHA-256} \\
+		\midrule
+		
+		\makecell[l]{Carta\_Aceptación\\\_Anonimizada.pdf}
+		&
+		Carta de aceptación
+		&
+		20/11/2026
+		&
+		---
+		&
+		\seqsplit{B12DEEE5267923CB5FFB3FC127497E39AAE63FE68127EA781F7C3C950EC04876}
+		\\
+		
+		\makecell[l]{Registro\_Primer\\\_Contacto.pdf}
+		&
+		Registro de primer contacto
+		&
+		20/11/2026
+		&
+		12 min
+		&
+		\seqsplit{8A252B0DB16D6BD40695961FC4F1829EC12CD0CE228933A15BE5C1C15519D1D0}
+		\\
+		
+		\bottomrule
+	\end{tabularx}
 \end{table}
+
 
 % Anexo C. Instrumentos de elicitacion
 
