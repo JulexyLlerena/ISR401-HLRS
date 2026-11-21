@@ -27,6 +27,7 @@
 \usepackage{makecell}
 \usepackage{seqsplit}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xltabular}
 
 \setstretch{1.1}
 \setlength{\parskip}{4pt}
@@ -279,28 +280,32 @@
 	
 	Se identifican al menos siete partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La norma ISO/IEC/IEEE 29148:2018~\cite{iso29148} exige identificar a las partes interesadas y definir el límite del sistema antes de definir los requisitos.
 	
-	\begin{table}[H]
-		\centering
-		\caption{Partes interesadas, interés, influencia y disponibilidad.}
-		\label{tab:interesados}
-		\small
-		\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
-			\toprule
-			ID & Rol & Interés & Poder o influencia & Disponibilidad \\
-			\midrule
-			PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
-			\rowcolor{rowgray}
-			PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputación y recomendaciones del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
-			PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
-			\rowcolor{rowgray}
-			PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (dirección y teléfono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logística de distribución sin intervenir en la gestión interna). & Baja (observación indirecta y consulta con la propietaria). \\
-			PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
-			\rowcolor{rowgray}
-			PI-06 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integración directa con la aplicación web). & Nula (interacción verificada mediante comprobantes registrados por la propietaria). \\
-			PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusión de productos y canal principal de recepción de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (análisis del flujo mediante observación no participante). \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
+	 {\small
+\begin{xltabular}{\textwidth}{@{}lYYYY@{}}
+\caption{Partes interesadas, interés, influencia y disponibilidad.}\label{tab:interesados}\\
+\toprule
+ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+\midrule
+\endfirsthead
+\toprule
+ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
+\rowcolor{rowgray}
+PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputación y recomendaciones del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
+PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
+\rowcolor{rowgray}
+PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (dirección y teléfono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logística de distribución sin intervenir en la gestión interna). & Baja (observación indirecta y consulta con la propietaria). \\
+PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
+\rowcolor{rowgray}
+PI-06 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integración directa con la aplicación web). & Nula (interacción verificada mediante comprobantes registrados por la propietaria). \\
+PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusión de productos y canal principal de recepción de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (análisis del flujo mediante observación no participante). \\
+\end{xltabular}
+}
 	
 	\subsection{Matriz poder--interés}
 	
@@ -604,7 +609,6 @@
 		\end{tabularx}
 	\end{table}
 	
-	\newpage
 	
 	\subsection{Cronograma hasta la semana 17}
 	
