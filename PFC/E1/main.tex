@@ -1,4 +1,4 @@
-% PFC/E1/main.tex
+﻿% PFC/E1/main.tex
 % TA-PFC-E1: Proyecto Fin de Curso, entrega 1
 % Compilacion: pdflatex main -> bibtex main -> pdflatex main -> pdflatex main
 
@@ -58,7 +58,7 @@
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
 \fancyhf{}
-\lhead{UTEQ \textperiodcentered{} Ingeniería de Requerimientos (ISR-401)}
+\lhead{UTEQ \textperiodcentered{} IngenierÃ­a de Requerimientos (ISR-401)}
 \rhead{TA-PFC-E1}
 \cfoot{\thepage}
 
@@ -69,18 +69,18 @@
 \begin{titlepage}
     \centering
 
-    {\large \textbf{UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}}\\[0.3cm]
-    {\large Facultad de Ciencias de la Computación}\\
+    {\large \textbf{UNIVERSIDAD TÃ‰CNICA ESTATAL DE QUEVEDO}}\\[0.3cm]
+    {\large Facultad de Ciencias de la ComputaciÃ³n}\\
     {\large Carrera de Software}\\[1.5cm]
 
-    {\Large \textbf{INGENIERÍA DE REQUERIMIENTOS}}\\[0.5cm]
+    {\Large \textbf{INGENIERÃA DE REQUERIMIENTOS}}\\[0.5cm]
     {\large ISR-401}\\[1.5cm]
 
     {\LARGE \textbf{TA-PFC-E1}}\\[0.9cm]
 
     \rule{0.85\textwidth}{0.5pt}\\[0.5cm]
 
-    {\large \textbf{Proyecto Fin de Curso, entrega 1: visión, alcance, partes interesadas, contexto y plan de elicitación}}\\[0.3cm]
+    {\large \textbf{Proyecto Fin de Curso, entrega 1: visiÃ³n, alcance, partes interesadas, contexto y plan de elicitaciÃ³n}}\\[0.3cm]
 
     {\normalsize Grupo: \textbf{HLRS}}\\
 
@@ -99,9 +99,9 @@
 
         \textbf{Nivel:} Cuarto\\[0.4cm]
         \textbf{Paralelo:} A\\[0.4cm]
-        \textbf{Docente:} Gleiston Cicerón Guerrero Ulloa, PhD\\[0.4cm]
+        \textbf{Docente:} Gleiston CicerÃ³n Guerrero Ulloa, PhD\\[0.4cm]
         \textbf{Modalidad:} Grupal\\[0.4cm]
-        \textbf{Fecha límite de entrega:} sábado 21 de noviembre de 2026, 23:59
+        \textbf{Fecha lÃ­mite de entrega:} sÃ¡bado 21 de noviembre de 2026, 23:59
     \end{flushleft}
 
     \vfill
@@ -120,75 +120,75 @@
 
 % 1. Introduccion
 
-\section{Introducción}
+\section{IntroducciÃ³n}
 
-El presente documento corresponde a la primera entrega del Proyecto Fin de Curso de la asignatura Ingeniería de Requerimientos (ISR-401). Su propósito es establecer la visión inicial, el alcance, las partes interesadas, el contexto y el plan de elicitación de una propuesta de software orientada a apoyar la gestión de un local de manualidades.
+El presente documento corresponde a la primera entrega del Proyecto Fin de Curso de la asignatura IngenierÃ­a de Requerimientos (ISR-401). Su propÃ³sito es establecer la visiÃ³n inicial, el alcance, las partes interesadas, el contexto y el plan de elicitaciÃ³n de una propuesta de software orientada a apoyar la gestiÃ³n de un local de manualidades.
 
-La propuesta consiste en desarrollar una aplicación web que permita organizar información relacionada con clientes, proveedores, empleados, productos terminados, pedidos, ventas, pagos, abonos y entregas. La iniciativa parte de la necesidad de analizar los procesos de gestión del establecimiento y determinar de qué manera un sistema informático podría contribuir a su organización y seguimiento.
+La propuesta consiste en desarrollar una aplicaciÃ³n web que permita organizar informaciÃ³n relacionada con clientes, proveedores, empleados, productos terminados, pedidos, ventas, pagos, abonos y entregas. La iniciativa parte de la necesidad de analizar los procesos de gestiÃ³n del establecimiento y determinar de quÃ© manera un sistema informÃ¡tico podrÃ­a contribuir a su organizaciÃ³n y seguimiento.
 
-Esta entrega establece una planificación preliminar de las actividades de ingeniería de requisitos. Por tanto, los procesos descritos representan el ámbito que se pretende estudiar y deberán contrastarse con la información proporcionada por los responsables y participantes de la organización.
+Esta entrega establece una planificaciÃ³n preliminar de las actividades de ingenierÃ­a de requisitos. Por tanto, los procesos descritos representan el Ã¡mbito que se pretende estudiar y deberÃ¡n contrastarse con la informaciÃ³n proporcionada por los responsables y participantes de la organizaciÃ³n.
 
-La documentación se estructura considerando los procesos de ingeniería de requisitos y la identificación de las partes interesadas, el contexto y las necesidades del sistema, de acuerdo con los lineamientos de la norma ISO/IEC/IEEE 29148:2018 \cite{iso29148}.
+La documentaciÃ³n se estructura considerando los procesos de ingenierÃ­a de requisitos y la identificaciÃ³n de las partes interesadas, el contexto y las necesidades del sistema, de acuerdo con los lineamientos de la norma ISO/IEC/IEEE 29148:2018 \cite{iso29148}.
 
 % 2. Organizacion real
 
-\section{Organización real}
+\section{OrganizaciÃ³n real}
 
-\subsection{Descripción de la organización}
+\subsection{DescripciÃ³n de la organizaciÃ³n}
 
-Pauly Creative's Craft es un emprendimiento dedicado a la elaboración y comercialización de productos de manualidades, ubicado en la ciudad de Quevedo, provincia de Los Ríos, Ecuador. Su actividad comercial se relaciona con el ámbito creativo y artesanal, ofreciendo productos asociados a las manualidades.
+Pauly Creative's Craft es un emprendimiento dedicado a la elaboraciÃ³n y comercializaciÃ³n de productos de manualidades, ubicado en la ciudad de Quevedo, provincia de Los RÃ­os, Ecuador. Su actividad comercial se relaciona con el Ã¡mbito creativo y artesanal, ofreciendo productos asociados a las manualidades.
 
-La organización constituye el caso de estudio seleccionado para el desarrollo del Proyecto Fin de Curso, cuyo propósito es analizar las necesidades relacionadas con la gestión comercial y administrativa del emprendimiento, a fin de establecer los requisitos de una propuesta de software.
+La organizaciÃ³n constituye el caso de estudio seleccionado para el desarrollo del Proyecto Fin de Curso, cuyo propÃ³sito es analizar las necesidades relacionadas con la gestiÃ³n comercial y administrativa del emprendimiento, a fin de establecer los requisitos de una propuesta de software.
 
-La información presentada en este apartado se limita a datos generales de identificación y descripción de la organización. Los detalles relacionados con su funcionamiento interno, información comercial específica, datos personales y demás información confidencial no se exponen públicamente y serán tratados únicamente en el contexto académico autorizado.
+La informaciÃ³n presentada en este apartado se limita a datos generales de identificaciÃ³n y descripciÃ³n de la organizaciÃ³n. Los detalles relacionados con su funcionamiento interno, informaciÃ³n comercial especÃ­fica, datos personales y demÃ¡s informaciÃ³n confidencial no se exponen pÃºblicamente y serÃ¡n tratados Ãºnicamente en el contexto acadÃ©mico autorizado.
 
-\textbf{Datos de identificación de la organización:}
+\textbf{Datos de identificaciÃ³n de la organizaciÃ³n:}
 
 \begin{itemize}
     \item \textbf{Nombre comercial:} Pauly Creative's Craft.
-    \item \textbf{Actividad económica:} Elaboración y comercialización de productos de manualidades.
-    \item \textbf{Ubicación:} Quevedo, provincia de Los Ríos, Ecuador.
+    \item \textbf{Actividad econÃ³mica:} ElaboraciÃ³n y comercializaciÃ³n de productos de manualidades.
+    \item \textbf{UbicaciÃ³n:} Quevedo, provincia de Los RÃ­os, Ecuador.
     \item \textbf{Responsable:} Propietaria del emprendimiento.
-    \item \textbf{Tipo de organización:} Emprendimiento comercial dedicado al ámbito de las manualidades.
+    \item \textbf{Tipo de organizaciÃ³n:} Emprendimiento comercial dedicado al Ã¡mbito de las manualidades.
 \end{itemize}
 
-Para el desarrollo del proyecto se utilizará información obtenida mediante las actividades de elicitación autorizadas por la organización. Los datos que puedan identificar a clientes, proveedores u otras personas, así como información interna sensible, serán excluidos de los documentos y repositorios públicos.
+Para el desarrollo del proyecto se utilizarÃ¡ informaciÃ³n obtenida mediante las actividades de elicitaciÃ³n autorizadas por la organizaciÃ³n. Los datos que puedan identificar a clientes, proveedores u otras personas, asÃ­ como informaciÃ³n interna sensible, serÃ¡n excluidos de los documentos y repositorios pÃºblicos.
 
 \subsection{Problema identificado}
 
-El proyecto contempla el análisis de las necesidades relacionadas con la gestión comercial y administrativa de un emprendimiento dedicado a la elaboración y comercialización de productos de manualidades.
+El proyecto contempla el anÃ¡lisis de las necesidades relacionadas con la gestiÃ³n comercial y administrativa de un emprendimiento dedicado a la elaboraciÃ³n y comercializaciÃ³n de productos de manualidades.
 
-Como punto de partida, se plantea estudiar aspectos relacionados con la gestión de pedidos, clientes, productos, ventas y demás actividades vinculadas al contexto del establecimiento, con el propósito de identificar posibles necesidades de información y oportunidades de mejora.
+Como punto de partida, se plantea estudiar aspectos relacionados con la gestiÃ³n de pedidos, clientes, productos, ventas y demÃ¡s actividades vinculadas al contexto del establecimiento, con el propÃ³sito de identificar posibles necesidades de informaciÃ³n y oportunidades de mejora.
 
-La problemática específica no se considera confirmada en esta etapa, debido a que deberá determinarse mediante las técnicas de elicitación planificadas y la información que la organización autorice proporcionar.
+La problemÃ¡tica especÃ­fica no se considera confirmada en esta etapa, debido a que deberÃ¡ determinarse mediante las tÃ©cnicas de elicitaciÃ³n planificadas y la informaciÃ³n que la organizaciÃ³n autorice proporcionar.
 
-Por tanto, cualquier necesidad, dificultad o deficiencia identificada será documentada a partir de información verificable obtenida durante el levantamiento de requisitos, evitando divulgar datos internos o confidenciales del emprendimiento.
+Por tanto, cualquier necesidad, dificultad o deficiencia identificada serÃ¡ documentada a partir de informaciÃ³n verificable obtenida durante el levantamiento de requisitos, evitando divulgar datos internos o confidenciales del emprendimiento.
 
-\subsection{Acuerdo con la organización}
+\subsection{Acuerdo con la organizaciÃ³n}
 
-La organización seleccionada como caso de estudio es Pauly Creative's Craft. La participación se coordinará con su propietaria, a quien se comunicará el propósito académico del proyecto, las actividades previstas y el tratamiento que se dará a la información obtenida.
+La organizaciÃ³n seleccionada como caso de estudio es Pauly Creative's Craft. La participaciÃ³n se coordinarÃ¡ con su propietaria, a quien se comunicarÃ¡ el propÃ³sito acadÃ©mico del proyecto, las actividades previstas y el tratamiento que se darÃ¡ a la informaciÃ³n obtenida.
 
-La aceptación de la organización se respaldará mediante la carta de aceptación correspondiente. Este documento será resguardado por el grupo de trabajo y su publicación estará sujeta a las condiciones de autorización establecidas por la organización.
+La aceptaciÃ³n de la organizaciÃ³n se respaldarÃ¡ mediante la carta de aceptaciÃ³n correspondiente. Este documento serÃ¡ resguardado por el grupo de trabajo y su publicaciÃ³n estarÃ¡ sujeta a las condiciones de autorizaciÃ³n establecidas por la organizaciÃ³n.
 
-El registro del primer contacto y la identificación de las evidencias se mantendrán en el archivo \path{evidencias/MANIFIESTO.md}. La documentación pública del proyecto contendrá únicamente información autorizada y no incluirá datos personales ni detalles confidenciales del establecimiento.
+El registro del primer contacto y la identificaciÃ³n de las evidencias se mantendrÃ¡n en el archivo \path{evidencias/MANIFIESTO.md}. La documentaciÃ³n pÃºblica del proyecto contendrÃ¡ Ãºnicamente informaciÃ³n autorizada y no incluirÃ¡ datos personales ni detalles confidenciales del establecimiento.
 
-\textbf{Estado del acuerdo:} Primer contacto realizado el 19/11/2026. La formalización de la participación se respaldará mediante la carta de aceptación correspondiente.
+\textbf{Estado del acuerdo:} Primer contacto realizado el 19/11/2026. La formalizaciÃ³n de la participaciÃ³n se respaldarÃ¡ mediante la carta de aceptaciÃ³n correspondiente.
 
 % 3. Vision y alcance
 
-\section{Visión y alcance}
+\section{VisiÃ³n y alcance}
 
-\subsection{Declaración de visión}
+\subsection{DeclaraciÃ³n de visiÃ³n}
 
-Desarrollar una aplicación web que facilite la gestión de un local de manualidades, reuniendo la información de clientes, proveedores, productos terminados, pedidos, ventas, pagos, abonos y entregas. Se dará mayor importancia al registro y seguimiento de los pedidos personalizados, desde que el cliente los solicita hasta que se entregan.
+Desarrollar una aplicaciÃ³n web que facilite la gestiÃ³n de un local de manualidades, reuniendo la informaciÃ³n de clientes, proveedores, productos terminados, pedidos, ventas, pagos, abonos y entregas. Se darÃ¡ mayor importancia al registro y seguimiento de los pedidos personalizados, desde que el cliente los solicita hasta que se entregan.
 
-La aplicación busca facilitar el registro, la consulta y el seguimiento de las actividades del establecimiento. De esta manera, se contará con información organizada que ayude a tomar decisiones y a llevar un mejor control de las actividades comerciales.
+La aplicaciÃ³n busca facilitar el registro, la consulta y el seguimiento de las actividades del establecimiento. De esta manera, se contarÃ¡ con informaciÃ³n organizada que ayude a tomar decisiones y a llevar un mejor control de las actividades comerciales.
 
-El sistema estará dirigido al propietario del establecimiento como único usuario. Los clientes no tendrán acceso al sistema, pero participarán proporcionando información durante el levantamiento de requisitos.
+El sistema estarÃ¡ dirigido al propietario del establecimiento como Ãºnico usuario. Los clientes no tendrÃ¡n acceso al sistema, pero participarÃ¡n proporcionando informaciÃ³n durante el levantamiento de requisitos.
 
 \subsection{Objetivos de negocio}
 
-Los objetivos de negocio se presentan en la Tabla~\ref{tab:objetivos}. Las metas propuestas son valores iniciales que servirán como referencia para el diseño del sistema y deberán revisarse con el responsable del establecimiento antes de establecerse como metas definitivas.
+Los objetivos de negocio se presentan en la Tabla~\ref{tab:objetivos}. Las metas propuestas son valores iniciales que servirÃ¡n como referencia para el diseÃ±o del sistema y deberÃ¡n revisarse con el responsable del establecimiento antes de establecerse como metas definitivas.
 
 \begin{table}[H]
 \centering
@@ -197,22 +197,22 @@ Los objetivos de negocio se presentan en la Tabla~\ref{tab:objetivos}. Las metas
 \small
 \begin{tabularx}{\textwidth}{@{}lYYYY@{}}
 \toprule
-ID & Objetivo & Indicador & Meta propuesta & Fuente de verificación \\
+ID & Objetivo & Indicador & Meta propuesta & Fuente de verificaciÃ³n \\
 \midrule
 OBJ-01 &
-Reunir en el sistema la información de clientes, proveedores y productos terminados. &
+Reunir en el sistema la informaciÃ³n de clientes, proveedores y productos terminados. &
 Porcentaje de registros gestionados mediante el sistema. &
 Al menos 90\% de los registros considerados dentro del alcance. &
-Pruebas funcionales y revisión de registros. \\
+Pruebas funcionales y revisiÃ³n de registros. \\
 
 OBJ-02 &
 Facilitar el registro y seguimiento de los pedidos personalizados desde que se reciben hasta que se entregan. &
 Porcentaje de pedidos personalizados con estado actualizado y consultable. &
 Al menos 90\% de los pedidos registrados con seguimiento. &
-Pruebas de gestión de pedidos. \\
+Pruebas de gestiÃ³n de pedidos. \\
 
 OBJ-03 &
-Organizar la información de ventas, pagos, abonos y entregas para facilitar su consulta. &
+Organizar la informaciÃ³n de ventas, pagos, abonos y entregas para facilitar su consulta. &
 Porcentaje de operaciones registradas y consultables. &
 Al menos 90\% de las operaciones incluidas en el sistema. &
 Pruebas funcionales y reportes generados. \\
@@ -224,125 +224,125 @@ Pruebas funcionales y reportes generados. \\
 
 \subsubsection{Incluido en el sistema}
 
-El sistema será una aplicación web que ayudará a gestionar las actividades del establecimiento. En su primera versión contará con los siguientes módulos:
+El sistema serÃ¡ una aplicaciÃ³n web que ayudarÃ¡ a gestionar las actividades del establecimiento. En su primera versiÃ³n contarÃ¡ con los siguientes mÃ³dulos:
 
 \begin{itemize}
-    \item \textbf{Gestión de clientes:} permitirá registrar, consultar y actualizar la información necesaria para atender a los clientes.
-    \item \textbf{Gestión de proveedores:} permitirá registrar y consultar la información de los proveedores.
-    \item \textbf{Gestión de usuarios:} permitirá el ingreso del propietario al sistema como único usuario administrador.
-    \item \textbf{Gestión de productos:} permitirá registrar y actualizar los productos terminados, así como consultar su disponibilidad.
-    \item \textbf{Gestión de pedidos personalizados:} permitirá registrar las características solicitadas por el cliente, el estado del pedido, los valores pagados y pendientes, y la fecha prevista de entrega.
-    \item \textbf{Gestión de ventas:} permitirá registrar y consultar las ventas de productos terminados y de pedidos personalizados que ya hayan sido entregados.
-    \item \textbf{Gestión de pagos y abonos:} permitirá registrar los pagos realizados y los valores que aún estén pendientes.
-    \item \textbf{Gestión de entregas:} permitirá registrar y llevar un seguimiento de las entregas de los pedidos.
-    \item \textbf{Reportes:} permitirá generar resúmenes de información sobre pedidos, ventas, pagos y entregas.
+    \item \textbf{GestiÃ³n de clientes:} permitirÃ¡ registrar, consultar y actualizar la informaciÃ³n necesaria para atender a los clientes.
+    \item \textbf{GestiÃ³n de proveedores:} permitirÃ¡ registrar y consultar la informaciÃ³n de los proveedores.
+    \item \textbf{GestiÃ³n de usuarios:} permitirÃ¡ el ingreso del propietario al sistema como Ãºnico usuario administrador.
+    \item \textbf{GestiÃ³n de productos:} permitirÃ¡ registrar y actualizar los productos terminados, asÃ­ como consultar su disponibilidad.
+    \item \textbf{GestiÃ³n de pedidos personalizados:} permitirÃ¡ registrar las caracterÃ­sticas solicitadas por el cliente, el estado del pedido, los valores pagados y pendientes, y la fecha prevista de entrega.
+    \item \textbf{GestiÃ³n de ventas:} permitirÃ¡ registrar y consultar las ventas de productos terminados y de pedidos personalizados que ya hayan sido entregados.
+    \item \textbf{GestiÃ³n de pagos y abonos:} permitirÃ¡ registrar los pagos realizados y los valores que aÃºn estÃ©n pendientes.
+    \item \textbf{GestiÃ³n de entregas:} permitirÃ¡ registrar y llevar un seguimiento de las entregas de los pedidos.
+    \item \textbf{Reportes:} permitirÃ¡ generar resÃºmenes de informaciÃ³n sobre pedidos, ventas, pagos y entregas.
 \end{itemize}
 
 \subsubsection{Excluido del sistema}
 
-Para esta primera etapa, no se incluirán las siguientes funcionalidades:
+Para esta primera etapa, no se incluirÃ¡n las siguientes funcionalidades:
 
 \begin{itemize}
-    \item Control de inventario de materiales e insumos; únicamente se manejará el inventario de productos terminados.
+    \item Control de inventario de materiales e insumos; Ãºnicamente se manejarÃ¡ el inventario de productos terminados.
     \item Acceso de los clientes al sistema para realizar o consultar pedidos.
-    \item Integración con entidades bancarias y plataformas de pago externas.
-    \item Procesamiento automático de transacciones bancarias.
-    \item Gestión contable y tributaria completa del establecimiento.
-    \item Administración de nómina y cálculo de remuneraciones.
-    \item Comercio electrónico público con carrito de compras y pasarela de pago.
-    \item Aplicación móvil nativa independiente.
-    \item Control automatizado de maquinaria o procesos físicos de fabricación.
-    \item Integración con servicios externos de transporte o mensajería.
+    \item IntegraciÃ³n con entidades bancarias y plataformas de pago externas.
+    \item Procesamiento automÃ¡tico de transacciones bancarias.
+    \item GestiÃ³n contable y tributaria completa del establecimiento.
+    \item AdministraciÃ³n de nÃ³mina y cÃ¡lculo de remuneraciones.
+    \item Comercio electrÃ³nico pÃºblico con carrito de compras y pasarela de pago.
+    \item AplicaciÃ³n mÃ³vil nativa independiente.
+    \item Control automatizado de maquinaria o procesos fÃ­sicos de fabricaciÃ³n.
+    \item IntegraciÃ³n con servicios externos de transporte o mensajerÃ­a.
 \end{itemize}
 
-Estas exclusiones podrán revisarse si durante el análisis de las necesidades se determina que alguna funcionalidad es necesaria y se justifica su incorporación.
+Estas exclusiones podrÃ¡n revisarse si durante el anÃ¡lisis de las necesidades se determina que alguna funcionalidad es necesaria y se justifica su incorporaciÃ³n.
 
 \subsection{Restricciones conocidas}
 
 Para el desarrollo del proyecto se han considerado las siguientes restricciones:
 
 \begin{itemize}
-    \item \textbf{Tiempo:} el desarrollo se realizará dentro del período académico establecido para la asignatura.
-    \item \textbf{Disponibilidad:} las actividades de levantamiento de requisitos dependerán de los horarios y del tiempo disponible del propietario y de los demás participantes.
-    \item \textbf{Recursos:} la propuesta deberá adaptarse a los recursos técnicos y humanos disponibles para el desarrollo del proyecto académico.
-    \item \textbf{Acceso a información:} no se solicitarán contraseñas, datos bancarios ni listados completos de clientes o proveedores.
-    \item \textbf{Privacidad:} la información personal y confidencial se manejará respetando los principios de protección de datos aplicables.
-    \item \textbf{Conectividad:} al ser una aplicación web, será necesario contar con conexión a internet para utilizarla.
-    \item \textbf{Validación:} las funcionalidades y sus prioridades deberán revisarse con el propietario y los demás participantes del proyecto.
+    \item \textbf{Tiempo:} el desarrollo se realizarÃ¡ dentro del perÃ­odo acadÃ©mico establecido para la asignatura.
+    \item \textbf{Disponibilidad:} las actividades de levantamiento de requisitos dependerÃ¡n de los horarios y del tiempo disponible del propietario y de los demÃ¡s participantes.
+    \item \textbf{Recursos:} la propuesta deberÃ¡ adaptarse a los recursos tÃ©cnicos y humanos disponibles para el desarrollo del proyecto acadÃ©mico.
+    \item \textbf{Acceso a informaciÃ³n:} no se solicitarÃ¡n contraseÃ±as, datos bancarios ni listados completos de clientes o proveedores.
+    \item \textbf{Privacidad:} la informaciÃ³n personal y confidencial se manejarÃ¡ respetando los principios de protecciÃ³n de datos aplicables.
+    \item \textbf{Conectividad:} al ser una aplicaciÃ³n web, serÃ¡ necesario contar con conexiÃ³n a internet para utilizarla.
+    \item \textbf{ValidaciÃ³n:} las funcionalidades y sus prioridades deberÃ¡n revisarse con el propietario y los demÃ¡s participantes del proyecto.
 \end{itemize}
 
 % 4. Partes interesadas
 
 \section{Partes interesadas}
 
-\subsection{Identificación}
+\subsection{IdentificaciÃ³n}
 
-Se identifican al menos siete partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La norma ISO/IEC/IEEE 29148:2018~\cite{iso29148} exige identificar a las partes interesadas y definir el límite del sistema antes de definir los requisitos.
+Se identifican al menos siete partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La norma ISO/IEC/IEEE 29148:2018~\cite{iso29148} exige identificar a las partes interesadas y definir el lÃ­mite del sistema antes de definir los requisitos.
 
 \begin{table}[H]
 	\centering
-	\caption{Partes interesadas, interés, influencia y disponibilidad.}
+	\caption{Partes interesadas, interÃ©s, influencia y disponibilidad.}
 	\label{tab:interesados}
 	\small
 	\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
 		\toprule
-		ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+		ID & Rol & InterÃ©s & Poder o influencia & Disponibilidad \\
 		\midrule
-		PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
+		PI-01 & Propietaria y Ãºnica usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesiÃ³n de observaciÃ³n y entrevistas pactadas; limitada en temporada alta). \\
 		\rowcolor{rowgray}
-		PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputación y recomendaciones del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
-		PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
+		PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputaciÃ³n y recomendaciones del negocio). & Media (participaciÃ³n indirecta mediante cuestionario enviado por WhatsApp). \\
+		PI-03 & Clientes de una sola vez & Obtener una atenciÃ³n rÃ¡pida, confirmaciÃ³n clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participaciÃ³n indirecta mediante cuestionario digital). \\
 		\rowcolor{rowgray}
-		PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (dirección y teléfono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logística de distribución sin intervenir en la gestión interna). & Baja (observación indirecta y consulta con la propietaria). \\
-		PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
+		PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (direcciÃ³n y telÃ©fono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logÃ­stica de distribuciÃ³n sin intervenir en la gestiÃ³n interna). & Baja (observaciÃ³n indirecta y consulta con la propietaria). \\
+		PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboraciÃ³n artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
 		\rowcolor{rowgray}
-		PI-06 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integración directa con la aplicación web). & Nula (interacción verificada mediante comprobantes registrados por la propietaria). \\
-		PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusión de productos y canal principal de recepción de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (análisis del flujo mediante observación no participante). \\
+		PI-06 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integraciÃ³n directa con la aplicaciÃ³n web). & Nula (interacciÃ³n verificada mediante comprobantes registrados por la propietaria). \\
+		PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusiÃ³n de productos y canal principal de recepciÃ³n de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (anÃ¡lisis del flujo mediante observaciÃ³n no participante). \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
-\subsection{Matriz poder--interés}
+\subsection{Matriz poder--interÃ©s}
 
 \begin{figure}[H]
 	\centering
-	\figuraopcional{matriz_poder_interes.pdf}{0.85\textwidth}{Exportar la matriz poder--interés desde modelos/}
-	\caption{Matriz poder--interés de las partes interesadas.}
+	\figuraopcional{matriz_poder_interes.pdf}{0.85\textwidth}{Exportar la matriz poder--interÃ©s desde modelos/}
+	\caption{Matriz poder--interÃ©s de las partes interesadas.}
 	\label{fig:poder-interes}
 \end{figure}
 
-La Figura~\ref{fig:poder-interes} ubica a cada parte interesada en su cuadrante según su nivel de influencia sobre el proyecto y su grado de interés en los resultados del sistema:
+La Figura~\ref{fig:poder-interes} ubica a cada parte interesada en su cuadrante segÃºn su nivel de influencia sobre el proyecto y su grado de interÃ©s en los resultados del sistema:
 
 \begin{itemize}
-	\item \textbf{Gestionar de cerca (Alto poder / Alto interés):} Se ubica únicamente la \textbf{Propietaria (PI-01)}, dado que es la única usuaria operativa de la aplicación web, conoce el ciclo completo del negocio y tiene la autoridad total para aprobar o ajustar los requisitos funcionales.
-	\item \textbf{Mantener satisfechos (Alto poder / Bajo interés):} En este cuadrante no se registran actores externos con autoridad directa sobre el software sin interés en su uso, manteniéndose la toma de decisiones centralizada en la propietaria.
-	\item \textbf{Mantener informados (Bajo poder / Alto interés):} Se encuentran los \textbf{Clientes frecuentes (PI-02)}, cuyo interés directo en el cumplimiento de tiempos y calidad es elevado, aunque no operan el sistema; sus expectativas se recogen mediante encuesta.
-	\item \textbf{Monitorear (Bajo poder / Bajo interés):} Agrupa a los \textbf{Clientes de una sola vez (PI-03)}, el \textbf{Personal de entrega (PI-04)}, el \textbf{Familiar colaborador (PI-05)}, la \textbf{Entidad financiera (PI-06)} y las \textbf{Redes sociales (PI-07)}. Su interacción con el sistema es periférica o indirecta, por lo que se supervisan mediante observación no participante y consulta con la propietaria.
+	\item \textbf{Gestionar de cerca (Alto poder / Alto interÃ©s):} Se ubica Ãºnicamente la \textbf{Propietaria (PI-01)}, dado que es la Ãºnica usuaria operativa de la aplicaciÃ³n web, conoce el ciclo completo del negocio y tiene la autoridad total para aprobar o ajustar los requisitos funcionales.
+	\item \textbf{Mantener satisfechos (Alto poder / Bajo interÃ©s):} En este cuadrante no se registran actores externos con autoridad directa sobre el software sin interÃ©s en su uso, manteniÃ©ndose la toma de decisiones centralizada en la propietaria.
+	\item \textbf{Mantener informados (Bajo poder / Alto interÃ©s):} Se encuentran los \textbf{Clientes frecuentes (PI-02)}, cuyo interÃ©s directo en el cumplimiento de tiempos y calidad es elevado, aunque no operan el sistema; sus expectativas se recogen mediante encuesta.
+	\item \textbf{Monitorear (Bajo poder / Bajo interÃ©s):} Agrupa a los \textbf{Clientes de una sola vez (PI-03)}, el \textbf{Personal de entrega (PI-04)}, el \textbf{Familiar colaborador (PI-05)}, la \textbf{Entidad financiera (PI-06)} y las \textbf{Redes sociales (PI-07)}. Su interacciÃ³n con el sistema es perifÃ©rica o indirecta, por lo que se supervisan mediante observaciÃ³n no participante y consulta con la propietaria.
 \end{itemize}
 
-\subsection{Estrategia de participación}
+\subsection{Estrategia de participaciÃ³n}
 
-La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada parte interesada según su cuadrante en la matriz.
+La Tabla~\ref{tab:estrategia} define la estrategia de participaciÃ³n de cada parte interesada segÃºn su cuadrante en la matriz.
 
 \begin{table}[H]
 	\centering
-	\caption{Estrategia de participación por parte interesada.}
+	\caption{Estrategia de participaciÃ³n por parte interesada.}
 	\label{tab:estrategia}
 	\small
 	\begin{tabularx}{\textwidth}{@{}lYYY@{}}
 		\toprule
-		ID & Cuadrante & Estrategia de participación & Frecuencia y canal \\
+		ID & Cuadrante & Estrategia de participaciÃ³n & Frecuencia y canal \\
 		\midrule
-		PI-01 & Gestionar de cerca (Alto poder / Alto interés) & Colaboración activa mediante entrevistas inicial y a profundidad, observación no participante y validación temprana de prototipos de pantalla. & Semanal por WhatsApp; sesiones presenciales pactadas (miércoles y sábado). \\
+		PI-01 & Gestionar de cerca (Alto poder / Alto interÃ©s) & ColaboraciÃ³n activa mediante entrevistas inicial y a profundidad, observaciÃ³n no participante y validaciÃ³n temprana de prototipos de pantalla. & Semanal por WhatsApp; sesiones presenciales pactadas (miÃ©rcoles y sÃ¡bado). \\
 		\rowcolor{rowgray}
-		PI-02 & Mantener informados (Bajo poder / Alto interés) & Consulta estructurada sobre hábitos de compra, claridad en el seguimiento de pedidos y expectativas de servicio. & Única aplicación (ventana de 5 días) mediante cuestionario enviado por WhatsApp. \\
-		PI-03 & Monitorear (Bajo poder / Bajo interés) & Recopilación estandarizada de percepción de atención y tiempos de respuesta para contrastar con clientes frecuentes. & Única aplicación mediante cuestionario digital distribuido por WhatsApp. \\
+		PI-02 & Mantener informados (Bajo poder / Alto interÃ©s) & Consulta estructurada sobre hÃ¡bitos de compra, claridad en el seguimiento de pedidos y expectativas de servicio. & Ãšnica aplicaciÃ³n (ventana de 5 dÃ­as) mediante cuestionario enviado por WhatsApp. \\
+		PI-03 & Monitorear (Bajo poder / Bajo interÃ©s) & RecopilaciÃ³n estandarizada de percepciÃ³n de atenciÃ³n y tiempos de respuesta para contrastar con clientes frecuentes. & Ãšnica aplicaciÃ³n mediante cuestionario digital distribuido por WhatsApp. \\
 		\rowcolor{rowgray}
-		PI-04 & Monitorear (Bajo poder / Bajo interés) & Identificación de datos requeridos para despacho (dirección, contacto) y mecanismo de confirmación de entrega. & Durante la sesión de observación no participante y entrevista. \\
-		PI-05 & Monitorear (Bajo poder / Bajo interés) & Delimitación de responsabilidades en la elaboración artesanal para confirmar su exclusión como usuario del sistema. & Integrado en la entrevista inicial y a profundidad con la propietaria. \\
+		PI-04 & Monitorear (Bajo poder / Bajo interÃ©s) & IdentificaciÃ³n de datos requeridos para despacho (direcciÃ³n, contacto) y mecanismo de confirmaciÃ³n de entrega. & Durante la sesiÃ³n de observaciÃ³n no participante y entrevista. \\
+		PI-05 & Monitorear (Bajo poder / Bajo interÃ©s) & DelimitaciÃ³n de responsabilidades en la elaboraciÃ³n artesanal para confirmar su exclusiÃ³n como usuario del sistema. & Integrado en la entrevista inicial y a profundidad con la propietaria. \\
 		\rowcolor{rowgray}
-		PI-06 & Monitorear (Bajo poder / Bajo interés) & Revisión del procedimiento manual de verificación de transferencias y registro de abonos sin integración bancaria. & Durante la entrevista a profundidad con la propietaria. \\
-		PI-07 & Monitorear (Bajo poder / Bajo interés) & Observación del flujo de recepción de pedidos, cotizaciones y cambios solicitados por mensajería instantánea. & Durante la sesión de observación no participante (2 horas). \\
+		PI-06 & Monitorear (Bajo poder / Bajo interÃ©s) & RevisiÃ³n del procedimiento manual de verificaciÃ³n de transferencias y registro de abonos sin integraciÃ³n bancaria. & Durante la entrevista a profundidad con la propietaria. \\
+		PI-07 & Monitorear (Bajo poder / Bajo interÃ©s) & ObservaciÃ³n del flujo de recepciÃ³n de pedidos, cotizaciones y cambios solicitados por mensajerÃ­a instantÃ¡nea. & Durante la sesiÃ³n de observaciÃ³n no participante (2 horas). \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
@@ -351,7 +351,7 @@ La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada par
 
 \section{Contexto del sistema}
 
-\subsection{Límite del sistema y diagrama de contexto}
+\subsection{LÃ­mite del sistema y diagrama de contexto}
 
 \begin{figure}[H]
 \centering
@@ -360,182 +360,221 @@ La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada par
 \label{fig:contexto}
 \end{figure}
 
-La Figura~\ref{fig:contexto} muestra el sistema, sus actores externos y los flujos de información.
+La Figura~\ref{fig:contexto} muestra el sistema, sus actores externos y los flujos de informaciÃ³n.
 
-\pendiente{Explicación del límite del sistema.}
+\pendiente{ExplicaciÃ³n del lÃ­mite del sistema.}
 
-\subsection{Perspectivas del sílabo}
+\subsection{Perspectivas del sÃ­labo}
 
-La Tabla~\ref{tab:perspectivas} resume los hallazgos obtenidos en la organización para cada una de las ocho perspectivas del sílabo.
+La Tabla~\ref{tab:perspectivas} presenta los hallazgos preliminares
+de la organizaciÃ³n, considerando las ocho perspectivas establecidas
+en el sÃ­labo de IngenierÃ­a de Requisitos.
 
 \begin{table}[H]
-\centering
-\caption{Las ocho perspectivas del sílabo con hallazgos de la organización real.}
-\label{tab:perspectivas}
-\small
-\begin{tabularx}{\textwidth}{@{}lYYY@{}}
-\toprule
-N.º & Perspectiva (según sílabo) & Hallazgo en la organización & Evidencia \\
-\midrule
-1 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-2 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-3 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-4 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-5 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-6 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-7 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-8 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-\bottomrule
-\end{tabularx}
+	\centering
+	\caption{Perspectivas del sÃ­labo y hallazgos de la organizaciÃ³n.}
+	\label{tab:perspectivas}
+	\footnotesize
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\textwidth}{@{}c Y Y Y@{}}
+		\toprule
+		\textbf{N.Âº} &
+		\textbf{Perspectiva} &
+		\textbf{Hallazgo} &
+		\textbf{Evidencia} \\
+		\midrule
+
+		1 &
+		Metas &
+		Se busca conocer el contexto de la organizaciÃ³n e identificar necesidades que puedan abordarse mediante el proyecto. &
+		Primer contacto. \\
+
+		2 &
+		Escenarios &
+		Se estableciÃ³ un acercamiento inicial para conocer la organizaciÃ³n y facilitar futuras actividades de levantamiento de informaciÃ³n. &
+		Registro del contacto. \\
+
+		3 &
+		ElicitaciÃ³n &
+		Se iniciÃ³ la comunicaciÃ³n con la organizaciÃ³n; la recopilaciÃ³n detallada de necesidades y requisitos estÃ¡ pendiente. &
+		Registro del primer contacto. \\
+
+		4 &
+		DocumentaciÃ³n &
+		Se dispone de documentos que respaldan el acercamiento y la aceptaciÃ³n de la organizaciÃ³n para el desarrollo del proyecto. &
+		Carta de aceptaciÃ³n y registro. \\
+
+		5 &
+		Requisitos orientados a soluciÃ³n &
+		Las posibles soluciones aÃºn no se establecen, ya que primero es necesario conocer las necesidades y el contexto de la organizaciÃ³n. &
+		Pendiente de levantamiento. \\
+
+		6 &
+		NegociaciÃ³n y resoluciÃ³n de conflictos &
+		Se cuenta con un acuerdo inicial para llevar a cabo el proyecto; todavÃ­a no se han identificado conflictos relacionados con requisitos. &
+		Carta de aceptaciÃ³n. \\
+
+		7 &
+		ValidaciÃ³n &
+		La validaciÃ³n de requisitos se realizarÃ¡ una vez que las necesidades sean recopiladas y documentadas junto con los involucrados. &
+		Pendiente de levantamiento. \\
+
+		8 &
+		GestiÃ³n &
+		Se mantienen organizadas las evidencias del acercamiento inicial para respaldar y dar seguimiento a las actividades del proyecto. &
+		Manifiesto de evidencias. \\
+
+		\bottomrule
+	\end{tabularx}
 \end{table}
 
 % 6. Plan de elicitacion
 
-\section{Plan de elicitación}
+\section{Plan de elicitaciÃ³n}
 
-\subsection{Selección de técnicas}
+\subsection{SelecciÃ³n de tÃ©cnicas}
 
-La selección de técnicas se fundamenta en la fuente y en el tipo de conocimiento que se busca obtener, según lo planteado por Pohl~\cite{pohl2025} y por el sílabo de nivel fundamental del IREB~\cite{ireb2026}. La Tabla~\ref{tab:tecnicas} la presenta por parte interesada. Se aplican entrevista y observación no participante a la propietaria, y cuestionario a los clientes. La información de las demás partes interesadas se obtiene por medio de la propietaria.
+La selecciÃ³n de tÃ©cnicas se fundamenta en la fuente y en el tipo de conocimiento que se busca obtener, segÃºn lo planteado por Pohl~\cite{pohl2025} y por el sÃ­labo de nivel fundamental del IREB~\cite{ireb2026}. La Tabla~\ref{tab:tecnicas} la presenta por parte interesada. Se aplican entrevista y observaciÃ³n no participante a la propietaria, y cuestionario a los clientes. La informaciÃ³n de las demÃ¡s partes interesadas se obtiene por medio de la propietaria.
 
 \begin{table}[H]
 \centering
-\caption{Técnica de elicitación por parte interesada y justificación.}
+\caption{TÃ©cnica de elicitaciÃ³n por parte interesada y justificaciÃ³n.}
 \label{tab:tecnicas}
 \small
 \begin{tabularx}{\textwidth}{@{}lYYY@{}}
 \toprule
-ID & Técnica & Tipo de conocimiento / fuente & Justificación \\
+ID & TÃ©cnica & Tipo de conocimiento / fuente & JustificaciÃ³n \\
 \midrule
-PI-01 & Entrevista y observación no participante & \textbf{Tipo:} consciente y tácito. \textbf{Fuente:} propietaria. & Es la única usuaria y conoce el ciclo completo del pedido. La observación permite contrastar lo que dice con lo que hace~\cite{pohl2025,ireb2026}. \\
-PI-02 & Cuestionario & \textbf{Tipo:} consciente (hábitos de compra y expectativas). \textbf{Fuente:} clientes frecuentes. & Recomiendan el negocio y son varios con poco tiempo. La propietaria les envía el cuestionario por WhatsApp. \\
+PI-01 & Entrevista y observaciÃ³n no participante & \textbf{Tipo:} consciente y tÃ¡cito. \textbf{Fuente:} propietaria. & Es la Ãºnica usuaria y conoce el ciclo completo del pedido. La observaciÃ³n permite contrastar lo que dice con lo que hace~\cite{pohl2025,ireb2026}. \\
+PI-02 & Cuestionario & \textbf{Tipo:} consciente (hÃ¡bitos de compra y expectativas). \textbf{Fuente:} clientes frecuentes. & Recomiendan el negocio y son varios con poco tiempo. La propietaria les envÃ­a el cuestionario por WhatsApp. \\
 PI-03 & Cuestionario & \textbf{Tipo:} consciente (dificultades y expectativas). \textbf{Fuente:} clientes de una sola vez. & Permite comparar su experiencia con la de los clientes frecuentes sin sesiones individuales. \\
 PI-04 & Entrevista a la propietaria & \textbf{Tipo:} consciente (abastecimiento y comprobantes). \textbf{Fuente:} propietaria. & No usa el sistema. La propietaria compra los materiales y recibe los comprobantes. \\
-PI-05 & Entrevista y observación no participante & \textbf{Tipo:} consciente y tácito (datos de entrega y su confirmación). \textbf{Fuente:} propietaria. & Ella coordina las entregas, propias o por cooperativa de encomiendas. Se aclara en la entrevista y se observa en la sesión de observación. \\
-PI-06 & Entrevista a la propietaria & \textbf{Tipo:} consciente (reparto de la elaboración). \textbf{Fuente:} propietaria. & Es un familiar que ayuda a veces y no usará el sistema. Su rol se aclara con la propietaria. \\
-PI-07 & Entrevista a la propietaria & \textbf{Tipo:} consciente (registro de abonos y transferencias). \textbf{Fuente:} propietaria. & No hay integración bancaria. Interesa conocer cómo registra ella cada pago. \\
-PI-08 & Observación no participante & \textbf{Tipo:} tácito (cómo llegan los pedidos y cambios). \textbf{Fuente:} chats y redes sociales. & Los pedidos llegan por WhatsApp. Se observa el flujo sin copiar conversaciones de clientes~\cite{lopdp2021}. \\
+PI-05 & Entrevista y observaciÃ³n no participante & \textbf{Tipo:} consciente y tÃ¡cito (datos de entrega y su confirmaciÃ³n). \textbf{Fuente:} propietaria. & Ella coordina las entregas, propias o por cooperativa de encomiendas. Se aclara en la entrevista y se observa en la sesiÃ³n de observaciÃ³n. \\
+PI-06 & Entrevista a la propietaria & \textbf{Tipo:} consciente (reparto de la elaboraciÃ³n). \textbf{Fuente:} propietaria. & Es un familiar que ayuda a veces y no usarÃ¡ el sistema. Su rol se aclara con la propietaria. \\
+PI-07 & Entrevista a la propietaria & \textbf{Tipo:} consciente (registro de abonos y transferencias). \textbf{Fuente:} propietaria. & No hay integraciÃ³n bancaria. Interesa conocer cÃ³mo registra ella cada pago. \\
+PI-08 & ObservaciÃ³n no participante & \textbf{Tipo:} tÃ¡cito (cÃ³mo llegan los pedidos y cambios). \textbf{Fuente:} chats y redes sociales. & Los pedidos llegan por WhatsApp. Se observa el flujo sin copiar conversaciones de clientes~\cite{lopdp2021}. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \subsection{Cronograma de sesiones}
 
-Las sesiones se programan según la Tabla~\ref{tab:sesiones}. Las fechas y horarios se acordaron con la propietaria el 20/11/2026 y se confirman mediante el resumen semanal por WhatsApp. Su disponibilidad es limitada en temporada alta y antes de Navidad y del Día de la Madre. Las sesiones cuentan con los modelos de consentimiento informado disponibles en el directorio \path{PFC/E1/etica/} del repositorio de GitHub y se rigen por la LOPDP~\cite{lopdp2021} y su Reglamento~\cite{reglamentolopdp2023}.
+Las sesiones se programan segÃºn la Tabla~\ref{tab:sesiones}. Las fechas y horarios se acordaron con la propietaria el 20/11/2026 y se confirman mediante el resumen semanal por WhatsApp. Su disponibilidad es limitada en temporada alta y antes de Navidad y del DÃ­a de la Madre. Las sesiones cuentan con los modelos de consentimiento informado disponibles en el directorio \path{PFC/E1/etica/} del repositorio de GitHub y se rigen por la LOPDP~\cite{lopdp2021} y su Reglamento~\cite{reglamentolopdp2023}.
 
 \begin{table}[H]
 \centering
-\caption{Cronograma de sesiones de elicitación.}
+\caption{Cronograma de sesiones de elicitaciÃ³n.}
 \label{tab:sesiones}
 \small
 \begin{tabularx}{\textwidth}{@{}lllYY@{}}
 \toprule
-Sesión & Fecha & Duración & Participantes (roles) & Técnica e instrumento \\
+SesiÃ³n & Fecha & DuraciÃ³n & Participantes (roles) & TÃ©cnica e instrumento \\
 \midrule
-S1 & 20/11/2026 & 60 min & Propietaria; integrante del equipo & Entrevista inicial; guion de entrevista (versión corta) \\
-S2 & 23/11/2026 (envío) al 27/11/2026 (respuestas) & 5 días & 15 a 20 clientes (envío por WhatsApp de la propietaria) & Cuestionario; cuestionario a clientes \\
-S3 & 25/11/2026 (miércoles, tarde) & 2 h & Propietaria; un integrante del equipo & Observación no participante; guía de observación \\
-S4 & 28/11/2026 (sábado, mañana) & 90 min & Propietaria; equipo & Entrevista a profundidad; guion de entrevista \\
+S1 & 20/11/2026 & 60 min & Propietaria; integrante del equipo & Entrevista inicial; guion de entrevista (versiÃ³n corta) \\
+S2 & 23/11/2026 (envÃ­o) al 27/11/2026 (respuestas) & 5 dÃ­as & 15 a 20 clientes (envÃ­o por WhatsApp de la propietaria) & Cuestionario; cuestionario a clientes \\
+S3 & 25/11/2026 (miÃ©rcoles, tarde) & 2 h & Propietaria; un integrante del equipo & ObservaciÃ³n no participante; guÃ­a de observaciÃ³n \\
+S4 & 28/11/2026 (sÃ¡bado, maÃ±ana) & 90 min & Propietaria; equipo & Entrevista a profundidad; guion de entrevista \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \subsection{Instrumentos}
 
-Los instrumentos de elicitación se encuentran en el directorio \path{PFC/E1/instrumentos/} del repositorio de GitHub. Estos comprenden:
+Los instrumentos de elicitaciÃ³n se encuentran en el directorio \path{PFC/E1/instrumentos/} del repositorio de GitHub. Estos comprenden:
 
 \begin{itemize}
     \item \textbf{Guion de entrevista:} dirigido al propietario para conocer los procesos, dificultades y necesidades del establecimiento.
-    \item \textbf{Cuestionario:} dirigido a los clientes para identificar sus hábitos de compra, dificultades, necesidades y expectativas sobre la aplicación web.
-    \item \textbf{Guía de observación:} orientada a identificar los procedimientos actuales de recepción de pedidos, gestión de productos, ventas y entregas, sin intervenir en las actividades.
+    \item \textbf{Cuestionario:} dirigido a los clientes para identificar sus hÃ¡bitos de compra, dificultades, necesidades y expectativas sobre la aplicaciÃ³n web.
+    \item \textbf{GuÃ­a de observaciÃ³n:} orientada a identificar los procedimientos actuales de recepciÃ³n de pedidos, gestiÃ³n de productos, ventas y entregas, sin intervenir en las actividades.
 \end{itemize}
 
-Los instrumentos se presentan como anexos de esta entrega y no incluyen resultados de aplicación. La información se registrará mediante notas y descripciones generales, sin recopilar datos personales o confidenciales.
+Los instrumentos se presentan como anexos de esta entrega y no incluyen resultados de aplicaciÃ³n. La informaciÃ³n se registrarÃ¡ mediante notas y descripciones generales, sin recopilar datos personales o confidenciales.
 
-\subsection{Trazabilidad entre partes interesadas, técnicas e instrumentos}
+\subsection{Trazabilidad entre partes interesadas, tÃ©cnicas e instrumentos}
 
-La Tabla~\ref{tab:trazabilidad} relaciona cada objetivo de negocio con las partes interesadas, las técnicas y los instrumentos correspondientes, de acuerdo con las Tablas~\ref{tab:tecnicas} y~\ref{tab:sesiones}.
+La Tabla~\ref{tab:trazabilidad} relaciona cada objetivo de negocio con las partes interesadas, las tÃ©cnicas y los instrumentos correspondientes, de acuerdo con las Tablas~\ref{tab:tecnicas} y~\ref{tab:sesiones}.
 
 \begin{table}[H]
 \centering
-\caption{Trazabilidad entre objetivos, partes interesadas, técnicas e instrumentos.}
+\caption{Trazabilidad entre objetivos, partes interesadas, tÃ©cnicas e instrumentos.}
 \label{tab:trazabilidad}
 \small
 \begin{tabularx}{\textwidth}{@{}lYYY@{}}
 \toprule
-Objetivo & Partes interesadas & Técnica & Instrumento \\
+Objetivo & Partes interesadas & TÃ©cnica & Instrumento \\
 \midrule
 OBJ-01 & PI-01, PI-04 (propietaria) y PI-02, PI-03 (clientes) & Entrevista (PI-01, PI-04) y cuestionario (PI-02, PI-03) & Guion de entrevista y cuestionario \\
-OBJ-02 & PI-01, PI-05 (propietaria), PI-02, PI-03 (clientes) y PI-08 (chats y redes sociales) & Entrevista y observación no participante (PI-01, PI-05), cuestionario (PI-02, PI-03) y observación no participante (PI-08) & Guion de entrevista, cuestionario y guía de observación \\
-OBJ-03 & PI-01, PI-05 y PI-07 (propietaria) & Entrevista y observación no participante (PI-01, PI-05) y entrevista (PI-07) & Guion de entrevista y guía de observación \\
+OBJ-02 & PI-01, PI-05 (propietaria), PI-02, PI-03 (clientes) y PI-08 (chats y redes sociales) & Entrevista y observaciÃ³n no participante (PI-01, PI-05), cuestionario (PI-02, PI-03) y observaciÃ³n no participante (PI-08) & Guion de entrevista, cuestionario y guÃ­a de observaciÃ³n \\
+OBJ-03 & PI-01, PI-05 y PI-07 (propietaria) & Entrevista y observaciÃ³n no participante (PI-01, PI-05) y entrevista (PI-07) & Guion de entrevista y guÃ­a de observaciÃ³n \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 % 7. Etica y proteccion de datos
 
-\section{Ética y protección de datos}
+\section{Ã‰tica y protecciÃ³n de datos}
 
 \subsection{Consentimiento informado}
 
-Para las actividades de elicitación se utilizará un consentimiento informado dirigido a mayores de 18 años, que explicará el propósito del estudio, las actividades, los riesgos, beneficios, tratamiento de datos y derecho a retirarse. Incluirá autorizaciones independientes para participar, grabar audio y video, tomar fotografías, citar frases y utilizar información anonimizada en trabajos académicos y publicaciones.
+Para las actividades de elicitaciÃ³n se utilizarÃ¡ un consentimiento informado dirigido a mayores de 18 aÃ±os, que explicarÃ¡ el propÃ³sito del estudio, las actividades, los riesgos, beneficios, tratamiento de datos y derecho a retirarse. IncluirÃ¡ autorizaciones independientes para participar, grabar audio y video, tomar fotografÃ­as, citar frases y utilizar informaciÃ³n anonimizada en trabajos acadÃ©micos y publicaciones.
 
-Cada participante podrá participar sin aceptar los permisos adicionales. Los modelos de consentimiento informado, uno para la propietaria y otro para los clientes, se encuentran en el directorio \path{PFC/E1/etica/} del repositorio de GitHub. El tratamiento de datos considerará la Ley Orgánica de Protección de Datos Personales del Ecuador \cite{lopdp2021} y su Reglamento General \cite{reglamentolopdp2023}.
+Cada participante podrÃ¡ participar sin aceptar los permisos adicionales. Los modelos de consentimiento informado, uno para la propietaria y otro para los clientes, se encuentran en el directorio \path{PFC/E1/etica/} del repositorio de GitHub. El tratamiento de datos considerarÃ¡ la Ley OrgÃ¡nica de ProtecciÃ³n de Datos Personales del Ecuador \cite{lopdp2021} y su Reglamento General \cite{reglamentolopdp2023}.
 
-\subsection{Anonimización de datos}
+\subsection{AnonimizaciÃ³n de datos}
 
-La información recopilada durante las actividades de elicitación será tratada de manera confidencial.
+La informaciÃ³n recopilada durante las actividades de elicitaciÃ³n serÃ¡ tratada de manera confidencial.
 
-Para reducir el riesgo de identificación de los participantes se aplicarán las siguientes medidas:
+Para reducir el riesgo de identificaciÃ³n de los participantes se aplicarÃ¡n las siguientes medidas:
 
 \begin{itemize}
-    \item Asignar un código a cada participante en lugar de utilizar su nombre.
-    \item Evitar incorporar números de cédula, teléfonos, direcciones particulares o datos de contacto en los documentos públicos.
-    \item No registrar contraseñas, datos bancarios ni información financiera privada.
+    \item Asignar un cÃ³digo a cada participante en lugar de utilizar su nombre.
+    \item Evitar incorporar nÃºmeros de cÃ©dula, telÃ©fonos, direcciones particulares o datos de contacto en los documentos pÃºblicos.
+    \item No registrar contraseÃ±as, datos bancarios ni informaciÃ³n financiera privada.
     \item No copiar listados completos de clientes o proveedores.
-    \item Evitar que las fotografías incluyan rostros, documentos legibles o información identificable.
+    \item Evitar que las fotografÃ­as incluyan rostros, documentos legibles o informaciÃ³n identificable.
     \item Utilizar descripciones generales y roles en los informes del proyecto.
-    \item Revisar las transcripciones y notas para eliminar información que permita identificar a una persona.
+    \item Revisar las transcripciones y notas para eliminar informaciÃ³n que permita identificar a una persona.
 \end{itemize}
 
-Cuando una persona solicite retirarse, se atenderá su petición de eliminación de información identificable y de los datos anonimizados que todavía puedan eliminarse sin afectar resultados agregados de forma irreversible.
+Cuando una persona solicite retirarse, se atenderÃ¡ su peticiÃ³n de eliminaciÃ³n de informaciÃ³n identificable y de los datos anonimizados que todavÃ­a puedan eliminarse sin afectar resultados agregados de forma irreversible.
 
 \subsection{Custodia de evidencias}
 
-Las evidencias que contengan información identificable serán almacenadas en una carpeta institucional privada, utilizando una cuenta institucional y restringiendo el acceso a las personas autorizadas.
+Las evidencias que contengan informaciÃ³n identificable serÃ¡n almacenadas en una carpeta institucional privada, utilizando una cuenta institucional y restringiendo el acceso a las personas autorizadas.
 
-El formulario firmado y las grabaciones originales no se publicarán en el repositorio del proyecto.
+El formulario firmado y las grabaciones originales no se publicarÃ¡n en el repositorio del proyecto.
 
-En el repositorio público únicamente se incorporarán documentos anonimizados y el manifiesto de evidencias (Anexo~\ref{anx:manifiesto}), sin incluir información personal de los participantes.
+En el repositorio pÃºblico Ãºnicamente se incorporarÃ¡n documentos anonimizados y el manifiesto de evidencias (Anexo~\ref{anx:manifiesto}), sin incluir informaciÃ³n personal de los participantes.
 
-El manifiesto registrará los siguientes datos:
+El manifiesto registrarÃ¡ los siguientes datos:
 
 \begin{itemize}
     \item Nombre del archivo.
-    \item Descripción de la evidencia.
-    \item Fecha de obtención.
-    \item Duración, cuando corresponda.
+    \item DescripciÃ³n de la evidencia.
+    \item Fecha de obtenciÃ³n.
+    \item DuraciÃ³n, cuando corresponda.
     \item Huella digital SHA-256.
 \end{itemize}
 
-El material identificable se conservará durante el período establecido en el consentimiento informado, con un máximo de 24 meses desde el cierre del período académico. Posteriormente será destruido de acuerdo con el procedimiento previsto.
+El material identificable se conservarÃ¡ durante el perÃ­odo establecido en el consentimiento informado, con un mÃ¡ximo de 24 meses desde el cierre del perÃ­odo acadÃ©mico. Posteriormente serÃ¡ destruido de acuerdo con el procedimiento previsto.
 
-\subsection{Principios éticos}
+\subsection{Principios Ã©ticos}
 
-El equipo considerará los principios establecidos en el Código de Ética y Conducta Profesional de ACM \cite{acm2018}.
+El equipo considerarÃ¡ los principios establecidos en el CÃ³digo de Ã‰tica y Conducta Profesional de ACM \cite{acm2018}.
 
-En particular, se tendrán en cuenta los siguientes aspectos:
+En particular, se tendrÃ¡n en cuenta los siguientes aspectos:
 
 \begin{itemize}
-    \item \textbf{Evitar daños:} no realizar actividades que perjudiquen a los participantes o interfieran innecesariamente con el funcionamiento del establecimiento.
-    \item \textbf{Honestidad:} explicar el propósito académico del proyecto y no presentar información ficticia como si fuera evidencia real.
-    \item \textbf{Privacidad:} proteger la información personal y respetar las decisiones de los participantes.
-    \item \textbf{Confidencialidad:} evitar divulgar información interna del establecimiento sin autorización.
-    \item \textbf{Respeto:} permitir que las personas decidan libremente si desean participar y qué información autorizan a proporcionar.
+    \item \textbf{Evitar daÃ±os:} no realizar actividades que perjudiquen a los participantes o interfieran innecesariamente con el funcionamiento del establecimiento.
+    \item \textbf{Honestidad:} explicar el propÃ³sito acadÃ©mico del proyecto y no presentar informaciÃ³n ficticia como si fuera evidencia real.
+    \item \textbf{Privacidad:} proteger la informaciÃ³n personal y respetar las decisiones de los participantes.
+    \item \textbf{Confidencialidad:} evitar divulgar informaciÃ³n interna del establecimiento sin autorizaciÃ³n.
+    \item \textbf{Respeto:} permitir que las personas decidan libremente si desean participar y quÃ© informaciÃ³n autorizan a proporcionar.
 \end{itemize}
 
 % 8. Gestion del proyecto
 
-\section{Gestión del proyecto}
+\section{GestiÃ³n del proyecto}
 
 \subsection{Roles del equipo}
 
@@ -550,17 +589,17 @@ Los roles y responsabilidades de los integrantes se detallan en la Tabla~\ref{ta
 \toprule
 Integrante & Rol & Responsabilidades \\
 \midrule
-Herrera Moran Gilmar Javier & Observación y análisis de partes interesadas & Guía de observación, matriz poder--interés, identificación de partes interesadas, estrategia de participación y PDF \\
-Llerena Abril Angelina Julexy & Documentación, entrevista y ética & Introducción, visión y alcance, guion de entrevista, consentimiento informado, principios éticos, plan de elicitación, referencias bibliográficas, análisis crítico y conclusiones \\
-Rivera Rodriguez Joseph Jeremy & Cuestionario y modelado & Cuestionario, diagrama de contexto, trazabilidad entre objetivos e instrumentos, README y declaración de uso de IA \\
-Saltos Tello Joseph Orlando & Coordinación y gestión documental & Organización real, contacto con el local, carta de aceptación, entrega en el SGA, anonimización, manifiesto de evidencias, cronograma de sesiones y plan de comuncacion \\
+Herrera Moran Gilmar Javier & ObservaciÃ³n y anÃ¡lisis de partes interesadas & GuÃ­a de observaciÃ³n, matriz poder--interÃ©s, identificaciÃ³n de partes interesadas, estrategia de participaciÃ³n y PDF \\
+Llerena Abril Angelina Julexy & DocumentaciÃ³n, entrevista y Ã©tica & IntroducciÃ³n, visiÃ³n y alcance, guion de entrevista, consentimiento informado, principios Ã©ticos, plan de elicitaciÃ³n, referencias bibliogrÃ¡ficas, anÃ¡lisis crÃ­tico y conclusiones \\
+Rivera Rodriguez Joseph Jeremy & Cuestionario y modelado & Cuestionario, diagrama de contexto, trazabilidad entre objetivos e instrumentos, README y declaraciÃ³n de uso de IA \\
+Saltos Tello Joseph Orlando & CoordinaciÃ³n y gestiÃ³n documental & OrganizaciÃ³n real, contacto con el local, carta de aceptaciÃ³n, entrega en el SGA, anonimizaciÃ³n, manifiesto de evidencias, cronograma de sesiones y plan de comuncacion \\
 \bottomrule
 \end{tabularx}
 \end{table}
 \newpage
 \subsection{Cronograma hasta la semana 17}
 
-La Tabla~\ref{tab:cronograma} presenta las actividades, productos y responsables del PFC hasta la semana 17.La planificación podrá ajustarse de acuerdo con las indicaciones del docente, la disponibilidad de la organización y el avance del equipo.
+La Tabla~\ref{tab:cronograma} presenta las actividades, productos y responsables del PFC hasta la semana 17.La planificaciÃ³n podrÃ¡ ajustarse de acuerdo con las indicaciones del docente, la disponibilidad de la organizaciÃ³n y el avance del equipo.
 
 \begin{table}[H]
 	\centering
@@ -571,123 +610,123 @@ La Tabla~\ref{tab:cronograma} presenta las actividades, productos y responsables
 		\toprule
 		Semana & Actividad & Producto & Responsable \\
 		\midrule
-		
+
 		4 &
-		Preparación y entrega inicial del PFC &
-		Visión, alcance, partes interesadas, contexto y plan de elicitación &
+		PreparaciÃ³n y entrega inicial del PFC &
+		VisiÃ³n, alcance, partes interesadas, contexto y plan de elicitaciÃ³n &
 		Grupo HLRS \\
-		
+
 		5 &
-		Coordinación con la organización y revisión de instrumentos &
+		CoordinaciÃ³n con la organizaciÃ³n y revisiÃ³n de instrumentos &
 		Instrumentos revisados y sesiones coordinadas &
 		Grupo HLRS \\
-		
+
 		6 &
-		Aplicación de encuesta a clientes y recopilación de información &
+		AplicaciÃ³n de encuesta a clientes y recopilaciÃ³n de informaciÃ³n &
 		Resultados de encuesta y registro de evidencias &
 		Rivera y grupo HLRS \\
-		
+
 		7 &
-		Observación de los procesos del establecimiento &
-		Registro de observación y descripción de procesos &
+		ObservaciÃ³n de los procesos del establecimiento &
+		Registro de observaciÃ³n y descripciÃ³n de procesos &
 		Herrera y grupo HLRS \\
-		
+
 		8 &
-		Entrevista de profundización con la propietaria &
+		Entrevista de profundizaciÃ³n con la propietaria &
 		Registro de entrevista y necesidades identificadas &
 		Llerena y grupo HLRS \\
-		
+
 		9 &
-		Organización y análisis de la información recopilada &
+		OrganizaciÃ³n y anÃ¡lisis de la informaciÃ³n recopilada &
 		Hallazgos, necesidades y problemas documentados &
 		Grupo HLRS \\
-		
+
 		10 &
-		Identificación y especificación de requisitos &
+		IdentificaciÃ³n y especificaciÃ³n de requisitos &
 		Lista inicial de requisitos funcionales y no funcionales &
 		Grupo HLRS \\
-		
+
 		11 &
-		Priorización y revisión de requisitos &
+		PriorizaciÃ³n y revisiÃ³n de requisitos &
 		Requisitos organizados y priorizados &
 		Grupo HLRS \\
-		
+
 		12 &
-		Elaboración de modelos y documentación de requisitos &
-		Modelos y documentación de análisis &
+		ElaboraciÃ³n de modelos y documentaciÃ³n de requisitos &
+		Modelos y documentaciÃ³n de anÃ¡lisis &
 		Grupo HLRS \\
-		
+
 		13 &
-		Diseño de prototipos de interfaces &
+		DiseÃ±o de prototipos de interfaces &
 		Prototipos iniciales del sistema &
 		Grupo HLRS \\
-		
+
 		14 &
-		Revisión y validación de requisitos y prototipos &
+		RevisiÃ³n y validaciÃ³n de requisitos y prototipos &
 		Registro de observaciones y ajustes &
 		Grupo HLRS y propietaria \\
-		
+
 		15 &
-		Corrección y refinamiento de requisitos &
-		Documentación actualizada y validada &
+		CorrecciÃ³n y refinamiento de requisitos &
+		DocumentaciÃ³n actualizada y validada &
 		Grupo HLRS \\
-		
+
 		16 &
-		Revisión de trazabilidad, consistencia y documentación final &
-		Documentación consolidada del PFC &
+		RevisiÃ³n de trazabilidad, consistencia y documentaciÃ³n final &
+		DocumentaciÃ³n consolidada del PFC &
 		Grupo HLRS \\
-		
+
 		17 &
-		Preparación y entrega final del proyecto &
-		Entrega académica final y evidencias organizadas &
+		PreparaciÃ³n y entrega final del proyecto &
+		Entrega acadÃ©mica final y evidencias organizadas &
 		Grupo HLRS \\
-		
+
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
-\subsection{Plan de comunicación con la organización}
+\subsection{Plan de comunicaciÃ³n con la organizaciÃ³n}
 
 
-La comunicación con la propietaria de Pauly Creative's Craft se realizará principalmente mediante WhatsApp, de acuerdo con su preferencia. Se procurará mantener una comunicación organizada, respetando su disponibilidad y evitando períodos de mayor carga de trabajo, especialmente las semanas previas a Navidad y al Día de la Madre. La Tabla~\ref{tab:comunicacion} presenta el plan de comunicación previsto.
+La comunicaciÃ³n con la propietaria de Pauly Creative's Craft se realizarÃ¡ principalmente mediante WhatsApp, de acuerdo con su preferencia. Se procurarÃ¡ mantener una comunicaciÃ³n organizada, respetando su disponibilidad y evitando perÃ­odos de mayor carga de trabajo, especialmente las semanas previas a Navidad y al DÃ­a de la Madre. La Tabla~\ref{tab:comunicacion} presenta el plan de comunicaciÃ³n previsto.
 
 \begin{table}[H]
 	\centering
-	\caption{Plan de comunicación con la organización}
+	\caption{Plan de comunicaciÃ³n con la organizaciÃ³n}
 	\renewcommand{\arraystretch}{1.3}
 	\setlength{\tabcolsep}{5pt}
-	
+
 	\begin{tabularx}{\textwidth}{|X|l|l|l|X|}
 		\hline
-		\textbf{Información} &
+		\textbf{InformaciÃ³n} &
 		\textbf{Destinatario} &
 		\textbf{Canal} &
 		\textbf{Frecuencia} &
 		\textbf{Responsable} \\
 		\hline
-		
-		Avances del proyecto, actividades realizadas y próximos pasos
+
+		Avances del proyecto, actividades realizadas y prÃ³ximos pasos
 		& Propietaria
 		& WhatsApp
 		& Semanal
 		& Saltos Tello Joseph Orlando \\
 		\hline
-		
-		Coordinación de entrevistas, encuestas, observaciones y revisiones
+
+		CoordinaciÃ³n de entrevistas, encuestas, observaciones y revisiones
 		& Propietaria
 		& WhatsApp
-		& Según necesidad y disponibilidad
+		& SegÃºn necesidad y disponibilidad
 		& Grupo HLRS \\
 		\hline
-		
+
 	\end{tabularx}
 \end{table}
 \subsection{Registro de riesgos}
 
 
-Se identifican riesgos que podrían afectar el levantamiento de requisitos, la coordinación con la organización, el cumplimiento del cronograma y la elaboración de los entregables académicos. La Tabla~\ref{tab:riesgos} presenta los riesgos preliminares, su probabilidad e impacto, el nivel estimado y las respuestas previstas.
+Se identifican riesgos que podrÃ­an afectar el levantamiento de requisitos, la coordinaciÃ³n con la organizaciÃ³n, el cumplimiento del cronograma y la elaboraciÃ³n de los entregables acadÃ©micos. La Tabla~\ref{tab:riesgos} presenta los riesgos preliminares, su probabilidad e impacto, el nivel estimado y las respuestas previstas.
 
-La probabilidad y el impacto se valoran cualitativamente como bajos, medios o altos, con el propósito de establecer medidas preventivas y acciones de respuesta.
+La probabilidad y el impacto se valoran cualitativamente como bajos, medios o altos, con el propÃ³sito de establecer medidas preventivas y acciones de respuesta.
 
 \begin{table}[H]
 	\centering
@@ -698,53 +737,53 @@ La probabilidad y el impacto se valoran cualitativamente como bajos, medios o al
 		\toprule
 		ID & Riesgo & Prob. & Impacto & Nivel & Respuesta & Responsable \\
 		\midrule
-		
+
 		R-01 &
 		Disponibilidad limitada de la propietaria para participar en entrevistas, observaciones o validaciones, especialmente en temporadas de alta demanda. &
 		Media &
 		Alto &
 		Alto &
-		Coordinar las sesiones con anticipación, adaptar los horarios y evitar períodos de mayor actividad comercial. &
+		Coordinar las sesiones con anticipaciÃ³n, adaptar los horarios y evitar perÃ­odos de mayor actividad comercial. &
 		Grupo HLRS \\
-		
+
 		R-02 &
-		Información de pedidos, pagos y actividades del negocio desorganizada o incompleta, lo que podría dificultar la recopilación y análisis de requisitos. &
+		InformaciÃ³n de pedidos, pagos y actividades del negocio desorganizada o incompleta, lo que podrÃ­a dificultar la recopilaciÃ³n y anÃ¡lisis de requisitos. &
 		Media &
 		Medio &
 		Medio &
-		Utilizar instrumentos estructurados, registrar la información proporcionada y solicitar aclaraciones durante las sesiones de elicitación. &
+		Utilizar instrumentos estructurados, registrar la informaciÃ³n proporcionada y solicitar aclaraciones durante las sesiones de elicitaciÃ³n. &
 		Grupo HLRS \\
-		
+
 		R-03 &
-		Dificultades de la propietaria para familiarizarse con herramientas tecnológicas o revisar prototipos del sistema. &
+		Dificultades de la propietaria para familiarizarse con herramientas tecnolÃ³gicas o revisar prototipos del sistema. &
 		Media &
 		Medio &
 		Medio &
 		Presentar prototipos sencillos, explicar su funcionamiento de forma clara y recopilar sus observaciones mediante sesiones guiadas. &
 		Grupo HLRS \\
-		
+
 		\bottomrule
 	\end{tabularx}
 \end{table}
 % 9. Analisis critico
 
-\section{Análisis crítico}
+\section{AnÃ¡lisis crÃ­tico}
 
-\pendiente{Interpretación de lo realizado, alternativas consideradas (por ejemplo, técnicas descartadas), limitaciones de la entrega y coherencia entre partes interesadas, técnicas e instrumentos.}
+\pendiente{InterpretaciÃ³n de lo realizado, alternativas consideradas (por ejemplo, tÃ©cnicas descartadas), limitaciones de la entrega y coherencia entre partes interesadas, tÃ©cnicas e instrumentos.}
 
 % 10. Conclusiones
 
 \section{Conclusiones}
 
-\pendiente{Conclusiones derivadas de lo realizado en la organización, sin afirmaciones genéricas.}
+\pendiente{Conclusiones derivadas de lo realizado en la organizaciÃ³n, sin afirmaciones genÃ©ricas.}
 
 % 11. Declaracion de uso de IA
 
-\section{Declaración de uso de inteligencia artificial}
+\section{DeclaraciÃ³n de uso de inteligencia artificial}
 
-Para este trabajo se utilizó como apoyo Gemini (Google), en su versión estándar vigente (2026), con el propósito de corregir la ortografía y la gramática. Los resultados obtenidos se verificaron revisando el texto línea por línea antes de su entrega.
+Para este trabajo se utilizÃ³ como apoyo Gemini (Google), en su versiÃ³n estÃ¡ndar vigente (2026), con el propÃ³sito de corregir la ortografÃ­a y la gramÃ¡tica. Los resultados obtenidos se verificaron revisando el texto lÃ­nea por lÃ­nea antes de su entrega.
 
-Adicionalmente, se empleó como apoyo Claude (Anthropic), en su versión vigente (2026), con el propósito de reestructurar el documento en LaTeX y verificar las dependencias de los compiladores. Los resultados obtenidos se comprobaron revisando el código fuente y ejecutando la compilación del documento para asegurar su correcto funcionamiento antes de la entrega.
+Adicionalmente, se empleÃ³ como apoyo Claude (Anthropic), en su versiÃ³n vigente (2026), con el propÃ³sito de reestructurar el documento en LaTeX y verificar las dependencias de los compiladores. Los resultados obtenidos se comprobaron revisando el cÃ³digo fuente y ejecutando la compilaciÃ³n del documento para asegurar su correcto funcionamiento antes de la entrega.
 
 \appendix
 
@@ -767,7 +806,7 @@ compartido con el docente.
 	\scriptsize
 	\renewcommand{\arraystretch}{1.6}
 	\setlength{\tabcolsep}{3pt}
-	
+
 	\begin{tabularx}{\textwidth}{
 			@{}
 			>{\raggedright\arraybackslash}p{2.5cm}
@@ -779,15 +818,15 @@ compartido con el docente.
 		}
 		\toprule
 		\textbf{Archivo} &
-		\textbf{Descripción} &
+		\textbf{DescripciÃ³n} &
 		\textbf{Fecha} &
-		\textbf{Duración} &
+		\textbf{DuraciÃ³n} &
 		\textbf{SHA-256} \\
 		\midrule
-		
-		\makecell[l]{Carta\_Aceptación\\\_Anonimizada.pdf}
+
+		\makecell[l]{Carta\_AceptaciÃ³n\\\_Anonimizada.pdf}
 		&
-		Carta de aceptación
+		Carta de aceptaciÃ³n
 		&
 		20/11/2026
 		&
@@ -795,7 +834,7 @@ compartido con el docente.
 		&
 		\seqsplit{B12DEEE5267923CB5FFB3FC127497E39AAE63FE68127EA781F7C3C950EC04876}
 		\\
-		
+
 		\makecell[l]{Registro\_Primer\\\_Contacto.pdf}
 		&
 		Registro de primer contacto
@@ -806,7 +845,7 @@ compartido con el docente.
 		&
 		\seqsplit{8A252B0DB16D6BD40695961FC4F1829EC12CD0CE228933A15BE5C1C15519D1D0}
 		\\
-		
+
 		\bottomrule
 	\end{tabularx}
 \end{table}
@@ -814,9 +853,9 @@ compartido con el docente.
 
 % Anexo C. Instrumentos de elicitacion
 
-\section{Instrumentos de elicitación}
+\section{Instrumentos de elicitaciÃ³n}
 
-Los instrumentos correspondientes a esta entrega se encuentran en el directorio \path{PFC/E1/instrumentos/} del repositorio de GitHub. Incluyen el guion de entrevista, el cuestionario y la guía de observación.
+Los instrumentos correspondientes a esta entrega se encuentran en el directorio \path{PFC/E1/instrumentos/} del repositorio de GitHub. Incluyen el guion de entrevista, el cuestionario y la guÃ­a de observaciÃ³n.
 
 % Bibliografia
 
