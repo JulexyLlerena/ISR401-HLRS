@@ -347,55 +347,6 @@ La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada par
 	\end{tabularx}
 \end{table}
 
-\subsection{Matriz poder--interés}
-
-% Nota: Si usas el archivo PDF exportado, mantén \figuraopcional. 
-% Si prefieres generarla nativamente en LaTeX, añade \usepackage{tikz} al preámbulo y usa el bloque tikzpicture de abajo.
-\begin{figure}[H]
-	\centering
-	\figuraopcional{matriz_poder_interes.pdf}{0.85\textwidth}{Exportar la matriz poder--interés desde modelos/}
-	\caption{Matriz poder--interés de las partes interesadas.}
-	\label{fig:poder-interes}
-\end{figure}
-
-La Figura~\ref{fig:poder-interes} ubica a cada parte interesada en su cuadrante según su nivel de influencia sobre el proyecto y su grado de interés en los resultados del sistema:
-
-\begin{itemize}
-	\item \textbf{Gestionar de cerca (Alto poder / Alto interés):} Se ubica únicamente la \textbf{Propietaria (PI-01)}, dado que es la única usuaria operativa de la aplicación web, conoce el ciclo completo del negocio y tiene la autoridad total para aprobar o ajustar los requisitos funcionales.
-	\item \textbf{Mantener satisfechos (Alto poder / Bajo interés):} En este cuadrante no se registran actores externos con autoridad directa sobre el software sin interés en su uso, manteniéndose la toma de decisiones centralizada en la propietaria.
-	\item \textbf{Mantener informados (Bajo poder / Alto interés):} Se encuentran los \textbf{Clientes frecuentes (PI-02)} y los \textbf{Proveedores de materiales (PI-04)}, quienes tienen un interés directo en el cumplimiento de tiempos y pagos, aunque no operan el sistema; sus expectativas se recogen mediante encuesta y entrevista indirecta.
-	\item \textbf{Monitorear (Bajo poder / Bajo interés):} Agrupa a los \textbf{Clientes de una sola vez (PI-03)}, el \textbf{Personal de entrega (PI-05)}, el \textbf{Familiar colaborador (PI-06)}, la \textbf{Entidad financiera (PI-07)} y las \textbf{Redes sociales (PI-08)}. Su interacción con el sistema es periférica o indirecta, por lo que se supervisan mediante observación no participante y consulta con la propietaria.
-\end{itemize}
-
-\subsection{Estrategia de participación}
-
-La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada parte interesada según su cuadrante en la matriz.
-
-\begin{table}[H]
-	\centering
-	\caption{Estrategia de participación por parte interesada.}
-	\label{tab:estrategia}
-	\small
-	\begin{tabularx}{\textwidth}{@{}lYYY@{}}
-		\toprule
-		ID & Cuadrante & Estrategia de participación & Frecuencia y canal \\
-		\midrule
-		PI-01 & Gestionar de cerca (Alto poder / Alto interés) & Colaboración activa mediante entrevistas inicial y a profundidad, observación no participante y validación temprana de prototipos de pantalla. & Semanal por WhatsApp; sesiones presenciales pactadas (miércoles y sábado). \\
-		\rowcolor{rowgray}
-		PI-02 & Mantener informados (Bajo poder / Alto interés) & Consulta estructurada sobre hábitos de compra, claridad en el seguimiento de pedidos y expectativas de servicio. & Única aplicación (ventana de 5 días) mediante cuestionario enviado por WhatsApp. \\
-		PI-03 & Monitorear (Bajo poder / Bajo interés) & Recopilación estandarizada de percepción de atención y tiempos de respuesta para contrastar con clientes frecuentes. & Única aplicación mediante cuestionario digital distribuido por WhatsApp. \\
-		\rowcolor{rowgray}
-		PI-04 & Mantener informados (Bajo poder / Alto interés) & Levantamiento indirecto de datos sobre tiempos de abastecimiento, costos y gestión de comprobantes de compra. & Durante las entrevistas con la propietaria. \\
-		PI-05 & Monitorear (Bajo poder / Bajo interés) & Identificación de datos requeridos para despacho (dirección, contacto) y mecanismo de confirmación de entrega. & Durante la sesión de observación no participante y entrevista. \\
-		\rowcolor{rowgray}
-		PI-06 & Monitorear (Bajo poder / Bajo interés) & Delimitación de responsabilidades en la elaboración artesanal para confirmar su exclusión como usuario del sistema. & Integrado en la entrevista inicial y a profundidad con la propietaria. \\
-		PI-07 & Monitorear (Bajo poder / Bajo interés) & Revisión del procedimiento manual de verificación de transferencias y registro de abonos sin integración bancaria. & Durante la entrevista a profundidad con la propietaria. \\
-		\rowcolor{rowgray}
-		PI-08 & Monitorear (Bajo poder / Bajo interés) & Observación del flujo de recepción de pedidos, cotizaciones y cambios solicitados por mensajería instantánea. & Durante la sesión de observación no participante (2 horas). \\
-		\bottomrule
-	\end{tabularx}
-\end{table}
-
 % 5. Contexto del sistema
 
 \section{Contexto del sistema}
