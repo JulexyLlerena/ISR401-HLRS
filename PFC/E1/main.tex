@@ -280,62 +280,77 @@ Para el desarrollo del proyecto se han considerado las siguientes restricciones:
 Se identifican al menos ocho partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La norma ISO/IEC/IEEE 29148:2018~\cite{iso29148} exige identificar a las partes interesadas y definir el límite del sistema antes de definir los requisitos.
 
 \begin{table}[H]
-\centering
-\caption{Partes interesadas, interés, influencia y disponibilidad.}
-\label{tab:interesados}
-\small
-\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
-\toprule
-ID & Rol & Interés & Poder o influencia & Disponibilidad \\
-\midrule
-PI-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-04 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-05 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-06 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-07 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-08 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-\bottomrule
-\end{tabularx}
+	\centering
+	\caption{Partes interesadas, interés, influencia y disponibilidad.}
+	\label{tab:interesados}
+	\small
+	\begin{tabularx}{\textwidth}{@{}lYYYY@{}}
+		\toprule
+		ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+		\midrule
+		PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
+		\rowcolor{rowgray}
+		PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputación y recomendaciones del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
+		PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
+		\rowcolor{rowgray}
+		PI-04 & Proveedores de materiales & Mantener compras recurrentes y recibir pagos puntuales contra entrega de insumos y comprobantes. & Medio (condicionan la disponibilidad oportuna de materia prima para la elaboración). & Baja (información recopilada indirectamente a través de la propietaria). \\
+		PI-05 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (dirección y teléfono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logística de distribución sin intervenir en la gestión interna). & Baja (observación indirecta y consulta con la propietaria). \\
+		\rowcolor{rowgray}
+		PI-06 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
+		PI-07 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integración directa con la aplicación web). & Nula (interacción verificada mediante comprobantes registrados por la propietaria). \\
+		\rowcolor{rowgray}
+		PI-08 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusión de productos y canal principal de recepción de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (análisis del flujo mediante observación no participante). \\
+		\bottomrule
+	\end{tabularx}
 \end{table}
 
 \subsection{Matriz poder--interés}
 
+% Nota: Si usas el archivo PDF exportado, mantén \figuraopcional. 
+% Si prefieres generarla nativamente en LaTeX, añade \usepackage{tikz} al preámbulo y usa el bloque tikzpicture de abajo.
 \begin{figure}[H]
-\centering
-\figuraopcional{matriz_poder_interes.pdf}{0.85\textwidth}{Exportar la matriz poder--interés desde modelos/}
-\caption{Matriz poder--interés de las partes interesadas.}
-\label{fig:poder-interes}
+	\centering
+	\figuraopcional{matriz_poder_interes.pdf}{0.85\textwidth}{Exportar la matriz poder--interés desde modelos/}
+	\caption{Matriz poder--interés de las partes interesadas.}
+	\label{fig:poder-interes}
 \end{figure}
 
-La Figura~\ref{fig:poder-interes} ubica a cada parte interesada en su cuadrante.
+La Figura~\ref{fig:poder-interes} ubica a cada parte interesada en su cuadrante según su nivel de influencia sobre el proyecto y su grado de interés en los resultados del sistema:
 
-\pendiente{Interpretación de la matriz.}
+\begin{itemize}
+	\item \textbf{Gestionar de cerca (Alto poder / Alto interés):} Se ubica únicamente la \textbf{Propietaria (PI-01)}, dado que es la única usuaria operativa de la aplicación web, conoce el ciclo completo del negocio y tiene la autoridad total para aprobar o ajustar los requisitos funcionales.
+	\item \textbf{Mantener satisfechos (Alto poder / Bajo interés):} En este cuadrante no se registran actores externos con autoridad directa sobre el software sin interés en su uso, manteniéndose la toma de decisiones centralizada en la propietaria.
+	\item \textbf{Mantener informados (Bajo poder / Alto interés):} Se encuentran los \textbf{Clientes frecuentes (PI-02)} y los \textbf{Proveedores de materiales (PI-04)}, quienes tienen un interés directo en el cumplimiento de tiempos y pagos, aunque no operan el sistema; sus expectativas se recogen mediante encuesta y entrevista indirecta.
+	\item \textbf{Monitorear (Bajo poder / Bajo interés):} Agrupa a los \textbf{Clientes de una sola vez (PI-03)}, el \textbf{Personal de entrega (PI-05)}, el \textbf{Familiar colaborador (PI-06)}, la \textbf{Entidad financiera (PI-07)} y las \textbf{Redes sociales (PI-08)}. Su interacción con el sistema es periférica o indirecta, por lo que se supervisan mediante observación no participante y consulta con la propietaria.
+\end{itemize}
 
 \subsection{Estrategia de participación}
 
 La Tabla~\ref{tab:estrategia} define la estrategia de participación de cada parte interesada según su cuadrante en la matriz.
 
 \begin{table}[H]
-\centering
-\caption{Estrategia de participación por parte interesada.}
-\label{tab:estrategia}
-\small
-\begin{tabularx}{\textwidth}{@{}lYYY@{}}
-\toprule
-ID & Cuadrante & Estrategia de participación & Frecuencia y canal \\
-\midrule
-PI-01 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-02 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-04 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-05 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-06 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-07 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-PI-08 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
-\bottomrule
-\end{tabularx}
+	\centering
+	\caption{Estrategia de participación por parte interesada.}
+	\label{tab:estrategia}
+	\small
+	\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+		\toprule
+		ID & Cuadrante & Estrategia de participación & Frecuencia y canal \\
+		\midrule
+		PI-01 & Gestionar de cerca (Alto poder / Alto interés) & Colaboración activa mediante entrevistas inicial y a profundidad, observación no participante y validación temprana de prototipos de pantalla. & Semanal por WhatsApp; sesiones presenciales pactadas (miércoles y sábado). \\
+		\rowcolor{rowgray}
+		PI-02 & Mantener informados (Bajo poder / Alto interés) & Consulta estructurada sobre hábitos de compra, claridad en el seguimiento de pedidos y expectativas de servicio. & Única aplicación (ventana de 5 días) mediante cuestionario enviado por WhatsApp. \\
+		PI-03 & Monitorear (Bajo poder / Bajo interés) & Recopilación estandarizada de percepción de atención y tiempos de respuesta para contrastar con clientes frecuentes. & Única aplicación mediante cuestionario digital distribuido por WhatsApp. \\
+		\rowcolor{rowgray}
+		PI-04 & Mantener informados (Bajo poder / Alto interés) & Levantamiento indirecto de datos sobre tiempos de abastecimiento, costos y gestión de comprobantes de compra. & Durante las entrevistas con la propietaria. \\
+		PI-05 & Monitorear (Bajo poder / Bajo interés) & Identificación de datos requeridos para despacho (dirección, contacto) y mecanismo de confirmación de entrega. & Durante la sesión de observación no participante y entrevista. \\
+		\rowcolor{rowgray}
+		PI-06 & Monitorear (Bajo poder / Bajo interés) & Delimitación de responsabilidades en la elaboración artesanal para confirmar su exclusión como usuario del sistema. & Integrado en la entrevista inicial y a profundidad con la propietaria. \\
+		PI-07 & Monitorear (Bajo poder / Bajo interés) & Revisión del procedimiento manual de verificación de transferencias y registro de abonos sin integración bancaria. & Durante la entrevista a profundidad con la propietaria. \\
+		\rowcolor{rowgray}
+		PI-08 & Monitorear (Bajo poder / Bajo interés) & Observación del flujo de recepción de pedidos, cotizaciones y cambios solicitados por mensajería instantánea. & Durante la sesión de observación no participante (2 horas). \\
+		\bottomrule
+	\end{tabularx}
 \end{table}
 
 % 5. Contexto del sistema
