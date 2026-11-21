@@ -1,69 +1,65 @@
-
-% PFC/E1/main.tex
-% TA-PFC-E1: Proyecto Fin de Curso, entrega 1
-% Compilacion: pdflatex main -> bibtex main -> pdflatex main -> pdflatex main
-
-\documentclass[11pt,a4paper]{article}
-
-% Paquetes
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish,es-tabla]{babel}
-\usepackage[scaled=0.92]{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{enumitem}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{graphicx}
-\usepackage[table]{xcolor}
-\usepackage{float}
-\usepackage{url}
-\usepackage{setspace}
-\usepackage{fancyhdr}
-\usepackage[most]{tcolorbox}
-\usepackage{amssymb}
-\usepackage{makecell}
-\usepackage{seqsplit}
-\usepackage[hidelinks]{hyperref}
-\usepackage{xltabular}
-
-\setstretch{1.1}
-\setlength{\parskip}{4pt}
-
-% Colores institucionales
-
-\definecolor{uteqverde}{HTML}{2C5F2D}
-\definecolor{uteqazul}{HTML}{1E4D8B}
-\definecolor{uteqoro}{HTML}{D4A017}
-\definecolor{rowgray}{HTML}{F2F4F2}
-
-% Configuraciones y comandos
-
-% Marcador de contenido por completar (eliminar todos antes de entregar)
-\newcommand{\pendiente}[1]{\textcolor{red}{[#1]}}
-
-% Figura con respaldo: si el archivo no existe, muestra un recuadro y compila igual
-\newcommand{\figuraopcional}[3]{%
-	\IfFileExists{figuras/#1}
-	{\includegraphics[width=#2]{figuras/#1}}
-	{\fbox{\parbox{#2}{\centering\vspace{2cm}
-				\pendiente{#3}\vspace{2cm}}}}%
-}
-
-% Columna X alineada a la izquierda
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-
-% Encabezado y pie de página
-\pagestyle{fancy}
-\setlength{\headheight}{15pt}
-\fancyhf{}
-\lhead{UTEQ \textperiodcentered{} Ingeniería de Requerimientos (ISR-401)}
-\rhead{TA-PFC-E1}
-\cfoot{\thepage}
-
-\begin{document}
+    
+    % PFC/E1/main.tex
+    % TA-PFC-E1: Proyecto Fin de Curso, entrega 1
+    % Compilacion: pdflatex main -> bibtex main -> pdflatex main -> pdflatex main
+    
+    \documentclass[11pt,a4paper]{article}
+    
+    % Paquetes
+    
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[spanish,es-tabla]{babel}
+    \usepackage[scaled=0.92]{helvet}
+    \renewcommand{\familydefault}{\sfdefault}
+    \usepackage[margin=2.5cm]{geometry}
+    \usepackage{enumitem}
+    \usepackage{booktabs}
+    \usepackage{tabularx}
+    \usepackage{graphicx}
+    \usepackage[table]{xcolor}
+    \usepackage{float}
+    \usepackage{url}
+    \usepackage{setspace}
+    \usepackage{fancyhdr}
+    \usepackage[most]{tcolorbox}
+    \usepackage{amssymb}
+    \usepackage{makecell}
+    \usepackage{seqsplit}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{xltabular}
+    
+    \setstretch{1.1}
+    \setlength{\parskip}{4pt}
+    
+    % Colores institucionales
+    
+    \definecolor{uteqverde}{HTML}{2C5F2D}
+    \definecolor{uteqazul}{HTML}{1E4D8B}
+    \definecolor{uteqoro}{HTML}{D4A017}
+    \definecolor{rowgray}{HTML}{F2F4F2}
+    
+     
+    \newcommand{\pendiente}[1]{\textcolor{red}{[#1]}}
+    
+    \newcommand{\figuraopcional}[3]{%
+    	\IfFileExists{figuras/#1}
+    	{\includegraphics[width=#2]{figuras/#1}}
+    	{\fbox{\parbox{#2}{\centering\vspace{2cm}
+    				\pendiente{#3}\vspace{2cm}}}}%
+    }
+    
+    \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+    
+    % Encabezado y pie de página
+    \pagestyle{fancy}
+    \setlength{\headheight}{15pt}
+    \fancyhf{}
+    \lhead{UTEQ \textperiodcentered{} Ingeniería de Requerimientos (ISR-401)}
+    \rhead{TA-PFC-E1}
+    \cfoot{\thepage}
+    
+    \begin{document}
 	
 	% Portada
 	
@@ -280,31 +276,31 @@
 	Se identifican al menos siete partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La norma ISO/IEC/IEEE 29148:2018~\cite{iso29148} exige identificar a las partes interesadas y definir el límite del sistema antes de definir los requisitos.
 	
 	 {\small
-\begin{xltabular}{\textwidth}{@{}lYYYY@{}}
-\caption{Partes interesadas, interés, influencia y disponibilidad.}\label{tab:interesados}\\
-\toprule
-ID & Rol & Interés & Poder o influencia & Disponibilidad \\
-\midrule
-\endfirsthead
-\toprule
-ID & Rol & Interés & Poder o influencia & Disponibilidad \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-
-PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
-\rowcolor{rowgray}
-PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputación y recomendaciones del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
-PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
-\rowcolor{rowgray}
-PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (dirección y teléfono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logística de distribución sin intervenir en la gestión interna). & Baja (observación indirecta y consulta con la propietaria). \\
-PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
-\rowcolor{rowgray}
-PI-06 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integración directa con la aplicación web). & Nula (interacción verificada mediante comprobantes registrados por la propietaria). \\
-PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusión de productos y canal principal de recepción de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (análisis del flujo mediante observación no participante). \\
-\end{xltabular}
-}
+    \begin{xltabular}{\textwidth}{@{}lYYYY@{}}
+    \caption{Partes interesadas, interés, influencia y disponibilidad.}\label{tab:interesados}\\
+    \toprule
+    ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+    \midrule
+    \endfirsthead
+    \toprule
+    ID & Rol & Interés & Poder o influencia & Disponibilidad \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endfoot
+    
+    PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma todas las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
+    
+    PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Medio--Alto (no operan el sistema, pero influyen en la reputación y recomendaciones del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
+    PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
+    
+    PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino (dirección y teléfono) y confirmar la entrega efectiva del pedido. & Bajo (ejecutan la logística de distribución sin intervenir en la gestión interna). & Baja (observación indirecta y consulta con la propietaria). \\
+    PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
+    
+    PI-06 & Entidad financiera / Banco & Procesar las transferencias bancarias utilizadas por los clientes para abonos y pagos totales. & Bajo (actor externo sin integración directa con la aplicación web). & Nula (interacción verificada mediante comprobantes registrados por la propietaria). \\
+    PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de difusión de productos y canal principal de recepción de pedidos y cambios. & Medio (concentran el flujo inicial de requerimientos y modificaciones de los clientes). & Constante (análisis del flujo mediante observación no participante). \\
+    \end{xltabular}
+    }
 	
 	\subsection{Matriz poder--interés}
 	
@@ -338,13 +334,13 @@ PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de dif
 			ID & Cuadrante & Estrategia de participación & Frecuencia y canal \\
 			\midrule
 			PI-01 & Gestionar de cerca (Alto poder / Alto interés) & Colaboración activa mediante entrevistas inicial y a profundidad, observación no participante y validación temprana de prototipos de pantalla. & Semanal por WhatsApp; sesiones presenciales pactadas (miércoles y sábado). \\
-			\rowcolor{rowgray}
+			
 			PI-02 & Mantener informados (Bajo poder / Alto interés) & Consulta estructurada sobre hábitos de compra, claridad en el seguimiento de pedidos y expectativas de servicio. & Única aplicación (ventana de 5 días) mediante cuestionario enviado por WhatsApp. \\
 			PI-03 & Monitorear (Bajo poder / Bajo interés) & Recopilación estandarizada de percepción de atención y tiempos de respuesta para contrastar con clientes frecuentes. & Única aplicación mediante cuestionario digital distribuido por WhatsApp. \\
-			\rowcolor{rowgray}
+			
 			PI-04 & Monitorear (Bajo poder / Bajo interés) & Identificación de datos requeridos para despacho (dirección, contacto) y mecanismo de confirmación de entrega. & Durante la sesión de observación no participante y entrevista. \\
 			PI-05 & Monitorear (Bajo poder / Bajo interés) & Delimitación de responsabilidades en la elaboración artesanal para confirmar su exclusión como usuario del sistema. & Integrado en la entrevista inicial y a profundidad con la propietaria. \\
-			\rowcolor{rowgray}
+			
 			PI-06 & Monitorear (Bajo poder / Bajo interés) & Revisión del procedimiento manual de verificación de transferencias y registro de abonos sin integración bancaria. & Durante la entrevista a profundidad con la propietaria. \\
 			PI-07 & Monitorear (Bajo poder / Bajo interés) & Observación del flujo de recepción de pedidos, cotizaciones y cambios solicitados por mensajería instantánea. & Durante la sesión de observación no participante (2 horas). \\
 			\bottomrule
@@ -591,149 +587,98 @@ PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de dif
 	
 	Los roles y responsabilidades de los integrantes se detallan en la Tabla~\ref{tab:roles}.
 	
-	\begin{table}[H]
-		\centering
-		\caption{Roles y responsabilidades del equipo.}
-		\label{tab:roles}
-		\small
-		\begin{tabularx}{\textwidth}{@{}lYY@{}}
-			\toprule
-			Integrante & Rol & Responsabilidades \\
-			\midrule
-			Herrera Moran Gilmar Javier & Observación y análisis de partes interesadas & Guía de observación, matriz poder--interés, identificación de partes interesadas, estrategia de participación y PDF \\
-			Llerena Abril Angelina Julexy & Documentación, entrevista y ética & Introducción, visión y alcance, guion de entrevista, consentimiento informado, principios éticos, plan de elicitación, referencias bibliográficas, análisis crítico y conclusiones \\
-			Rivera Rodriguez Joseph Jeremy & Cuestionario y modelado & Cuestionario, diagrama de contexto, trazabilidad entre objetivos e instrumentos, README y declaración de uso de IA \\
-			Saltos Tello Joseph Orlando & Coordinación y gestión documental & Organización real, contacto con el local, carta de aceptación, entrega en el SGA, anonimización, manifiesto de evidencias, cronograma de sesiones y plan de comunicación \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
+    {\small
+    \begin{xltabular}{\textwidth}{@{}lYY@{}}
+        \caption{Roles y responsabilidades del equipo.}\label{tab:roles}\\
+        \toprule
+        Integrante & Rol & Responsabilidades \\
+        \midrule
+        \endfirsthead
+        \toprule
+        Integrante & Rol & Responsabilidades \\
+        \midrule
+        \endhead
+        \bottomrule
+        \endfoot
+        
+        Herrera Moran Gilmar Javier & Sin participación & No trabajó \\
+        Llerena Abril Angelina Julexy & Documentación, entrevista, ética y plan de elicitación & Estructura inicial del documento, introducción, visión y alcance, referencias bibliográficas, guion de entrevista, guía de observación, consentimiento informado, principios éticos, selección de técnicas, cronograma de sesiones, trazabilidad entre objetivos e instrumentos y análisis crítico \\
+        Rivera Rodriguez Joseph Jeremy & Partes interesadas, contexto y cuestionario & Partes interesadas (identificación, matriz poder--interés y estrategia de participación), límite del sistema y diagrama de contexto, cuestionario a clientes, conclusiones, declaración de uso de IA y README \\
+        Saltos Tello Joseph Orlando & Coordinación y gestión documental & Organización real, problema y acuerdo, carta de aceptación, registro de primer contacto, manifiesto de evidencias con huellas SHA-256, perspectivas del sílabo, cronograma hasta la semana 17, plan de comunicación y registro de riesgos \\
+    \end{xltabular}
+    }
 	
 	
 	\subsection{Cronograma hasta la semana 17}
 	
 	La Tabla~\ref{tab:cronograma} presenta las actividades, productos y responsables del PFC hasta la semana 17. La planificación podrá ajustarse de acuerdo con las indicaciones del docente, la disponibilidad de la organización y el avance del equipo.
 	
-	\begin{table}[H]
-		\centering
-		\caption{Cronograma preliminar del PFC hasta la semana 17.}
-		\label{tab:cronograma}
-		\small
-		\begin{tabularx}{\textwidth}{@{}lYYY@{}}
-			\toprule
-			Semana & Actividad & Producto & Responsable \\
-			\midrule
-			
-			4 &
-			Preparación y entrega inicial del PFC &
-			Visión, alcance, partes interesadas, contexto y plan de elicitación &
-			Grupo HLRS \\
-			
-			5 &
-			Coordinación con la organización y revisión de instrumentos &
-			Instrumentos revisados y sesiones coordinadas &
-			Grupo HLRS \\
-			
-			6 &
-			Aplicación de encuesta a clientes y recopilación de información &
-			Resultados de encuesta y registro de evidencias &
-			Rivera y grupo HLRS \\
-			
-			7 &
-			Observación de los procesos del establecimiento &
-			Registro de observación y descripción de procesos &
-			Herrera y grupo HLRS \\
-			
-			8 &
-			Entrevista de profundización con la propietaria &
-			Registro de entrevista y necesidades identificadas &
-			Llerena y grupo HLRS \\
-			
-			9 &
-			Organización y análisis de la información recopilada &
-			Hallazgos, necesidades y problemas documentados &
-			Grupo HLRS \\
-			
-			10 &
-			Identificación y especificación de requisitos &
-			Lista inicial de requisitos funcionales y no funcionales &
-			Grupo HLRS \\
-			
-			11 &
-			Priorización y revisión de requisitos &
-			Requisitos organizados y priorizados &
-			Grupo HLRS \\
-			
-			12 &
-			Elaboración de modelos y documentación de requisitos &
-			Modelos y documentación de análisis &
-			Grupo HLRS \\
-			
-			13 &
-			Diseño de prototipos de interfaces &
-			Prototipos iniciales del sistema &
-			Grupo HLRS \\
-			
-			14 &
-			Revisión y validación de requisitos y prototipos &
-			Registro de observaciones y ajustes &
-			Grupo HLRS y propietaria \\
-			
-			15 &
-			Corrección y refinamiento de requisitos &
-			Documentación actualizada y validada &
-			Grupo HLRS \\
-			
-			16 &
-			Revisión de trazabilidad, consistencia y documentación final &
-			Documentación consolidada del PFC &
-			Grupo HLRS \\
-			
-			17 &
-			Preparación y entrega final del proyecto &
-			Entrega académica final y evidencias organizadas &
-			Grupo HLRS \\
-			
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
+    {\small
+    \begin{xltabular}{\textwidth}{@{}lYYY@{}}
+        \caption{Cronograma preliminar del PFC hasta la semana 17.}\label{tab:cronograma}\\
+        \toprule
+        Semana & Actividad & Producto & Responsable \\
+        \midrule
+        \endfirsthead
+        \toprule
+        Semana & Actividad & Producto & Responsable \\
+        \midrule
+        \endhead
+        \bottomrule
+        \endfoot
+        
+        4 & Preparación y entrega inicial del PFC & Visión, alcance, partes interesadas, contexto y plan de elicitación & Grupo HLRS \\
+        5 & Coordinación con la organización y revisión de instrumentos & Instrumentos revisados y sesiones coordinadas & Grupo HLRS \\
+        6 & Aplicación de encuesta a clientes y recopilación de información & Resultados de encuesta y registro de evidencias & Rivera y grupo HLRS \\
+        7 & Observación de los procesos del establecimiento & Registro de observación y descripción de procesos & Llerena y grupo HLRS \\
+        8 & Entrevista de profundización con la propietaria & Registro de entrevista y necesidades identificadas & Llerena y grupo HLRS \\
+        9 & Organización y análisis de la información recopilada & Hallazgos, necesidades y problemas documentados & Grupo HLRS \\
+        10 & Identificación y especificación de requisitos & Lista inicial de requisitos funcionales y no funcionales & Grupo HLRS \\
+        11 & Priorización y revisión de requisitos & Requisitos organizados y priorizados & Grupo HLRS \\
+        12 & Elaboración de modelos y documentación de requisitos & Modelos y documentación de análisis & Grupo HLRS \\
+        13 & Diseño de prototipos de interfaces & Prototipos iniciales del sistema & Grupo HLRS \\
+        14 & Revisión y validación de requisitos y prototipos & Registro de observaciones y ajustes & Grupo HLRS y propietaria \\
+        15 & Corrección y refinamiento de requisitos & Documentación actualizada y validada & Grupo HLRS \\
+        16 & Revisión de trazabilidad, consistencia y documentación final & Documentación consolidada del PFC & Grupo HLRS \\
+        17 & Preparación y entrega final del proyecto & Entrega académica final y evidencias organizadas & Grupo HLRS \\
+    \end{xltabular}
+    }
+
+    
 	\subsection{Plan de comunicación con la organización}
 	
 	La comunicación con la propietaria de Pauly Creative's Craft se realizará principalmente mediante WhatsApp, de acuerdo con su preferencia. Se procurará mantener una comunicación organizada, respetando su disponibilidad y evitando períodos de mayor carga de trabajo, especialmente las semanas previas a Navidad y al Día de la Madre. La Tabla~\ref{tab:comunicacion} presenta el plan de comunicación previsto.
-	
-	\begin{table}[H]
-		\centering
-		\caption{Plan de comunicación con la organización}
-		\label{tab:comunicacion}
-		\renewcommand{\arraystretch}{1.3}
-		\setlength{\tabcolsep}{5pt}
-		
-		\begin{tabularx}{\textwidth}{|X|l|l|l|X|}
-			\hline
-			\textbf{Información} &
-			\textbf{Destinatario} &
-			\textbf{Canal} &
-			\textbf{Frecuencia} &
-			\textbf{Responsable} \\
-			\hline
-			
-			Avances del proyecto, actividades realizadas y próximos pasos
-			& Propietaria
-			& WhatsApp
-			& Semanal
-			& Saltos Tello Joseph Orlando \\
-			\hline
-			
-			Coordinación de entrevistas, encuestas, observaciones y revisiones
-			& Propietaria
-			& WhatsApp
-			& Según necesidad y disponibilidad
-			& Grupo HLRS \\
-			\hline
-			
-		\end{tabularx}
-	\end{table}
-	
+    	
+    
+        {\renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{5pt}
+    \begin{xltabular}{\textwidth}{|X|l|l|l|X|}
+    \caption{Plan de comunicación con la organización}\label{tab:comunicacion}\\
+    \hline
+    \textbf{Información} & \textbf{Destinatario} & \textbf{Canal} & \textbf{Frecuencia} & \textbf{Responsable} \\
+    \hline
+    \endfirsthead
+    \hline
+    \textbf{Información} & \textbf{Destinatario} & \textbf{Canal} & \textbf{Frecuencia} & \textbf{Responsable} \\
+    \hline
+    \endhead
+    
+    Avances del proyecto, actividades realizadas y próximos pasos
+    & Propietaria
+    & WhatsApp
+    & Semanal
+    & Saltos Tello Joseph Orlando \\
+    \hline
+    
+    Coordinación de entrevistas, encuestas, observaciones y revisiones
+    & Propietaria
+    & WhatsApp
+    & Según necesidad y disponibilidad
+    & Grupo HLRS \\
+    \hline
+    \end{xltabular}
+    }
+        
 	\subsection{Registro de riesgos}
 	
 	Se identifican riesgos que podrían afectar el levantamiento de requisitos, la coordinación con la organización, el cumplimiento del cronograma y la elaboración de los entregables académicos. La Tabla~\ref{tab:riesgos} presenta los riesgos preliminares, su probabilidad e impacto, el nivel estimado y las respuestas previstas.
@@ -780,29 +725,29 @@ PI-07 & Redes sociales y canales digitales (WhatsApp) & Servir como medio de dif
 	
 
     
-\section{Análisis crítico}
-
-La propuesta de software se orienta a las necesidades operativas de Pauly Creative's Craft, priorizando la gestión de pedidos personalizados y el control de las actividades comerciales. Sin embargo, los objetivos y funcionalidades definidos todavía son preliminares, por lo que deberán contrastarse con la información obtenida durante las actividades de elicitación.
-
-La delimitación del alcance permite concentrar el desarrollo en las funciones principales del emprendimiento, evitando incorporar elementos como pagos en línea e integraciones bancarias que aumentarían su complejidad. No obstante, será necesario comprobar que las funcionalidades excluidas no afecten procesos importantes del establecimiento.
-
-La propietaria constituye la principal parte interesada, debido a que será la única usuaria del sistema. Por su parte, los clientes aportan información sobre sus necesidades y expectativas. La combinación de entrevistas, observación y cuestionarios permite recopilar distintas perspectivas, aunque la participación voluntaria de los clientes y la disponibilidad de la propietaria podrían limitar la información obtenida.
-
-Entre los principales riesgos se encuentran la disponibilidad limitada de la propietaria, la desorganización de la información y las dificultades para revisar los prototipos. Las medidas preventivas planteadas permiten reducir estos inconvenientes, pero será necesario revisar su efectividad durante el desarrollo del proyecto.
-
-Finalmente, las medidas de consentimiento informado, anonimización y custodia de evidencias establecen condiciones para proteger la información recopilada. En general, la planificación proporciona una base para continuar con la ingeniería de requisitos, cuya calidad dependerá de la validación de las necesidades identificadas y de su correspondencia con el funcionamiento real del emprendimiento.
+    \section{Análisis crítico}
+    
+    La propuesta de software se orienta a las necesidades operativas de Pauly Creative's Craft, priorizando la gestión de pedidos personalizados y el control de las actividades comerciales. Sin embargo, los objetivos y funcionalidades definidos todavía son preliminares, por lo que deberán contrastarse con la información obtenida durante las actividades de elicitación.
+    
+    La delimitación del alcance permite concentrar el desarrollo en las funciones principales del emprendimiento, evitando incorporar elementos como pagos en línea e integraciones bancarias que aumentarían su complejidad. No obstante, será necesario comprobar que las funcionalidades excluidas no afecten procesos importantes del establecimiento.
+    
+    La propietaria constituye la principal parte interesada, debido a que será la única usuaria del sistema. Por su parte, los clientes aportan información sobre sus necesidades y expectativas. La combinación de entrevistas, observación y cuestionarios permite recopilar distintas perspectivas, aunque la participación voluntaria de los clientes y la disponibilidad de la propietaria podrían limitar la información obtenida.
+    
+    Entre los principales riesgos se encuentran la disponibilidad limitada de la propietaria, la desorganización de la información y las dificultades para revisar los prototipos. Las medidas preventivas planteadas permiten reducir estos inconvenientes, pero será necesario revisar su efectividad durante el desarrollo del proyecto.
+    
+    Finalmente, las medidas de consentimiento informado, anonimización y custodia de evidencias establecen condiciones para proteger la información recopilada. En general, la planificación proporciona una base para continuar con la ingeniería de requisitos, cuya calidad dependerá de la validación de las necesidades identificadas y de su correspondencia con el funcionamiento real del emprendimiento.
 
     
 	% 10. Conclusiones
-	
-\section{Conclusiones}
-
-\begin{itemize}
-	\item Se estableció la visión y el alcance inicial de la propuesta de software orientada a resolver las principales dificultades operativas del local de manualidades, priorizando el seguimiento y control de los pedidos personalizados.
-	\item Mediante la identificación de las partes interesadas y la construcción de la matriz poder--interés, se determinó el nivel de participación de cada actor, destacando a la propietaria como la usuaria clave y única administradora del sistema.
-	\item La definición del contexto del sistema y el análisis de las perspectivas del sílabo permitieron delimitar con claridad las fronteras del proyecto, especificando los módulos funcionales incluidos y descartando por el momento integraciones complejas ajenas al alcance académico actual.
-	\item Se estructuró un plan de elicitación riguroso que combina entrevistas, observación no participante y cuestionarios, garantizando un levantamiento de requerimientos ético, estructurado y alineado con la Ley Orgánica de Protección de Datos Personales del Ecuador.
-\end{itemize}
+    	
+    \section{Conclusiones}
+    
+    \begin{itemize}
+    	\item Se estableció la visión y el alcance inicial de la propuesta de software orientada a resolver las principales dificultades operativas del local de manualidades, priorizando el seguimiento y control de los pedidos personalizados.
+    	\item Mediante la identificación de las partes interesadas y la construcción de la matriz poder--interés, se determinó el nivel de participación de cada actor, destacando a la propietaria como la usuaria clave y única administradora del sistema.
+    	\item La definición del contexto del sistema y el análisis de las perspectivas del sílabo permitieron delimitar con claridad las fronteras del proyecto, especificando los módulos funcionales incluidos y descartando por el momento integraciones complejas ajenas al alcance académico actual.
+    	\item Se estructuró un plan de elicitación riguroso que combina entrevistas, observación no participante y cuestionarios, garantizando un levantamiento de requerimientos ético, estructurado y alineado con la Ley Orgánica de Protección de Datos Personales del Ecuador.
+    \end{itemize}
 	
 	% 11. Declaración de uso de IA
 	
@@ -875,7 +820,7 @@ Finalmente, las medidas de consentimiento informado, anonimización y custodia d
 		\end{tabularx}
 	\end{table}
 	
-	% Anexo C. Instrumentos de elicitación
+	% Anexo B. Instrumentos de elicitación
 	
 	\section{Instrumentos de elicitación}
 	
