@@ -1,11 +1,10 @@
-
 % PFC/E1/main.tex
 % TA-PFC-E1: Proyecto Fin de Curso, entrega 1
 % Compilacion: pdflatex main -> bibtex main -> pdflatex main -> pdflatex main
 
 \documentclass[11pt,a4paper]{article}
 
-% PAQUETES
+% Paquetes
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -15,37 +14,30 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{enumitem}
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{tabularx}
-\usepackage{array}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{float}
 \usepackage{url}
-\usepackage{seqsplit}
-\usepackage[hidelinks]{hyperref}
 \usepackage{setspace}
 \usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{amssymb}
-\usepackage{lastpage}
+% hyperref se carga al final para evitar conflictos con otros paquetes
+\usepackage[hidelinks]{hyperref}
+
 
 \setstretch{1.1}
 \setlength{\parskip}{4pt}
 
+% Colores institucionales
 
-% ---------------------------------------------------------------------
-%  Colores institucionales
-% ---------------------------------------------------------------------
 \definecolor{uteqverde}{HTML}{2C5F2D}
 \definecolor{uteqazul}{HTML}{1E4D8B}
 \definecolor{uteqoro}{HTML}{D4A017}
 \definecolor{rowgray}{HTML}{F2F4F2}
-\definecolor{campofondo}{HTML}{FFF6D6}
-\definecolor{avisorojo}{HTML}{9B1C1C}
 
-
-% CONFIGURACIONES Y COMANDOS
+% Configuraciones y comandos
 
 % Marcador de contenido por completar (eliminar todos antes de entregar)
 \newcommand{\pendiente}[1]{\textcolor{red}{[#1]}}
@@ -58,10 +50,12 @@
   \pendiente{#3}\vspace{2cm}}}}%
 }
 
+% Columna X alineada a la izquierda
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
+% Encabezado y pie de pagina
 \pagestyle{fancy}
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{15pt}
 \fancyhf{}
 \lhead{UTEQ \textperiodcentered{} Ingeniería de Requerimientos (ISR-401)}
 \rhead{TA-PFC-E1}
@@ -69,7 +63,7 @@
 
 \begin{document}
 
-% PORTADA
+% Portada
 
 \begin{titlepage}
     \centering
@@ -116,14 +110,14 @@
 
 \end{titlepage}
 
-% INDICES
+% Indices
 
 \tableofcontents
 \listoffigures
 \listoftables
 \newpage
 
-% 1. INTRODUCCION Y ORGANIZACION
+% 1. Introduccion
 
 \section{Introducción}
 
@@ -134,6 +128,8 @@ La propuesta consiste en desarrollar una aplicación web que permita organizar i
 Esta entrega establece una planificación preliminar de las actividades de ingeniería de requisitos. Por tanto, los procesos descritos representan el ámbito que se pretende estudiar y deberán contrastarse con la información proporcionada por los responsables y participantes de la organización.
 
 La documentación se estructura considerando los procesos de ingeniería de requisitos y la identificación de las partes interesadas, el contexto y las necesidades del sistema, de acuerdo con los lineamientos de la norma ISO/IEC/IEEE 29148:2018 \cite{iso29148}.
+
+% 2. Organizacion real
 
 \section{Organización real}
 
@@ -177,7 +173,7 @@ El registro del primer contacto y la identificación de las evidencias se manten
 
 \textbf{Estado del acuerdo:} Primer contacto realizado el 19/11/2026. La formalización de la participación se respaldará mediante la carta de aceptación correspondiente.
 
-% VISIÓN Y ALCANCE
+% 3. Vision y alcance
 
 \section{Visión y alcance}
 
@@ -274,7 +270,7 @@ Para el desarrollo del proyecto se han considerado las siguientes restricciones:
     \item \textbf{Validación:} las funcionalidades y sus prioridades deberán revisarse con el propietario y los demás participantes del proyecto.
 \end{itemize}
 
-% 3. PARTES INTERESADAS
+% 4. Partes interesadas
 
 \section{Partes interesadas}
 
@@ -341,7 +337,7 @@ PI-08 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
 \end{tabularx}
 \end{table}
 
-% 4. CONTEXTO
+% 5. Contexto del sistema
 
 \section{Contexto del sistema}
 
@@ -383,7 +379,7 @@ N.º & Perspectiva (según sílabo) & Hallazgo en la organización & Evidencia \
 \end{tabularx}
 \end{table}
 
-% 5. PLAN DE ELICITACION
+% 6. Plan de elicitacion
 
 \section{Plan de elicitación}
 
@@ -435,19 +431,15 @@ S4 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
 
 \subsection{Instrumentos}
 
-Los instrumentos completos se encuentran en \path{PFC/E1/instrumentos/} y se resumen a continuación.
+Los instrumentos de elicitación se encuentran en el directorio \path{PFC/E1/instrumentos/} del repositorio de GitHub. Estos comprenden:
 
-\subsubsection{Guion de entrevista}
+\begin{itemize}
+    \item \textbf{Guion de entrevista:} dirigido al propietario para conocer los procesos, dificultades y necesidades del establecimiento.
+    \item \textbf{Cuestionario:} dirigido a los clientes para identificar sus hábitos de compra, dificultades, necesidades y expectativas sobre la aplicación web.
+    \item \textbf{Guía de observación:} orientada a identificar los procedimientos actuales de recepción de pedidos, gestión de productos, ventas y entregas, sin intervenir en las actividades.
+\end{itemize}
 
-\pendiente{Objetivo, estructura, preguntas clave y relación con los objetivos de negocio (OBJ-01 a OBJ-03).}
-
-\subsubsection{Cuestionario}
-
-\pendiente{Objetivo, población, tipo de preguntas y escala.}
-
-\subsubsection{Guía de observación o de taller}
-
-\pendiente{Objetivo, aspectos a observar o dinámica del taller, registro de resultados.}
+Los instrumentos se presentan como anexos de esta entrega y no incluyen resultados de aplicación. La información se registrará mediante notas y descripciones generales, sin recopilar datos personales o confidenciales.
 
 \subsection{Trazabilidad entre partes interesadas, técnicas e instrumentos}
 
@@ -469,7 +461,7 @@ OBJ-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} \\
 \end{tabularx}
 \end{table}
 
-% 6. ETICA Y DATOS
+% 7. Etica y proteccion de datos
 
 \section{Ética y protección de datos}
 
@@ -481,17 +473,57 @@ Cada participante podrá participar sin aceptar los permisos adicionales. El mod
 
 \subsection{Anonimización de datos}
 
-\pendiente{Procedimiento: códigos de participante, eliminación de datos identificables, tratamiento de transcripciones.}
+La información recopilada durante las actividades de elicitación será tratada de manera confidencial.
+
+Para reducir el riesgo de identificación de los participantes se aplicarán las siguientes medidas:
+
+\begin{itemize}
+    \item Asignar un código a cada participante en lugar de utilizar su nombre.
+    \item Evitar incorporar números de cédula, teléfonos, direcciones particulares o datos de contacto en los documentos públicos.
+    \item No registrar contraseñas, datos bancarios ni información financiera privada.
+    \item No copiar listados completos de clientes o proveedores.
+    \item Evitar que las fotografías incluyan rostros, documentos legibles o información identificable.
+    \item Utilizar descripciones generales y roles en los informes del proyecto.
+    \item Revisar las transcripciones y notas para eliminar información que permita identificar a una persona.
+\end{itemize}
+
+Cuando una persona solicite retirarse, se atenderá su petición de eliminación de información identificable y de los datos anonimizados que todavía puedan eliminarse sin afectar resultados agregados de forma irreversible.
 
 \subsection{Custodia de evidencias}
 
-\pendiente{Carpeta institucional privada (cuenta @uteq.edu.ec) compartida con el docente, responsables, control de acceso y plazo de conservación. En el repositorio se publica solo el manifiesto con nombre de archivo, fecha, duración y huella SHA-256 (Tabla~\ref{tab:manifiesto}).}
+Las evidencias que contengan información identificable serán almacenadas en una carpeta institucional privada, utilizando una cuenta institucional y restringiendo el acceso a las personas autorizadas.
+
+El formulario firmado y las grabaciones originales no se publicarán en el repositorio del proyecto.
+
+En el repositorio público únicamente se incorporarán documentos anonimizados y el manifiesto de evidencias (Anexo~\ref{anx:manifiesto}), sin incluir información personal de los participantes.
+
+El manifiesto registrará los siguientes datos:
+
+\begin{itemize}
+    \item Nombre del archivo.
+    \item Descripción de la evidencia.
+    \item Fecha de obtención.
+    \item Duración, cuando corresponda.
+    \item Huella digital SHA-256.
+\end{itemize}
+
+El material identificable se conservará durante el período establecido en el consentimiento informado, con un máximo de 24 meses desde el cierre del período académico. Posteriormente será destruido de acuerdo con el procedimiento previsto.
 
 \subsection{Principios éticos}
 
-\pendiente{Aplicación del Código de Ética de la ACM.}
+El equipo considerará los principios establecidos en el Código de Ética y Conducta Profesional de ACM \cite{acm2018}.
 
-% 7. GESTION DEL PROYECTO
+En particular, se tendrán en cuenta los siguientes aspectos:
+
+\begin{itemize}
+    \item \textbf{Evitar daños:} no realizar actividades que perjudiquen a los participantes o interfieran innecesariamente con el funcionamiento del establecimiento.
+    \item \textbf{Honestidad:} explicar el propósito académico del proyecto y no presentar información ficticia como si fuera evidencia real.
+    \item \textbf{Privacidad:} proteger la información personal y respetar las decisiones de los participantes.
+    \item \textbf{Confidencialidad:} evitar divulgar información interna del establecimiento sin autorización.
+    \item \textbf{Respeto:} permitir que las personas decidan libremente si desean participar y qué información autorizan a proporcionar.
+\end{itemize}
+
+% 8. Gestion del proyecto
 
 \section{Gestión del proyecto}
 
@@ -508,10 +540,10 @@ Los roles y responsabilidades de los integrantes se detallan en la Tabla~\ref{ta
 \toprule
 Integrante & Rol & Responsabilidades \\
 \midrule
-Herrera Moran Gilmar Javier & Observación y evidencias & Guía de observación, matriz poder--interés, anonimización y manifiesto de evidencias \\
-Llerena Abril Angelina Julexy & Entrevista y ética & Guion de entrevista, consentimiento informado, principios éticos y referencias \\
-Rivera Rodriguez Joseph Jeremy & Cuestionario y modelado & Cuestionario, diagrama de contexto y README \\
-Saltos Tello Joseph Orlando & Coordinación & Contacto con el local, carta de aceptación, PDF, entrega en el SGA y declaración de uso de IA \\
+Herrera Moran Gilmar Javier & Observación y análisis de partes interesadas & Guía de observación, matriz poder--interés, identificación de partes interesadas, estrategia de participación y PDF \\
+Llerena Abril Angelina Julexy & Documentación, entrevista y ética & Introducción, visión y alcance, guion de entrevista, consentimiento informado, principios éticos, plan de elicitación, referencias bibliográficas, análisis crítico y conclusiones \\
+Rivera Rodriguez Joseph Jeremy & Cuestionario y modelado & Cuestionario, diagrama de contexto, trazabilidad entre objetivos e instrumentos, README y declaración de uso de IA \\
+Saltos Tello Joseph Orlando & Coordinación y gestión documental & Organización real, contacto con el local, carta de aceptación, entrega en el SGA, anonimización, manifiesto de evidencias, cronograma de sesiones, plan de comunicación y registro de riesgos \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -586,244 +618,221 @@ R-03 & \pendiente{...} & \pendiente{...} & \pendiente{...} & \pendiente{...} & \
 \end{tabularx}
 \end{table}
 
-% 8. ANALISIS Y CONCLUSIONES
+% 9. Analisis critico
 
 \section{Análisis crítico}
 
 \pendiente{Interpretación de lo realizado, alternativas consideradas (por ejemplo, técnicas descartadas), limitaciones de la entrega y coherencia entre partes interesadas, técnicas e instrumentos.}
 
+% 10. Conclusiones
+
 \section{Conclusiones}
 
 \pendiente{Conclusiones derivadas de lo realizado en la organización, sin afirmaciones genéricas.}
 
-% 9. DECLARACION DE USO DE IA
+% 11. Declaracion de uso de IA
 
 \section{Declaración de uso de inteligencia artificial}
 
 \pendiente{Si se usó una herramienta de IA solo como apoyo (ortografía o errores de compilación), indicar: herramienta, versión, propósito y cómo se verificó lo obtenido. Si no se usó, declararlo expresamente.}
 
-% ANEXOS
+% Anexos
 
 \appendix
 
-% ANEXO A. MODELO DE CONSENTIMIENTO INFORMADO
+% Anexo A. Modelo de consentimiento informado
 
 \section{Modelo de consentimiento informado}
 \label{anx:consentimiento}
 
-\newcommand{\campo}[1]{#1}
-\newcommand{\CodigoDoc}{\campo{PFC-ISR401-HLRS-A03}}
+% El formulario va dentro de un grupo para que sus ajustes de formato
+% (sangria, listas e interlineado de tablas) no afecten al resto del documento
+\begingroup
+
+% Datos del formulario
+\newcommand{\CodigoDoc}{PFC-ISR401-HLRS-A03}
 \newcommand{\Version}{1.0}
-\newcommand{\FechaVersion}{\campo{17/11/2026}}
+\newcommand{\FechaVersion}{17/11/2026}
 \newcommand{\Periodo}{2026--2027 SPA}
-\newcommand{\Paralelo}{\campo{A}}
-\newcommand{\Proyecto}{Aplicaci{\'o}n web para la gesti{\'o}n integral de un local de manualidades}
-\newcommand{\Organizacion}{\campo{Local de manualidades}}
-\newcommand{\Procesos}{la recepci{\'o}n y seguimiento de pedidos, el registro de clientes, proveedores, empleados y usuarios, la gesti{\'o}n de productos terminados y su disponibilidad, las ventas, pagos y abonos, la programaci{\'o}n de entregas y la generaci{\'o}n de reportes}
-\newcommand{\Duracion}{\campo{15 a 45}}
-\newcommand{\Repositorio}{\campo{https://github.com/usuario/repositorio}}
-\newcommand{\Lider}{\campo{Saltos
-Tello Joseph Orlando}}
-\newcommand{\LiderCorreo}{\campo{jsaltost@uteq.edu.ec}}
+\newcommand{\Paralelo}{A}
+\newcommand{\Proyecto}{Aplicación web para la gestión integral de un local de manualidades}
+\newcommand{\Organizacion}{Local de manualidades}
+\newcommand{\Procesos}{la recepción y seguimiento de pedidos, el registro de clientes, proveedores, empleados y usuarios, la gestión de productos terminados y su disponibilidad, las ventas, pagos y abonos, la programación de entregas y la generación de reportes}
+\newcommand{\Duracion}{15 a 45}
+\newcommand{\Repositorio}{https://github.com/usuario/repositorio}
+\newcommand{\Lider}{Saltos Tello Joseph Orlando}
+\newcommand{\LiderCorreo}{jsaltost@uteq.edu.ec}
 \newcommand{\NoRecoleccion}{Listas completas de clientes o proveedores con nombres y contactos, datos bancarios o de tarjetas, estados financieros del negocio y conversaciones privadas de clientes}
 
-\newcommand{\Integrantes}{%
-\begin{center}
-    \small
-    \begin{tabularx}{0.85\linewidth}{@{}>{\centering\arraybackslash}X >{\centering\arraybackslash}X@{}}
-        Herrera Moran Gilmar Javier &
-        Llerena Abril Angelina Julexy \\[5pt]
-        Rivera Rodriguez Joseph Jeremy &
-        Saltos Tello Joseph Orlando
-    \end{tabularx}
-\end{center}
-}
-
-
-% ---------------------------------------------------------------------
-%  Estilos de sección
-% ---------------------------------------------------------------------
+% Estilos del formulario
 \newcommand{\seccion}[1]{%
-	\par\vspace{7pt}%
-	\noindent{\color{uteqverde}\large\bfseries #1}\par%
-	\vspace{-3pt}{\color{uteqoro}\rule{\linewidth}{1pt}}\par\vspace{-4pt}%
+    \par\vspace{7pt}%
+    \noindent{\color{uteqverde}\large\bfseries #1}\par%
+    \vspace{-3pt}{\color{uteqoro}\rule{\linewidth}{1pt}}\par\vspace{-4pt}%
 }
 \newcommand{\caja}{\(\square\)}
 \newcommand{\lineafirma}[1]{\parbox[t]{0.46\linewidth}{\centering\rule{\linewidth}{0.5pt}\\[-1pt]\small #1}}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
 \setlist{itemsep=1pt,topsep=2pt,leftmargin=16pt}
 \renewcommand{\arraystretch}{1.35}
 
+% Encabezado del formulario
 
-	% =====================================================================
-	%  PORTADA DEL FORMULARIO
-	% =====================================================================
-	\begin{center}
-		{\small\color{uteqazul}\bfseries FACULTAD DE CIENCIAS DE LA COMPUTACIÓN $\cdot$ CARRERA DE INGENIERÍA DE SOFTWARE}\\[6pt]
-		{\LARGE\color{uteqverde}\bfseries FORMULARIO DE CONSENTIMIENTO INFORMADO}\\[3pt]
-		{\normalsize Participación voluntaria en el levantamiento de requisitos de un proyecto académico}
-	\end{center}
+\begin{center}
+    {\small\color{uteqazul}\bfseries FACULTAD DE CIENCIAS DE LA COMPUTACIÓN $\cdot$ CARRERA DE INGENIERÍA DE SOFTWARE}\\[6pt]
+    {\LARGE\color{uteqverde}\bfseries FORMULARIO DE CONSENTIMIENTO INFORMADO}\\[3pt]
+    {\normalsize Participación voluntaria en el levantamiento de requisitos de un proyecto académico}
+\end{center}
 
-	\vspace{2pt}
-	\begin{tcolorbox}[enhanced,colback=rowgray,colframe=uteqverde,boxrule=0.6pt,arc=1.5mm,left=4pt,right=4pt,top=2pt,bottom=2pt]
-		\small
-		\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries\leavevmode\color{uteqverde}}p{0.27\linewidth}X@{}}
-			Código del documento & \CodigoDoc\quad Versión \Version\quad(\FechaVersion)\\
-			Asignatura & Ingeniería de Requisitos (ISR-401) $\cdot$ 4.º nivel $\cdot$ Paralelo \Paralelo\ $\cdot$ Período \Periodo\\
-			Proyecto & \Proyecto\\
-			Organización estudiada & \Organizacion\\
-			Docente responsable & Ing. Gleiston Cicerón Guerrero Ulloa, PhD $\cdot$ gguerrero@uteq.edu.ec\\
-			Contacto del equipo & \Lider\ $\cdot$ \LiderCorreo\\
-			Código del participante & \rule{4.2cm}{0.4pt}\quad{\footnotesize}\\
-		\end{tabularx}
-	\end{tcolorbox}
+\vspace{2pt}
+\begin{tcolorbox}[enhanced,colback=rowgray,colframe=uteqverde,boxrule=0.6pt,arc=1.5mm,left=4pt,right=4pt,top=2pt,bottom=2pt]
+    \small
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries\leavevmode\color{uteqverde}}p{0.27\linewidth}X@{}}
+        Código del documento & \CodigoDoc\quad Versión \Version\quad(\FechaVersion)\\
+        Asignatura & Ingeniería de Requisitos (ISR-401) $\cdot$ 4.º nivel $\cdot$ Paralelo \Paralelo\ $\cdot$ Período \Periodo\\
+        Proyecto & \Proyecto\\
+        Organización estudiada & \Organizacion\\
+        Docente responsable & Ing. Gleiston Cicerón Guerrero Ulloa, PhD $\cdot$ gguerrero@uteq.edu.ec\\
+        Contacto del equipo & \Lider\ $\cdot$ \LiderCorreo\\
+        Código del participante & \rule{4.2cm}{0.4pt}\\
+    \end{tabularx}
+\end{tcolorbox}
 
+\vspace{2pt}
+Usted ha sido invitado o invitada a participar en una actividad académica de la Universidad Técnica Estatal de Quevedo (UTEQ). Antes de decidir, lea con calma este documento o pida que se lo lean en voz alta. Puede hacer todas las preguntas que necesite. Participar es opcional: Si no desea participar, no tiene que dar ninguna explicación.
 
-	\vspace{2pt}
-	Usted ha sido invitado o invitada a participar en una actividad académica de la Universidad Técnica Estatal de Quevedo (UTEQ). Antes de decidir, lea con calma este documento o pida que se lo lean en voz alta. Puede hacer todas las preguntas que necesite. Participar es opcional: Si no desea participar, no tiene que dar ninguna explicación.
+% Seccion 1
+\seccion{1. ¿Para qué es este estudio?}
+Un equipo de estudiantes de Ingeniería de Software está analizando cómo se trabaja en un \Organizacion, en particular en \Procesos, con el fin de identificar, analizar y documentar los requisitos de un sistema informático. La información se usará como evidencia para elaborar documentos de ingeniería de requisitos: Listas de requisitos, casos de uso, modelos, prototipos y registros de validación. Se trata de una propuesta académica: Su participación no implica la compra, instalación, publicación ni entrega de ningún sistema a la organización.
 
-	% =====================================================================
-	\seccion{1. ¿Para qué es este estudio?}
-	% =====================================================================
-	Un equipo de estudiantes de Ingeniería de Software está analizando cómo se trabaja en un \Organizacion, en particular en \Procesos, con el fin de identificar, analizar y documentar los requisitos de un sistema informático. La información se usará como evidencia para elaborar documentos de ingeniería de requisitos: Listas de requisitos, casos de uso, modelos, prototipos y registros de validación. Se trata de una propuesta académica: Su participación no implica la compra, instalación, publicación ni entrega de ningún sistema a la organización.
+% Seccion 2
+\seccion{2. ¿Qué tendría que hacer?}
+Como propietario/a del local, se le pedirá una o varias de estas actividades, que el equipo le indicará antes de empezar:
+\begin{itemize}
+    \item Una entrevista sobre cómo administra su negocio en el día a día, los problemas que encuentra y las mejoras que considera necesarias (aproximadamente \Duracion\ minutos).
+    \item Responder un cuestionario breve, impreso o en línea.
 
-	% =====================================================================
-    \seccion{2. ¿Qué tendría que hacer?}
-    % =====================================================================
-    Como propietario/a del local, se le pedirá una o varias de estas actividades, que el equipo le indicará antes de empezar:
-    \begin{itemize}
-    	\item Una entrevista sobre cómo administra su negocio en el día a día, los problemas que encuentra y las mejoras que considera necesarias (aproximadamente \Duracion\ minutos).
-    	\item Responder un cuestionario breve, impreso o en línea.
+    \begin{quote}
+        \textbf{¿En qué modalidad prefiere responder el cuestionario?}
 
-    	\begin{quote}
-    		\textbf{¿En qué modalidad prefiere responder el cuestionario?}
+        \caja\ Impreso \hspace{1.5cm}
+        \caja\ En línea
+    \end{quote}
 
-    		\caja\ Impreso \hspace{1.5cm}
-    		\caja\ En línea
-    	\end{quote}
+    \item Permitir que un integrante del equipo observe cómo gestiona su negocio sin intervenir (observación no participante).
+    \item Revisar las interfaces del prototipo del posible sistema y opinar si reflejan la gestión de su negocio (sesión de validación).
+\end{itemize}
+Lo que usted diga se registrará con notas escritas. El audio, el video y las fotografías solo se usarán si usted lo autoriza en la Sección 7. Negarse a ser grabado no le impide participar.
 
-    	\item Permitir que un integrante del equipo observe cómo gestiona su negocio sin intervenir (observación no participante).
-    	\item Revisar las interfaces del prototipo del posible sistema y opinar si reflejan la gestión de su negocio (sesión de validación).
+\textbf{No se le pedirá:} \NoRecoleccion; tampoco contraseñas ni información de terceros que permita identificarlos. Si durante la observación se llegara a visualizar información personal, confidencial o sensible, esta no será capturada, copiada ni registrada por ningún medio.
+
+% Seccion 3
+\seccion{3. Riesgos y cómo se reducen}
+La participación no implica riesgos físicos. Los riesgos posibles son sentirse incómodo al hablar de su trabajo o de problemas internos de la organización, y que la información se use de forma indebida. Para reducirlos: Puede omitir cualquier pregunta, pausar o terminar la actividad cuando quiera; el equipo utilizará el código de participante asignado anteriormente en lugar de su nombre; y ninguna opinión suya se comunicará a terceros de forma que lo identifique.
+
+% Seccion 4
+\seccion{4. Beneficios}
+No recibirá pago ni beneficio económico. Su colaboración ayudará a que la propuesta de sistema responda a las necesidades reales de su trabajo y contribuirá a la formación de futuros profesionales de la Ingeniería de Software.
+
+% Seccion 5
+\seccion{5. Confidencialidad y protección de sus datos}
+Sus datos personales serán tratados conforme a la Ley Orgánica de Protección de Datos Personales del Ecuador (LOPDP), que le reconoce, entre otros, los derechos de acceso, rectificación, eliminación y oposición sobre sus datos.
+\begin{itemize}
+    \item \textbf{Lo que nunca se publica:} Su nombre, número de cédula (si lo proporciona), número de teléfono, firma, rostro, voz, contacto ni su cargo específico. En todo documento, presentación o repositorio público usted aparecerá solo con su código de participante o con un rol genérico (por ejemplo, ``Atención al cliente'').
+    \item \textbf{Para qué se usa su teléfono:} Únicamente para que el equipo pueda contactarle por asuntos de esta actividad (confirmar citas, aclarar una respuesta o atender una solicitud de retiro). No se usará para otros fines.
+    \item \textbf{Dónde se guarda lo identificable:} Este formulario firmado y las grabaciones originales se guardan en una zona restringida, dentro de un archivo cifrado cuya contraseña solo conoce el docente responsable. En la zona pública del repositorio del proyecto (\Repositorio) solo se publica material anonimizado y una copia de este formulario con la cédula, el teléfono y la firma cubiertos.
+    \item \textbf{Cuánto tiempo:} El material identificable se conservará como máximo 24 meses desde el cierre del período académico y luego será destruido. Solo se conservarán los instrumentos en blanco y los resultados totalmente anonimizados.
+\end{itemize}
+
+% Seccion 6
+\seccion{6. Participación voluntaria y derecho a retirarse}
+Su participación es libre. Puede negarse a responder cualquier pregunta y retirarse en cualquier momento, sin dar explicaciones y sin ninguna consecuencia laboral, académica ni de otro tipo. Si se retira, puede pedir que se eliminen sus datos usando el desprendible de la última página o escribiendo a los contactos indicados al inicio; se eliminarán siempre que aún no se hayan integrado en resultados agregados o anonimizados de forma irreversible. Este formulario está dirigido a personas de 18 años o más; las personas menores de edad no participan en el estudio.
+
+% Seccion 7
+\seccion{7. Autorizaciones específicas}
+Marque Sí o No en cada fila. Puede aceptar unas y rechazar otras; solo la primera es necesaria para participar.
+
+\begin{center}
+    \small
+    \begin{tabularx}{\linewidth}{|X|>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}|}
+        \hline
+        \rowcolor{uteqverde}\textcolor{white}{\bfseries Autorización} & \textcolor{white}{\bfseries Sí} & \textcolor{white}{\bfseries No}\\
+        \hline
+        a) Acepto participar en la actividad que se me ha explicado. & \caja & \caja\\
+        \hline
+        \rowcolor{rowgray}b) Autorizo la grabación en audio de mi participación. & \caja & \caja\\
+        \hline
+        c) Autorizo la grabación en video de mi participación. & \caja & \caja\\
+        \hline
+        \rowcolor{rowgray}d) Autorizo fotografías fechadas del entorno de trabajo, sin mi rostro, sin documentos legibles y sin ubicación GPS. & \caja & \caja\\
+        \hline
+        e) Autorizo que se citen textualmente frases mías, sin datos que me identifiquen. & \caja & \caja\\
+        \hline
+        \rowcolor{rowgray}f) Autorizo el uso de mi información anonimizada en los trabajos académicos de la asignatura. & \caja & \caja\\
+        \hline
+        g) Autorizo el uso de mi información anonimizada en publicaciones académicas o científicas derivadas del proyecto. & \caja & \caja\\
+        \hline
+        \rowcolor{rowgray}h) Autorizo el depósito de mi información anonimizada en un repositorio abierto de datos de investigación, bajo licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0). & \caja & \caja\\
+        \hline
+    \end{tabularx}
+\end{center}
+Ninguna de estas autorizaciones permite publicar datos que lo identifiquen.
+
+% Seccion 8
+\seccion{8. Declaración y firmas}
+Declaro que tengo 18 años o más; que he leído este formulario, o me lo han leído; que pude hacer preguntas y recibí respuestas claras; y que comprendo el objetivo, las actividades, los riesgos, los beneficios, el manejo de mis datos y mi derecho a retirarme. Acepto participar de forma voluntaria según las opciones que marqué en la Sección 7. Se firman dos ejemplares: Uno queda en mi poder y otro en el expediente restringido del proyecto.
+
+\textbf{El número de teléfono es obligatorio; el número de cédula es opcional.}
+
+\vspace{20pt}
+\noindent\lineafirma{Número de teléfono (obligatorio)}\hfill
+\lineafirma{Nombres y apellidos del participante}
+
+\vspace{16pt}
+\noindent\lineafirma{Número de cédula (opcional)}\hfill
+\lineafirma{Lugar y fecha (dd/mm/aaaa)}
+
+\vspace{16pt}
+\noindent\lineafirma{Firma del participante}\hfill
+\lineafirma{Nombre y firma del estudiante que aplica el instrumento}
+
+\vspace{16pt}
+\noindent\lineafirma{Nombre y firma del testigo (opcional; obligatorio si el formulario se leyó en voz alta)}
+
+\vspace{13pt}
+
+\noindent
+{\footnotesize\color{uteqverde}
+\textbf{Integrantes del equipo:}
+Herrera Moran Gilmar Javier $\cdot$
+Llerena Abril Angelina Julexy $\cdot$
+Rivera Rodriguez Joseph Jeremy $\cdot$
+Saltos Tello Joseph Orlando
+}
+
+% Desprendible de revocacion
+\clearpage
+\begin{tcolorbox}[enhanced,colback=white,colframe=uteqverde,boxrule=0.8pt,arc=1.5mm,borderline={0.6pt}{3pt}{uteqverde,dashed},title={\bfseries 9. Revocación del consentimiento (opcional) --- desprendible para el participante},fonttitle=\normalsize,coltitle=white,colbacktitle=uteqverde]
+    Conserve esta hoja. Si más adelante desea retirarse del estudio, complétela y entréguela a cualquier integrante del equipo o envíe su contenido por correo a los contactos indicados en la primera página.
+
+    \vspace{10pt}
+    Yo, \rule{7.5cm}{0.4pt}, participante con código \rule{2.6cm}{0.4pt}, retiro mi consentimiento para participar en el proyecto \Proyecto\ y solicito:
+    \begin{itemize}[label={}]
+        \item \caja\ Eliminar mis datos identificables (formulario firmado, grabaciones, fotografías).
+        \item \caja\ Eliminar también mis respuestas anonimizadas, siempre que aún no se hayan integrado en resultados agregados.
     \end{itemize}
-    Lo que usted diga se registrará con notas escritas. El audio, el video y las fotografías solo se usarán si usted lo autoriza en la Sección 7. Negarse a ser grabado no le impide participar.
 
-    \textbf{No se le pedirá:} \NoRecoleccion; tampoco contraseñas ni información de terceros que permita identificarlos. Si durante la observación se llegara a visualizar información personal, confidencial o sensible, esta no será capturada, copiada ni registrada por ningún medio.
+    \vspace{12pt}
+    Teléfono de contacto (obligatorio): \rule{5cm}{0.4pt}
 
+    \vspace{26pt}
+    \noindent\lineafirma{Firma}\hfill\lineafirma{Fecha (dd/mm/aaaa)}
+\end{tcolorbox}
 
-    % =====================================================================
-    \seccion{3. Riesgos y cómo se reducen}
-    % =====================================================================
-    La participación no implica riesgos físicos. Los riesgos posibles son sentirse incómodo al hablar de su trabajo o de problemas internos de la organización, y que la información se use de forma indebida. Para reducirlos: Puede omitir cualquier pregunta, pausar o terminar la actividad cuando quiera; el equipo utilizará el código de participante asignado anteriormente en lugar de su nombre; y ninguna opinión suya se comunicará a terceros de forma que lo identifique.
+\endgroup
 
-	% =====================================================================
-	\seccion{4. Beneficios}
-	% =====================================================================
-	No recibirá pago ni beneficio económico. Su colaboración ayudará a que la propuesta de sistema responda a las necesidades reales de su trabajo y contribuirá a la formación de futuros profesionales de la Ingeniería de Software.
-
-	% =====================================================================
-	\seccion{5. Confidencialidad y protección de sus datos}
-	% =====================================================================
-	Sus datos personales serán tratados conforme a la Ley Orgánica de Protección de Datos Personales del Ecuador (LOPDP), que le reconoce, entre otros, los derechos de acceso, rectificación, eliminación y oposición sobre sus datos.
-	\begin{itemize}
-		\item \textbf{Lo que nunca se publica:} Su nombre, número de cédula (si lo proporciona), número de teléfono, firma, rostro, voz, contacto ni su cargo específico. En todo documento, presentación o repositorio público usted aparecerá solo con su código de participante o con un rol genérico (por ejemplo, ``Atención al cliente'').
-		\item \textbf{Para qué se usa su teléfono:} Únicamente para que el equipo pueda contactarle por asuntos de esta actividad (confirmar citas, aclarar una respuesta o atender una solicitud de retiro). No se usará para otros fines.
-		\item \textbf{Dónde se guarda lo identificable:} Este formulario firmado y las grabaciones originales se guardan en una zona restringida, dentro de un archivo cifrado cuya contraseña solo conoce el docente responsable. En la zona pública del repositorio del proyecto (\Repositorio) solo se publica material anonimizado y una copia de este formulario con la cédula, el teléfono y la firma cubiertos.
-		\item \textbf{Cuánto tiempo:} El material identificable se conservará como máximo 24 meses desde el cierre del período académico y luego será destruido. Solo se conservarán los instrumentos en blanco y los resultados totalmente anonimizados.
-	\end{itemize}
-
-	% =====================================================================
-	\seccion{6. Participación voluntaria y derecho a retirarse}
-	% =====================================================================
-	Su participación es libre. Puede negarse a responder cualquier pregunta y retirarse en cualquier momento, sin dar explicaciones y sin ninguna consecuencia laboral, académica ni de otro tipo. Si se retira, puede pedir que se eliminen sus datos usando el desprendible de la última página o escribiendo a los contactos indicados al inicio; se eliminarán siempre que aún no se hayan integrado en resultados agregados o anonimizados de forma irreversible. Este formulario está dirigido a personas de 18 años o más; las personas menores de edad no participan en el estudio.
-
-	% =====================================================================
-	\seccion{7. Autorizaciones específicas}
-	% =====================================================================
-	Marque Sí o No en cada fila. Puede aceptar unas y rechazar otras; solo la primera es necesaria para participar.
-
-	\begin{center}
-		\small
-		\begin{tabularx}{\linewidth}{|X|>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}|}
-			\hline
-			\rowcolor{uteqverde}\textcolor{white}{\bfseries Autorización} & \textcolor{white}{\bfseries Sí} & \textcolor{white}{\bfseries No}\\
-			\hline
-			a) Acepto participar en la actividad que se me ha explicado. & \caja & \caja\\
-			\hline
-			\rowcolor{rowgray}b) Autorizo la grabación en audio de mi participación. & \caja & \caja\\
-			\hline
-			c) Autorizo la grabación en video de mi participación. & \caja & \caja\\
-			\hline
-			\rowcolor{rowgray}d) Autorizo fotografías fechadas del entorno de trabajo, sin mi rostro, sin documentos legibles y sin ubicación GPS. & \caja & \caja\\
-			\hline
-			e) Autorizo que se citen textualmente frases mías, sin datos que me identifiquen. & \caja & \caja\\
-			\hline
-			\rowcolor{rowgray}f) Autorizo el uso de mi información anonimizada en los trabajos académicos de la asignatura. & \caja & \caja\\
-			\hline
-			g) Autorizo el uso de mi información anonimizada en publicaciones académicas o científicas derivadas del proyecto. & \caja & \caja\\
-			\hline
-			\rowcolor{rowgray}h) Autorizo el depósito de mi información anonimizada en un repositorio abierto de datos de investigación, bajo licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0). & \caja & \caja\\
-			\hline
-		\end{tabularx}
-	\end{center}
-	Ninguna de estas autorizaciones permite publicar datos que lo identifiquen.
-
-	% =====================================================================
-	\seccion{8. Declaración y firmas}
-	% =====================================================================
-	Declaro que tengo 18 años o más; que he leído este formulario, o me lo han leído; que pude hacer preguntas y recibí respuestas claras; y que comprendo el objetivo, las actividades, los riesgos, los beneficios, el manejo de mis datos y mi derecho a retirarme. Acepto participar de forma voluntaria según las opciones que marqué en la Sección 7. Se firman dos ejemplares: Uno queda en mi poder y otro en el expediente restringido del proyecto.
-
-	\textbf{El número de teléfono es obligatorio; el número de cédula es opcional.}
-
-	\vspace{20pt}
-    \noindent\lineafirma{Número de teléfono (obligatorio)}\hfill
-    \lineafirma{Nombres y apellidos del participante}
-
-    \vspace{16pt}
-    \noindent\lineafirma{Número de cédula (opcional)}\hfill
-    \lineafirma{Lugar y fecha (dd/mm/aaaa)}
-
-    \vspace{16pt}
-    \noindent\lineafirma{Firma del participante}\hfill
-    \lineafirma{Nombre y firma del estudiante que aplica el instrumento}
-
-    \vspace{16pt}
-    \noindent\lineafirma{Nombre y firma del testigo (opcional; obligatorio si el formulario se leyó en voz alta)}
-
-    \vspace{40pt}
-
-    \noindent
-    {\footnotesize\color{uteqverde}
-    \textbf{Integrantes del equipo:}
-    Herrera Moran Gilmar Javier $\cdot$
-    Llerena Abril Angelina Julexy $\cdot$
-    Rivera Rodriguez Joseph Jeremy $\cdot$
-    Saltos Tello Joseph Orlando
-    }
-
-	% =====================================================================
-	%  DESPRENDIBLE DE REVOCACIÓN
-	% =====================================================================
-	\clearpage
-	\begin{tcolorbox}[enhanced,colback=white,colframe=uteqverde,boxrule=0.8pt,arc=1.5mm,borderline={0.6pt}{3pt}{uteqverde,dashed},title={\bfseries 9. Revocación del consentimiento (opcional) --- desprendible para el participante},fonttitle=\normalsize,coltitle=white,colbacktitle=uteqverde]
-		Conserve esta hoja. Si más adelante desea retirarse del estudio, complétela y entréguela a cualquier integrante del equipo o envíe su contenido por correo a los contactos indicados en la primera página.
-
-		\vspace{10pt}
-		Yo, \rule{7.5cm}{0.4pt}, participante con código \rule{2.6cm}{0.4pt}, retiro mi consentimiento para participar en el proyecto \Proyecto\ y solicito:
-		\begin{itemize}[label={}]
-			\item \caja\ Eliminar mis datos identificables (formulario firmado, grabaciones, fotografías).
-			\item \caja\ Eliminar también mis respuestas anonimizadas, siempre que aún no se hayan integrado en resultados agregados.
-		\end{itemize}
-
-		\vspace{12pt}
-		Teléfono de contacto (obligatorio): \rule{5cm}{0.4pt}
-
-		\vspace{26pt}
-		\noindent\lineafirma{Firma}\hfill\lineafirma{Fecha (dd/mm/aaaa)}
-	\end{tcolorbox}
-
-% ANEXO B. REGISTRO DE EVIDENCIAS
+% Anexo B. Registro de evidencias
 
 \section{Registro de evidencias (manifiesto)}
 \label{anx:manifiesto}
@@ -845,9 +854,13 @@ Archivo & Descripción & Fecha & Duración & SHA-256 \\
 \end{tabularx}
 \end{table}
 
+% Anexo C. Instrumentos de elicitacion
+
 \section{Instrumentos de elicitación}
 
-\pendiente{Referencia a los archivos de PFC/E1/instrumentos/ (guion de entrevista, cuestionario, guía de observación o taller).}
+Los instrumentos correspondientes a esta entrega se encuentran en el directorio \path{PFC/E1/instrumentos/} del repositorio de GitHub. Incluyen el guion de entrevista, el cuestionario y la guía de observación.
+
+% Bibliografia
 
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
