@@ -1,11 +1,11 @@
 # Proyecto Fin de Curso (PFC) - Entrega 1: Ingeniería de Requerimientos (ISR-401)
 
-**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)
-**Facultad:** Facultad de Ciencias de la Computación
-**Carrera:** Ingeniería de Software
-**Nivel:** Cuarto
-**Paralelo:** A
-**Docente:** Gleiston Cicerón Guerrero Ulloa, PhD
+**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)  
+**Facultad:** Facultad de Ciencias de la Computación  
+**Carrera:** Ingeniería de Software  
+**Nivel:** Cuarto  
+**Paralelo:** A  
+**Docente:** Gleiston Cicerón Guerrero Ulloa, PhD  
 **Grupo:** HLRS
 
 ### Integrantes
@@ -34,41 +34,53 @@ La organización de los archivos es la siguiente:
 ```text
 PFC/
 └── E1/
-    ├── main.tex
-    ├── main.pdf
-    ├── referencias.bib
-    ├── README.md
-    │
-    ├── figuras/
-    │   ├── matriz_poder_interes.png
-    │   └── diagrama_contexto.png
-    │
-    ├── instrumentos/
-    │   ├── guion_entrevista.*
-    │   ├── cuestionario.*
-    │   └── guia_observacion.*
+    ├── etica/
+    │   ├── cnInformado_cliente.pdf
+    │   ├── cnInformado_cliente.tex
+    │   ├── cnInformado_propietario.pdf
+    │   └── cnInformado_propietario.tex
     │
     ├── evidencias/
-    │   └── MANIFIESTO.md
+    │   ├── Carta_Aceptación_Anonimizad...
+    │   ├── ChatGPT_02_Propuesta_Estruct...
+    │   ├── ChatGPT_03_Correccion_Redac...
+    │   ├── ChatGPT_04_Resultado_Correccion_PFC...
+    │   ├── Consentimiento_Informado_A...
+    │   ├── IA_01_Generacion_Estructura_I...
+    │   ├── MANIFIESTO.md
+    │   └── Registro_Primer_Contacto.pdf
     │
-    └── etica/
-        ├── consentimiento_propietaria.*
-        └── consentimiento_clientes.*
+    ├── figuras/
+    │   ├── diagrama_contexto.png
+    │   └── matriz_poder_interes.png
+    │
+    ├── instrumentos/
+    │   ├── Cuestionario.pdf
+    │   ├── Guia_observacion.pdf
+    │   └── Guion_Entrevista.pdf
+    │
+    ├── modelos/
+    │   ├── diagrama-contexto.drawio
+    │   └── matriz_poder_interes.drawio
+    │
+    ├── main.pdf
+    ├── main.tex
+    ├── referencias.bib
+    └── README.md
 ```
 
 **Descripción de los archivos y directorios:**
 
 | Archivo o directorio | Descripción |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+|---|---|
 | `main.tex` | Archivo principal que contiene la estructura y el contenido del documento. |
 | `main.pdf` | Documento generado mediante la compilación del archivo LaTeX. |
 | `referencias.bib` | Base de datos bibliográfica utilizada para las citas y referencias en formato IEEE. |
-| `figuras/` | Contiene los recursos gráficos utilizados en el documento, como la matriz poder-interés y el diagrama de contexto. |
-| `instrumentos/` | Contiene los instrumentos preparados para las actividades de elicitación: entrevista, cuestionario y guía de observación. |
-| `evidencias/` | Contiene el manifiesto público de evidencias y sus respectivas huellas digitales SHA-256. |
-| `etica/` | Contiene los modelos de consentimiento informado para las actividades de elicitación. |
-
-*Nota: Los nombres y extensiones de los archivos de los instrumentos y consentimientos deben corresponder a los archivos realmente incorporados al repositorio. El archivo `main.pdf` es un producto generado y no constituye un requisito para compilar el proyecto.*
+| `etica/` | Contiene los modelos de consentimiento informado para clientes y propietario, tanto en formato PDF como en LaTeX. |
+| `evidencias/` | Almacena los documentos y registros que respaldan el desarrollo del proyecto, incluyendo cartas, registros de contacto y evidencias del uso de herramientas de inteligencia artificial. También contiene el manifiesto de evidencias. |
+| `figuras/` | Contiene los recursos gráficos utilizados en el documento, como la matriz poder-interés y el diagrama de contexto en formato PNG. |
+| `instrumentos/` | Contiene los instrumentos preparados para las actividades de elicitación: cuestionario, guía de observación y guion de entrevista. |
+| `modelos/` | Contiene los archivos editables de los diagramas elaborados en Draw.io. |
 
 ## 3. Requisitos y dependencias
 
@@ -79,12 +91,20 @@ Para generar el documento PDF a partir del código fuente es necesario disponer 
 - **pdfLaTeX (`pdflatex`):** motor utilizado para compilar el documento.
 - **BibTeX (`bibtex`):** herramienta encargada de procesar las referencias bibliográficas.
 
-### 3.2. Paquetes LaTeX utilizados
+### 3.2. Distribuciones LaTeX
+
+Se puede utilizar cualquiera de las siguientes distribuciones:
+
+- **MiKTeX:** https://miktex.org/download
+- **TeX Live:** https://www.tug.org/texlive/
+- **MacTeX:** https://www.tug.org/mactex/
+
+### 3.3. Paquetes LaTeX utilizados
 
 El archivo `main.tex` utiliza los siguientes paquetes:
 
 | Categoría | Paquetes |
-| --------------------- | ----------------------------------------------- |
+|---|---|
 | Idioma y codificación | `inputenc`, `fontenc`, `babel` |
 | Tipografía y formato | `helvet`, `geometry`, `setspace`, `fancyhdr` |
 | Tablas | `booktabs`, `tabularx`, `xltabular`, `makecell` |
@@ -95,11 +115,20 @@ El archivo `main.tex` utiliza los siguientes paquetes:
 
 También se requiere el estilo bibliográfico `IEEEtran.bst` para procesar las referencias mediante BibTeX.
 
+**Dependencias adicionales:**
+
+- **Git:** para clonar el repositorio y administrar el control de versiones.
+- **TeXstudio (opcional):** editor para trabajar con archivos LaTeX.
+- **Draw.io / diagrams.net:** herramienta para visualizar y editar los modelos de diagramas almacenados en `modelos/`.
+- **Overleaf (opcional):** plataforma en línea para editar y compilar documentos LaTeX.
+
 ## 4. Instalación y compilación por entorno
 
 ### 4.1. GNU/Linux (Ubuntu, Linux Mint y Debian)
 
 En distribuciones basadas en Debian se pueden instalar las dependencias mediante el administrador de paquetes `apt`.
+
+**Instalación de LaTeX y BibTeX:**
 
 ```bash
 sudo apt update
@@ -140,14 +169,14 @@ pdflatex main.tex
 
 Para Windows se recomienda instalar alguna de las siguientes distribuciones:
 
-- **MiKTeX:** [https://miktex.org/download](https://miktex.org/download)
-- **TeX Live:** [https://www.tug.org/texlive/](https://www.tug.org/texlive/)
+- **MiKTeX:** https://miktex.org/download
+- **TeX Live:** https://www.tug.org/texlive/
 
 En caso de utilizar MiKTeX, se recomienda habilitar la instalación automática de paquetes faltantes (*Install missing packages on-the-fly*).
 
 También se puede utilizar TeXstudio como entorno de edición:
 
-[https://www.texstudio.org/](https://www.texstudio.org/)
+https://www.texstudio.org/
 
 **Clonar el repositorio desde PowerShell:**
 
@@ -159,7 +188,7 @@ cd <NOMBRE-DEL-REPOSITORIO>\PFC\E1
 
 **Compilar el documento:**
 
-```bash
+```powershell
 pdflatex main.tex
 bibtex main
 pdflatex main.tex
@@ -170,7 +199,7 @@ pdflatex main.tex
 
 Para macOS se puede instalar MacTeX desde su página oficial:
 
-[https://www.tug.org/mactex/](https://www.tug.org/mactex/)
+https://www.tug.org/mactex/
 
 También es posible utilizar Homebrew:
 
@@ -199,9 +228,9 @@ pdflatex main.tex
 
 El proyecto también puede compilarse mediante Overleaf, sin necesidad de instalar una distribución LaTeX local.
 
-Pasos:
+**Pasos:**
 
-1. Acceder a [https://www.overleaf.com/](https://www.overleaf.com/).
+1. Acceder a https://www.overleaf.com/.
 2. Crear un proyecto nuevo o importar los archivos mediante un archivo ZIP.
 3. Incorporar el contenido de `PFC/E1/`, incluyendo `main.tex`, `referencias.bib` y el directorio `figuras/`.
 4. Abrir el menú de configuración del proyecto.
@@ -238,18 +267,23 @@ Cada herramienta cumple una función específica:
 
 Por este motivo, se recomienda ejecutar la secuencia completa cuando se realicen modificaciones en el documento o en las referencias bibliográficas.
 
-## 6. Recursos gráficos y figuras opcionales
+## 6. Recursos gráficos y modelos editables
 
-El documento utiliza una macro personalizada denominada `\figuraopcional`, definida en `main.tex`, para incorporar las figuras del proyecto.
-
-Actualmente se contemplan dos recursos gráficos:
+El documento utiliza dos recursos gráficos principales, almacenados en el directorio `figuras/`:
 
 - `matriz_poder_interes.png`: representación de las partes interesadas según su nivel de poder e interés.
 - `diagrama_contexto.png`: representación del sistema, sus límites, los actores externos y los flujos de información.
 
-La macro verifica si cada archivo existe en el directorio `figuras/`.
+Los archivos originales editables de estos diagramas se encuentran en el directorio `modelos/`:
 
-Si la imagen está disponible, se incorpora automáticamente al documento. Si no existe, se muestra un recuadro indicando que la figura está pendiente de incorporación.
+- `matriz_poder_interes.drawio`
+- `diagrama-contexto.drawio`
+
+Estos archivos pueden abrirse y modificarse mediante Draw.io o diagrams.net.
+
+El documento utiliza una macro personalizada denominada `\figuraopcional`, definida en `main.tex`, para incorporar las figuras del proyecto.
+
+La macro verifica si cada archivo existe en el directorio `figuras/`. Si la imagen está disponible, se incorpora automáticamente al documento. Si no existe, se muestra un recuadro indicando que la figura está pendiente de incorporación.
 
 Esto permite compilar el documento incluso cuando todavía no se han incorporado todos los recursos gráficos, sin provocar errores por archivos de imagen faltantes.
 
@@ -276,8 +310,9 @@ Se consideran las siguientes disposiciones:
 
 - Los documentos públicos no deben contener información personal o confidencial de los participantes.
 - Las cartas firmadas, grabaciones y demás evidencias identificables deben conservarse en un espacio privado y con acceso restringido.
-- El archivo `MANIFIESTO.md` permite registrar las evidencias privadas mediante su descripción, fecha de obtención y huella digital SHA-256.
+- El archivo `MANIFIESTO.md` permite registrar las evidencias mediante su descripción, fecha de obtención y huella digital SHA-256.
 - Los modelos de consentimiento informado se encuentran organizados en el directorio `etica/`.
+- Los instrumentos de elicitación se encuentran en el directorio `instrumentos/`.
 - El tratamiento de la información considera la Ley Orgánica de Protección de Datos Personales del Ecuador y su Reglamento General.
 
 La documentación pública del repositorio debe limitarse a los archivos autorizados para su divulgación.
@@ -304,8 +339,8 @@ Se recomienda mantener actualizados los archivos fuente, las referencias bibliog
 
 ---
 
-**Proyecto:** TA-PFC-E1
-**Asignatura:** Ingeniería de Requerimientos (ISR-401)
-**Grupo:** HLRS
-**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)
+**Proyecto:** TA-PFC-E1  
+**Asignatura:** Ingeniería de Requerimientos (ISR-401)  
+**Grupo:** HLRS  
+**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)  
 **Año:** 2026
