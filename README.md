@@ -1,10 +1,15 @@
 # Proyecto Fin de Curso (PFC) - Entrega 1: Ingeniería de Requerimientos (ISR-401)
 
-**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)  
-**Facultad:** Facultad de Ciencias de la Computación  
-**Carrera:** Ingeniería de Software (4.º Nivel, Paralelo A)  
-**Docente:** Gleiston Cicerón Guerrero Ulloa, PhD  
-**Grupo:** HLRS  
+**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)
+**Facultad:** Facultad de Ciencias de la Computación
+**Carrera:** Ingeniería de Software
+**Nivel:** Cuarto
+**Paralelo:** A
+**Docente:** Gleiston Cicerón Guerrero Ulloa, PhD
+**Grupo:** HLRS
+
+### Integrantes
+
 - Herrera Moran Gilmar Javier
 - Llerena Abril Angelina Julexy
 - Rivera Rodriguez Joseph Jeremy
@@ -12,115 +17,295 @@
 
 ---
 
-## Descripción del Repositorio
+## 1. Descripción del repositorio
 
-Este repositorio contiene el código fuente en LaTeX, los recursos gráficos, los instrumentos de elicitación y el manifiesto de evidencias correspondientes a la primera entrega (`TA-PFC-E1`) del Proyecto Fin de Curso. El documento establece la visión, el alcance, la identificación de partes interesadas, el contexto del sistema y el plan de elicitación bajo los lineamientos de la norma **ISO/IEC/IEEE 29148:2018**.
+Este repositorio contiene los archivos correspondientes a la primera entrega (`TA-PFC-E1`) del Proyecto Fin de Curso de la asignatura Ingeniería de Requerimientos (ISR-401).
 
----
+El proyecto consiste en el análisis y la planificación inicial de una propuesta de aplicación web para apoyar la gestión de **un local de manualidades**, un emprendimiento dedicado a la elaboración y comercialización de productos de manualidades, ubicado en Quevedo, Ecuador.
 
-## Estructura del Proyecto
+Esta primera entrega establece la visión y el alcance del sistema, la identificación de las partes interesadas, el contexto de la solución y el plan de elicitación. Su documentación toma como referencia la norma **ISO/IEC/IEEE 29148:2018**, junto con los lineamientos académicos de la asignatura.
+
+El documento principal se encuentra desarrollado en LaTeX y permite generar una versión PDF mediante los compiladores correspondientes.
+
+## 2. Estructura del proyecto
+
+La organización de los archivos es la siguiente:
 
 ```text
-PFC/E1/
-├── main.tex                  # Archivo principal del documento LaTeX
-├── referencias.bib           # Archivo de referencias bibliográficas (formato IEEEtran)
-├── README.md                 # Documentación de compilación, dependencias y entornos
-├── figuras/                  # Recursos gráficos del documento
-│   ├── matriz_poder_interes.pdf
-│   └── diagrama_contexto.pdf
-├── instrumentos/             # Instrumentos de elicitación (entrevista, cuestionario, observación)
-└── evidencias/               # Registro público de integridad de evidencias privadas
-    └── MANIFIESTO.md
+PFC/
+└── E1/
+    ├── main.tex
+    ├── main.pdf
+    ├── referencias.bib
+    ├── README.md
+    │
+    ├── figuras/
+    │   ├── matriz_poder_interes.png
+    │   └── diagrama_contexto.png
+    │
+    ├── instrumentos/
+    │   ├── guion_entrevista.*
+    │   ├── cuestionario.*
+    │   └── guia_observacion.*
+    │
+    ├── evidencias/
+    │   └── MANIFIESTO.md
+    │
+    └── etica/
+        ├── consentimiento_propietaria.*
+        └── consentimiento_clientes.*
 ```
 
----
+**Descripción de los archivos y directorios:**
 
-## Requisitos y Dependencias
+| Archivo o directorio | Descripción |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `main.tex` | Archivo principal que contiene la estructura y el contenido del documento. |
+| `main.pdf` | Documento generado mediante la compilación del archivo LaTeX. |
+| `referencias.bib` | Base de datos bibliográfica utilizada para las citas y referencias en formato IEEE. |
+| `figuras/` | Contiene los recursos gráficos utilizados en el documento, como la matriz poder-interés y el diagrama de contexto. |
+| `instrumentos/` | Contiene los instrumentos preparados para las actividades de elicitación: entrevista, cuestionario y guía de observación. |
+| `evidencias/` | Contiene el manifiesto público de evidencias y sus respectivas huellas digitales SHA-256. |
+| `etica/` | Contiene los modelos de consentimiento informado para las actividades de elicitación. |
 
-Para garantizar la compilación reproducible del documento PDF (`main.pdf`) a partir del código fuente, el entorno debe contar con una distribución TeX completa o los paquetes individuales detallados a continuación.
+*Nota: Los nombres y extensiones de los archivos de los instrumentos y consentimientos deben corresponder a los archivos realmente incorporados al repositorio. El archivo `main.pdf` es un producto generado y no constituye un requisito para compilar el proyecto.*
 
-### Compiladores requeridos
-* **`pdflatex`**: Motor de compilación principal (configurado para codificación UTF-8).
-* **`bibtex`**: Procesador de citas y referencias bibliográficas (`IEEEtran`).
+## 3. Requisitos y dependencias
 
-### Dependencias de paquetes LaTeX
-El archivo `main.tex` requiere los siguientes paquetes instalados en la distribución TeX:
-* **Idioma y codificación:** `inputenc` (`utf8`), `fontenc` (`T1`), `babel` (`spanish`, `es-tabla`).
-* **Tipografía y diseño:** `helvet`, `geometry`, `setspace`, `fancyhdr`.
-* **Tablas y listas:** `enumitem`, `booktabs`, `tabularx`, `float`.
-* **Gráficos, color y cajas:** `graphicx`, `xcolor` (`table`), `tcolorbox` (`most`), `amssymb`.
-* **Enlaces y bibliografía:** `url`, `hyperref` (`hidelinks`), `IEEEtran`.
+Para generar el documento PDF a partir del código fuente es necesario disponer de una distribución LaTeX y de los compiladores correspondientes.
 
----
+### 3.1. Compiladores requeridos
 
-## Instalación de Dependencias y Compilación por Entorno
+- **pdfLaTeX (`pdflatex`):** motor utilizado para compilar el documento.
+- **BibTeX (`bibtex`):** herramienta encargada de procesar las referencias bibliográficas.
 
-### 1. Entornos GNU/Linux (Ubuntu MATE, Linux Mint MATE, Debian)
-En distribuciones basadas en Debian/Ubuntu que utilizan el entorno de escritorio **MATE**, las dependencias y el editor ligero recomendado se instalan mediante `apt`:
+### 3.2. Paquetes LaTeX utilizados
+
+El archivo `main.tex` utiliza los siguientes paquetes:
+
+| Categoría | Paquetes |
+| --------------------- | ----------------------------------------------- |
+| Idioma y codificación | `inputenc`, `fontenc`, `babel` |
+| Tipografía y formato | `helvet`, `geometry`, `setspace`, `fancyhdr` |
+| Tablas | `booktabs`, `tabularx`, `xltabular`, `makecell` |
+| Listas | `enumitem` |
+| Gráficos y colores | `graphicx`, `xcolor`, `float` |
+| Utilidades | `url`, `amssymb`, `seqsplit` |
+| Hipervínculos | `hyperref` |
+
+También se requiere el estilo bibliográfico `IEEEtran.bst` para procesar las referencias mediante BibTeX.
+
+## 4. Instalación y compilación por entorno
+
+### 4.1. GNU/Linux (Ubuntu, Linux Mint y Debian)
+
+En distribuciones basadas en Debian se pueden instalar las dependencias mediante el administrador de paquetes `apt`.
 
 ```bash
-# 1. Actualizar repositorios e instalar TeX Live (paquetes base, español y extras)
 sudo apt update
-sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-lang-spanish texlive-fonts-recommended texlive-bibtex-extra
 
-# (Opcional) Instalar editor ligero compatible con MATE
-sudo apt install -y texmaker
+sudo apt install -y \
+texlive-latex-base \
+texlive-latex-recommended \
+texlive-latex-extra \
+texlive-lang-spanish \
+texlive-fonts-recommended \
+texlive-bibtex-extra
 ```
 
-**Compilación desde la terminal de MATE (`mate-terminal`):**
+Opcionalmente, se puede instalar un editor LaTeX:
+
+```bash
+sudo apt install -y texstudio
+```
+
+**Clonar el repositorio y acceder al proyecto:**
+
 ```bash
 git clone <URL-DEL-REPOSITORIO>
-cd <NOMBRE-DEL-REPOSITORIO>/PFC/E1
 
+cd <NOMBRE-DEL-REPOSITORIO>/PFC/E1
+```
+
+**Compilar el documento:**
+
+```bash
 pdflatex main.tex
 bibtex main
 pdflatex main.tex
 pdflatex main.tex
 ```
 
----
+### 4.2. Windows
 
-### 2. Entornos Windows
-1. Descargar e instalar **MiKTeX** (`https://miktex.org/download`) o **TeX Live** para Windows.
-2. Durante la instalación de MiKTeX, habilitar la opción *"Install missing packages on-the-fly: Yes"* para que descargue automáticamente paquetes como `tcolorbox`, `tabularx` o `babel-spanish`.
-3. Abrir **PowerShell**, **CMD** o el editor de su preferencia (TeXstudio / VS Code con *LaTeX Workshop*) en la carpeta `PFC/E1/` y ejecutar:
+Para Windows se recomienda instalar alguna de las siguientes distribuciones:
+
+- **MiKTeX:** [https://miktex.org/download](https://miktex.org/download)
+- **TeX Live:** [https://www.tug.org/texlive/](https://www.tug.org/texlive/)
+
+En caso de utilizar MiKTeX, se recomienda habilitar la instalación automática de paquetes faltantes (*Install missing packages on-the-fly*).
+
+También se puede utilizar TeXstudio como entorno de edición:
+
+[https://www.texstudio.org/](https://www.texstudio.org/)
+
+**Clonar el repositorio desde PowerShell:**
 
 ```powershell
 git clone <URL-DEL-REPOSITORIO>
-cd <NOMBRE-DEL-REPOSITORIO>\PFC\E1
 
+cd <NOMBRE-DEL-REPOSITORIO>\PFC\E1
+```
+
+**Compilar el documento:**
+
+```bash
 pdflatex main.tex
 bibtex main
 pdflatex main.tex
 pdflatex main.tex
 ```
 
----
+### 4.3. macOS
 
-### 3. Entornos macOS
-1. Instalar **MacTeX** mediante Homebrew (`brew install --cask mactex`) o descargando el instalador oficial (`https://www.tug.org/mactex/`).
-2. Abrir la Terminal, navegar al directorio del proyecto y ejecutar la secuencia de compilación:
+Para macOS se puede instalar MacTeX desde su página oficial:
+
+[https://www.tug.org/mactex/](https://www.tug.org/mactex/)
+
+También es posible utilizar Homebrew:
+
+```bash
+brew install --cask mactex
+```
+
+Una vez instalada la distribución, se debe clonar el repositorio y acceder al directorio del proyecto:
 
 ```bash
 git clone <URL-DEL-REPOSITORIO>
-cd <NOMBRE-DEL-REPOSITORIO>/PFC/E1
 
+cd <NOMBRE-DEL-REPOSITORIO>/PFC/E1
+```
+
+**Compilar el documento:**
+
+```bash
 pdflatex main.tex
 bibtex main
 pdflatex main.tex
 pdflatex main.tex
 ```
 
+### 4.4. Entorno en la nube (Overleaf)
+
+El proyecto también puede compilarse mediante Overleaf, sin necesidad de instalar una distribución LaTeX local.
+
+Pasos:
+
+1. Acceder a [https://www.overleaf.com/](https://www.overleaf.com/).
+2. Crear un proyecto nuevo o importar los archivos mediante un archivo ZIP.
+3. Incorporar el contenido de `PFC/E1/`, incluyendo `main.tex`, `referencias.bib` y el directorio `figuras/`.
+4. Abrir el menú de configuración del proyecto.
+5. Seleccionar `pdfLaTeX` como compilador.
+6. Establecer `main.tex` como documento principal.
+7. Presionar **Recompilar** para generar el documento PDF.
+
+## 5. Procedimiento de compilación
+
+La secuencia de compilación recomendada es:
+
+```text
+pdflatex main.tex
+       |
+       v
+bibtex main
+       |
+       v
+pdflatex main.tex
+       |
+       v
+pdflatex main.tex
+       |
+       v
+main.pdf
+```
+
+Cada herramienta cumple una función específica:
+
+- La primera ejecución de `pdflatex` genera los archivos auxiliares y recopila las referencias utilizadas.
+- `bibtex` procesa la bibliografía definida en `referencias.bib`.
+- La segunda ejecución de `pdflatex` incorpora las referencias bibliográficas.
+- La tercera ejecución actualiza los índices, las referencias cruzadas, la numeración y los enlaces internos.
+
+Por este motivo, se recomienda ejecutar la secuencia completa cuando se realicen modificaciones en el documento o en las referencias bibliográficas.
+
+## 6. Recursos gráficos y figuras opcionales
+
+El documento utiliza una macro personalizada denominada `\figuraopcional`, definida en `main.tex`, para incorporar las figuras del proyecto.
+
+Actualmente se contemplan dos recursos gráficos:
+
+- `matriz_poder_interes.png`: representación de las partes interesadas según su nivel de poder e interés.
+- `diagrama_contexto.png`: representación del sistema, sus límites, los actores externos y los flujos de información.
+
+La macro verifica si cada archivo existe en el directorio `figuras/`.
+
+Si la imagen está disponible, se incorpora automáticamente al documento. Si no existe, se muestra un recuadro indicando que la figura está pendiente de incorporación.
+
+Esto permite compilar el documento incluso cuando todavía no se han incorporado todos los recursos gráficos, sin provocar errores por archivos de imagen faltantes.
+
+**Importante:** los nombres y las extensiones de las imágenes deben coincidir con los definidos en las llamadas a `\figuraopcional` del archivo `main.tex`.
+
+## 7. Bibliografía y citación
+
+Las referencias bibliográficas se encuentran centralizadas en el archivo `referencias.bib`.
+
+El documento utiliza el estilo bibliográfico `IEEEtran`, mediante las siguientes instrucciones:
+
+```latex
+\bibliographystyle{IEEEtran}
+\bibliography{referencias}
+```
+
+Para incorporar una nueva referencia se debe agregar su registro bibliográfico al archivo `referencias.bib` y utilizar su clave correspondiente mediante `\cite{clave}` dentro del documento.
+
+## 8. Consideraciones sobre privacidad y evidencias
+
+El proyecto contempla actividades de elicitación con participantes vinculados a la organización seleccionada. Por ello, se establecen medidas para proteger la información recopilada.
+
+Se consideran las siguientes disposiciones:
+
+- Los documentos públicos no deben contener información personal o confidencial de los participantes.
+- Las cartas firmadas, grabaciones y demás evidencias identificables deben conservarse en un espacio privado y con acceso restringido.
+- El archivo `MANIFIESTO.md` permite registrar las evidencias privadas mediante su descripción, fecha de obtención y huella digital SHA-256.
+- Los modelos de consentimiento informado se encuentran organizados en el directorio `etica/`.
+- El tratamiento de la información considera la Ley Orgánica de Protección de Datos Personales del Ecuador y su Reglamento General.
+
+La documentación pública del repositorio debe limitarse a los archivos autorizados para su divulgación.
+
+## 9. Control de versiones
+
+El proyecto utiliza Git y GitHub para mantener el historial de cambios y facilitar el trabajo colaborativo.
+
+Las modificaciones realizadas en los archivos fuente pueden registrarse mediante los siguientes comandos:
+
+```bash
+git add .
+git commit -m "Actualización de la documentación PFC E1"
+git push origin main
+```
+
+Para obtener los cambios más recientes del repositorio:
+
+```bash
+git pull origin main
+```
+
+Se recomienda mantener actualizados los archivos fuente, las referencias bibliográficas y los recursos gráficos para facilitar la reproducción del documento.
+
 ---
 
-### 4. Entorno en la Nube (Overleaf)
-1. Comprimir el contenido de la carpeta `PFC/E1/` en un archivo `.zip` (o vincular directamente mediante GitHub).
-2. Crear un nuevo proyecto en **Overleaf** subiendo los archivos.
-3. Verificar en **Menú > Compilador** que esté seleccionado **`pdfLaTeX`** y como **Documento principal** esté definido **`main.tex`**.
-4. Hacer clic en **Recompilar**.
-
----
-
-## Notas sobre la Reproducibilidad
-* El orden de ejecución (`pdflatex` $\rightarrow$ `bibtex` $\rightarrow$ `pdflatex` $\rightarrow$ `pdflatex`) es obligatorio para resolver correctamente los índices (`\tableofcontents`, `\listoffigures`, `\listoftables`), las referencias cruzadas de tablas y la bibliografía IEEE.
-* El documento incluye la macro `\figuraopcional`, por lo que si los diagramas en `figuras/` aún no existen en formato `.pdf`, el archivo compilará sin errores mostrando un recuadro marcador de posición.
+**Proyecto:** TA-PFC-E1
+**Asignatura:** Ingeniería de Requerimientos (ISR-401)
+**Grupo:** HLRS
+**Institución:** Universidad Técnica Estatal de Quevedo (UTEQ)
+**Año:** 2026
