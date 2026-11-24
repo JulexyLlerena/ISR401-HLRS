@@ -1,0 +1,219 @@
+% Guia de observacion no participante
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% interlineado general
+\linespread{1.2}
+\usepackage[a4paper,top=2.4cm,bottom=2.3cm,left=2.3cm,right=2.3cm,headheight=14pt,headsep=0.4cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{needspace}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% Colores institucionales
+\definecolor{uteqverde}{HTML}{2C5F2D}
+\definecolor{uteqazul}{HTML}{1E4D8B}
+\definecolor{uteqoro}{HTML}{D4A017}
+\definecolor{rowgray}{HTML}{F2F4F2}
+
+% Encabezado y pie
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\scriptsize\color{uteqverde} ISR-401 Ingeniería de Requerimientos $\cdot$ Guía de observación}
+\fancyfoot[R]{\scriptsize\color{uteqverde} Página \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{{\color{uteqoro}\hrule width\headwidth height\footrulewidth \vskip\footruleskip}}
+
+% Estilo de seccion
+\newcommand{\seccion}[1]{%
+	\par\vspace{16pt}%
+	\noindent{\color{uteqverde}\large\bfseries #1}\par%
+	\vspace{-3pt}{\color{uteqoro}\rule{\linewidth}{1pt}}\par\vspace{6pt}%
+}
+
+\newcommand{\etiqueta}[1]{\textcolor{uteqverde}{\bfseries #1}}
+\newcommand{\cb}{$\square$}
+
+% titulo de bloque: reserva espacio para que no quede solo al final de la pagina
+\newcommand{\bloque}[2]{\Needspace{#1}\par\textcolor{uteqazul}{\bfseries #2}\par\vspace{8pt}}
+\newcommand{\encab}[1]{\textcolor{white}{\textbf{#1}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% longtable pegada a los margenes y sin espacio extra antes y despues
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlist[itemize,1]{label=\textcolor{uteqoro}{\textbullet},itemsep=4pt,topsep=4pt,leftmargin=16pt}
+
+% Lista de cotejo: codigo, aspecto, Si, Parcial, No, registro
+\newenvironment{cotejo}{%
+	\small\setlength{\parskip}{0pt}\renewcommand{\arraystretch}{2.0}%
+	\rowcolors{2}{white}{rowgray}%
+	\longtable{@{}l R{5.8cm} C{0.7cm} C{1.0cm} C{0.7cm} R{5.0cm}@{}}%
+		\rowcolor{uteqverde}%
+		\encab{Cód.} & \encab{Qué se observa} & \encab{Sí} & \encab{Parc.} & \encab{No} & \encab{Hecho observado} \\
+		\endhead
+	}{\endlongtable\par\vspace{10pt}}
+
+\newcommand{\fila}[2]{#1 & #2 & \cb & \cb & \cb & \\}
+
+\begin{document}
+
+	\begin{center}
+		{\small\color{uteqazul}\bfseries FACULTAD DE CIENCIAS DE LA COMPUTACIÓN $\cdot$ CARRERA DE SOFTWARE}\\[6pt]
+		{\LARGE\color{uteqverde}\bfseries GUÍA DE OBSERVACIÓN}\\[3pt]
+		{\normalsize Proyecto Fin de Curso $\cdot$ Ingeniería de Requerimientos (ISR-401)}
+	\end{center}
+
+	\begin{tcolorbox}[enhanced,colback=rowgray,colframe=uteqverde,boxrule=0.6pt,arc=1.5mm,left=4pt,right=4pt,top=3pt,bottom=3pt]
+		\small
+		\etiqueta{Objetivo:} Observar, sin intervenir (observación no participante), cómo se realizan actualmente en el local el seguimiento de los pedidos personalizados, las ventas, el cobro de abonos y las entregas, qué herramientas se usan y qué dificultades aparecen.
+	\end{tcolorbox}
+
+	\seccion{1. Datos de la sesión}
+
+	\begingroup
+	\small
+	\renewcommand{\arraystretch}{2.0}
+	\begin{tabularx}{\textwidth}{@{}p{5cm} Y@{}}
+		\toprule
+		Código de la sesión & \makebox[4cm]{\hrulefill} \\
+		Lugar & \makebox[8cm]{\hrulefill} \\
+		Hora de inicio y de fin & \makebox[3cm]{\hrulefill} \ a \ \makebox[3cm]{\hrulefill} \\
+		Persona observada (rol y código) & \makebox[4cm]{\hrulefill} \ $\cdot$ \ \makebox[3cm]{\hrulefill} \\
+		Consentimiento informado firmado & \cb\ Sí \quad \cb\ No (si es No, no se inicia la observación) \\
+		Autorización para observar el flujo de chats (sin anotar su contenido) & \cb\ Sí \quad \cb\ No \\
+		\bottomrule
+	\end{tabularx}
+	\endgroup
+
+	\seccion{2. Reglas de la observación}
+
+	\begin{itemize}
+		\item El observador no interviene, no corrige ni sugiere soluciones durante la sesión; solo registra.
+		\item Se anotan hechos (qué hizo, con qué herramienta, cuánto tardó, qué falló), no opiniones. Toda interpretación se escribe aparte con la etiqueta \emph{[interpretación]}.
+		\item No se anotan nombres, teléfonos, direcciones, cédulas, datos bancarios ni contenido de conversaciones. Los clientes se registran con un código (C1, C2, \ldots) y los pedidos como P1, P2, \ldots
+		\item No se toman fotografías ni videos salvo autorización escrita y sin rostros ni datos identificables.
+		\item Si la persona observada pide pausar o detener la observación, se hace de inmediato y se deja constancia.
+	\end{itemize}
+
+	\Needspace{5cm}
+	\seccion{3. Lista de cotejo}
+
+	Marcar \etiqueta{Sí} (se observó completo), \etiqueta{Parc.} (parcial o con dificultades) o \etiqueta{No} (no ocurrió o no se pudo observar). En la última columna se escribe el hecho observado y la herramienta usada (cuaderno, WhatsApp, hoja de cálculo, otra).
+
+	\vspace{4pt}
+
+	\bloque{9.5cm}{A. Pedidos personalizados}
+
+	\begin{cotejo}
+		\fila{A-01}{Por qué canal llega el pedido y cómo se registra (cuaderno, mensaje, memoria, otro).}
+		\fila{A-02}{Qué características del pedido se anotan y cómo se manejan los cambios posteriores.}
+		\fila{A-03}{Cómo se consulta el estado de un pedido y cómo se informa al cliente del avance o los retrasos.}
+		\fila{A-04}{Se pierden, repiten o se contradicen datos de un pedido.}
+	\end{cotejo}
+
+	\bloque{7.5cm}{B. Ventas de productos terminados}
+
+	\begin{cotejo}
+		\fila{B-01}{Cómo se verifica qué productos hay disponibles antes de ofrecerlos.}
+		\fila{B-02}{Cómo se registra una venta (si se registra).}
+		\fila{B-03}{Algún producto solicitado que no estaba disponible o cuya existencia no se pudo confirmar.}
+	\end{cotejo}
+
+	\bloque{9cm}{C. Pagos y abonos}
+
+	\begin{cotejo}
+		\fila{C-01}{Formas de pago y cómo se registra un abono o un pago total.}
+		\fila{C-02}{Cómo se verifica una transferencia.}
+		\fila{C-03}{Cómo se calcula el saldo pendiente y cómo se confirma el abono al cliente.}
+		\fila{C-04}{Alguna diferencia, duda o demora al verificar lo cobrado.}
+	\end{cotejo}
+
+	\bloque{7.5cm}{D. Entregas}
+
+	\begin{cotejo}
+		\fila{D-01}{Tipo de entrega (en el local, a domicilio, encomienda) y qué datos de destino se piden.}
+		\fila{D-02}{Cómo se confirma que el cliente recibió el pedido y cómo se cierra el pedido.}
+		\fila{D-03}{Algún problema en la entrega (retraso, dato faltante, confirmación pendiente).}
+	\end{cotejo}
+
+	\Needspace{9.5cm}
+	\seccion{4. Registro cronológico de eventos}
+
+	Se anotan solo los eventos relevantes, en orden, con códigos de cliente y de pedido.
+
+	\vspace{4pt}
+
+	\begingroup
+	\small
+	\setlength{\parskip}{0pt}
+	\renewcommand{\arraystretch}{1.9}
+	\rowcolors{2}{white}{rowgray}
+	\begin{longtable}{@{}C{1.3cm} R{4.8cm} C{1.8cm} C{2.3cm} R{4.5cm}@{}}
+		\rowcolor{uteqverde}
+		\encab{Hora} & \encab{Hecho observado} & \encab{Cód. (A--D)} & \encab{Herramienta} & \encab{[Interpretación]} \\
+		\endhead
+		& & & & \\
+		& & & & \\
+		& & & & \\
+		& & & & \\
+		& & & & \\
+	\end{longtable}
+	\endgroup
+
+	\Needspace{6.5cm}
+	\seccion{5. Dificultades observadas}
+
+	\begingroup
+	\small
+	\setlength{\parskip}{0pt}
+	\renewcommand{\arraystretch}{2.0}
+	\rowcolors{2}{white}{rowgray}
+	\begin{longtable}{@{}C{1.1cm} R{4.6cm} R{4.7cm} R{4.7cm}@{}}
+		\rowcolor{uteqverde}
+		\encab{N.º} & \encab{Situación observada} & \encab{Efecto en el trabajo (tiempo perdido, error, reproceso)} & \encab{Duda por aclarar} \\
+		\endhead
+		1 & & & \\
+		2 & & & \\
+		3 & & & \\
+		4 & & & \\
+	\end{longtable}
+	\endgroup
+
+	\seccion{6. Verificación y cierre}
+
+	\begin{tcolorbox}[enhanced,colback=rowgray,colframe=uteqverde,boxrule=0.6pt,arc=1.5mm,left=4pt,right=4pt,top=3pt,bottom=3pt]
+		\small
+		\cb\ Las notas no contienen nombres, teléfonos, direcciones, cédulas, datos bancarios ni contenido de chats.\\
+		\cb\ Los clientes y pedidos se registraron solo con código.\\
+		\cb\ Los hechos observados están separados de las interpretaciones.\\
+		\cb\ Las fotografías, si las hubo, contaron con autorización escrita y no muestran rostros ni documentos legibles.
+	\end{tcolorbox}
+
+	\vspace{14pt}
+	\begin{tabularx}{\textwidth}{@{}Y Y@{}}
+		Observador/a: \makebox[4.5cm]{\hrulefill} & Fecha: \makebox[3.5cm]{\hrulefill} \\
+	\end{tabularx}
+
+\end{document}
