@@ -1,0 +1,148 @@
+% Guion de entrevista 1: propietario/a (principal)
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=2.4cm,bottom=2.3cm,left=2.3cm,right=2.3cm,headheight=14pt,headsep=0.4cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% Colores institucionales
+\definecolor{uteqverde}{HTML}{2C5F2D}
+\definecolor{uteqazul}{HTML}{1E4D8B}
+\definecolor{uteqoro}{HTML}{D4A017}
+\definecolor{rowgray}{HTML}{F2F4F2}
+
+% Encabezado y pie
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\scriptsize\color{uteqverde} ISR-401 Ingeniería de Requerimientos $\cdot$ Guion de entrevista $\cdot$ Propietario/a}
+\fancyfoot[R]{\scriptsize\color{uteqverde} Página \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{{\color{uteqoro}\hrule width\headwidth height\footrulewidth \vskip\footruleskip}}
+
+% Estilo de seccion
+\newcommand{\seccion}[1]{%
+	\par\vspace{7pt}%
+	\noindent{\color{uteqverde}\large\bfseries #1}\par%
+	\vspace{-3pt}{\color{uteqoro}\rule{\linewidth}{1pt}}\par\vspace{-4pt}%
+}
+
+% Etiqueta destacada
+\newcommand{\etiqueta}[1]{\textcolor{uteqverde}{\bfseries #1}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[enumerate,1]{label=\textcolor{uteqverde}{\bfseries\arabic*.},itemsep=5pt,topsep=4pt,leftmargin=22pt}
+\setlist[itemize,1]{label=\textcolor{uteqoro}{\textbullet},itemsep=1pt,topsep=2pt,leftmargin=16pt}
+
+\begin{document}
+
+	\begin{center}
+		{\small\color{uteqazul}\bfseries FACULTAD DE CIENCIAS DE LA COMPUTACIÓN $\cdot$ CARRERA DE SOFTWARE}\\[6pt]
+		{\LARGE\color{uteqverde}\bfseries GUION DE ENTREVISTA}\\[3pt]
+		{\normalsize Proyecto Fin de Curso $\cdot$ Ingeniería de Requerimientos (ISR-401)}
+	\end{center}
+
+	\seccion{ENTREVISTA 1. Propietario/a}
+
+	\begin{tcolorbox}[enhanced,colback=rowgray,colframe=uteqverde,boxrule=0.6pt,arc=1.5mm,left=4pt,right=4pt,top=3pt,bottom=3pt]
+		\small
+		\etiqueta{Objetivo:} Conocer cómo se gestiona hoy el local (pedidos, clientes, proveedores, productos, ventas, entregas y reportes), qué problemas tiene, qué información es sensible y qué espera de un sistema.
+	\end{tcolorbox}
+
+	\etiqueta{Apertura:} ¿Cómo es un día normal en su local?
+
+	\begin{itemize}
+		\item ¿Cómo empezó su negocio?
+		\item ¿Cómo se reparte el trabajo en el local?
+	\end{itemize}
+
+	\begin{enumerate}
+		\item \textbf{¿Cómo fue el proceso del último pedido a medida que recibió?}
+		\begin{itemize}
+			\item ¿Cómo registró lo que le pidió el cliente?
+			\item ¿Cómo acordaron el precio y el abono?
+		\end{itemize}
+
+		\item \textbf{¿Cómo vende los productos que ya tiene terminados?}
+		\begin{itemize}
+			\item ¿Cómo fue su última venta de un producto terminado?
+			\item ¿Cómo registra esa venta?
+		\end{itemize}
+
+		\item \textbf{¿Cómo se entera del estado de cada pedido?}
+		\begin{itemize}
+			\item ¿Qué pasó la última vez que un pedido tuvo un problema?
+			\item ¿Cómo mantiene informado al cliente?
+		\end{itemize}
+
+		\item \textbf{¿Cómo lleva la información de sus clientes?}
+		\begin{itemize}
+			\item ¿Qué hace cuando un cliente le consulta por un pedido antiguo?
+			\item ¿Qué opina de cómo lo maneja hoy?
+		\end{itemize}
+
+		\item \textbf{¿Cómo controla los productos que tiene terminados?}
+		\begin{itemize}
+			\item ¿Cómo se entera de cuántos tiene disponibles?
+			\item ¿Qué pasó la última vez que un cliente pidió un producto que no tenía?
+		\end{itemize}
+
+		\item \textbf{¿Cómo trabaja con sus proveedores?}
+		\begin{itemize}
+			\item ¿Cómo fue su última compra?
+			\item ¿Qué situación con un proveedor recuerda especialmente?
+		\end{itemize}
+
+		\item \textbf{¿Cómo maneja los cobros de sus pedidos?}
+		\begin{itemize}
+			\item ¿Cómo lleva la cuenta de lo que cada cliente le debe?
+			\item ¿Cómo revisa que lo vendido coincida con lo cobrado?
+		\end{itemize}
+
+		\item \textbf{¿Cómo organiza las entregas de los pedidos?}
+		\begin{itemize}
+			\item ¿Qué pasó la última vez que una entrega no salió como esperaba?
+			\item ¿Cómo se asegura de que el cliente recibió su pedido?
+		\end{itemize}
+
+		\item \textbf{¿Qué información necesita para tomar decisiones sobre su negocio?}
+		\begin{itemize}
+			\item ¿Cómo la consigue hoy?
+			\item ¿Qué reportes le serían útiles?
+		\end{itemize}
+
+		\item \textbf{¿Qué información de su negocio considera privada?}
+		\begin{itemize}
+			\item ¿Qué datos no querría que estuvieran en un sistema?
+			\item ¿Qué sentiría si otras personas accedieran a esos datos?
+		\end{itemize}
+
+		\item \textbf{¿Cómo se imagina un sistema que le ayude en su local?}
+		\begin{itemize}
+			\item ¿Qué le gustaría que resolviera primero?
+			\item ¿Qué podría hacer que dejara de usarlo?
+		\end{itemize}
+
+		\item \textbf{¿Qué tiene a su alcance para usar un sistema en su local?}
+		\begin{itemize}
+			\item ¿Con qué dispositivos cuenta?
+			\item ¿Cómo es su experiencia con la tecnología?
+			\item ¿Qué podría limitar el uso de un sistema en su local?
+		\end{itemize}
+	\end{enumerate}
+
+	\etiqueta{Cierre:} ¿Qué más le gustaría contarme?
+
+	Muchas gracias por su tiempo y por compartir su experiencia con nosotros. Su información será de gran ayuda para nuestro proyecto.
+
+\end{document}
