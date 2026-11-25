@@ -17,7 +17,7 @@
         <mxCell id="q1_title" value="MANTENER SATISFECHOS&#xa;(Alto Poder / Bajo Interés)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E4D8B;" vertex="1" parent="1">
           <mxGeometry x="140" y="90" width="280" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="q1_note" value="(Sin actores directos en este cuadrante;&#xa;toma de decisiones centralizada)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+        <mxCell id="q1_note" value="No se identifican partes interesadas en este cuadrante." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
           <mxGeometry x="150" y="180" width="260" height="50" as="geometry" />
         </mxCell>
 
@@ -40,19 +40,13 @@
           <mxGeometry x="140" y="340" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="pi03" value="&lt;b&gt;PI-03:&lt;/b&gt; Clientes de una sola vez" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="140" y="390" width="130" height="45" as="geometry" />
+          <mxGeometry x="140" y="400" width="130" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="pi04" value="&lt;b&gt;PI-04:&lt;/b&gt; Personal de entrega / Encomiendas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="290" y="390" width="130" height="45" as="geometry" />
+        <mxCell id="pi04" value="&lt;b&gt;PI-04:&lt;/b&gt; Personal de entrega / Cooperativa de encomiendas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="400" width="130" height="65" as="geometry" />
         </mxCell>
         <mxCell id="pi05" value="&lt;b&gt;PI-05:&lt;/b&gt; Familiar colaborador" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="140" y="450" width="130" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="pi06" value="&lt;b&gt;PI-06:&lt;/b&gt; Entidad financiera / Banco" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="290" y="450" width="130" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="pi07" value="&lt;b&gt;PI-07:&lt;/b&gt; Redes sociales y canales digitales (WhatsApp)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="170" y="510" width="220" height="45" as="geometry" />
+          <mxGeometry x="190" y="490" width="180" height="55" as="geometry" />
         </mxCell>
 
         <!-- Cuadrante Inferior Derecho: Bajo Poder / Alto Interés -->
