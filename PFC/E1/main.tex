@@ -272,9 +272,12 @@
 	
 	\section{Partes interesadas}
 	
+	
 	\subsection{Identificación}
 	
-	Se identifican cinco partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La norma ISO/IEC/IEEE 29148:2018~\cite{iso29148} exige identificar a las partes interesadas y definir el límite del sistema antes de definir los requisitos.
+	Se identifican cinco partes interesadas, expresadas como roles y no como nombres (Tabla~\ref{tab:interesados}). La identificación considera a las personas y grupos que tienen interés en el funcionamiento del establecimiento o que pueden verse afectados por el sistema propuesto. De acuerdo con la norma ISO/IEC/IEEE 29148:2018~\cite{iso29148}, es necesario identificar a las partes interesadas y establecer los límites del sistema antes de definir sus requisitos.
+	
+	Los canales de comunicación, como WhatsApp y las redes sociales, no se consideran partes interesadas, debido a que son medios utilizados para intercambiar información. De igual manera, las entidades financieras o bancarias no se incluyen como partes interesadas, puesto que no participan directamente en los procesos contemplados en el alcance de esta propuesta.
 	
 	{\small
 		\begin{xltabular}{\textwidth}{@{}lYYYY@{}}
@@ -290,17 +293,19 @@
 			\bottomrule
 			\endfoot
 			
-			PI-01 & Propietaria y única usuaria & Automatizar el control de pedidos personalizados, evitar olvidos en abonos o entregas y consultar saldos pendientes al instante. & Alto (toma las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
+			PI-01 & Propietaria y única usuaria & Gestionar los pedidos personalizados, controlar los abonos y las entregas, y consultar la información comercial del establecimiento. & Alto (toma las decisiones operativas y valida los requisitos del sistema). & Alta (reuniones semanales, sesión de observación y entrevistas pactadas; limitada en temporada alta). \\
 			
-			PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados a tiempo, conforme a lo solicitado y con claridad sobre sus abonos realizados. & Bajo (no operan el sistema ni deciden sobre sus requisitos; su opinión influye en la reputación del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
+			PI-02 & Clientes frecuentes & Recibir sus pedidos personalizados conforme a lo solicitado, conocer las condiciones de compra y mantener claridad sobre los abonos realizados. & Bajo (no operan el sistema ni deciden sobre sus requisitos; su opinión influye en la reputación del negocio). & Media (participación indirecta mediante cuestionario enviado por WhatsApp). \\
 			
-			PI-03 & Clientes de una sola vez & Obtener una atención rápida, confirmación clara de su compra y entrega puntual de productos terminados o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
+			PI-03 & Clientes de una sola vez & Obtener atención adecuada, información clara sobre sus compras y entrega puntual de los productos o encargos. & Bajo (su impacto sobre las decisiones administrativas o del sistema es puntual). & Baja (participación indirecta mediante cuestionario digital). \\
 			
-			PI-04 & Personal de entrega / Cooperativa de encomiendas & Contar con datos precisos de destino y facilitar la confirmación de la entrega efectiva del pedido. & Bajo (participa en la distribución física sin intervenir en la gestión interna ni en las decisiones del sistema). & Baja (información obtenida mediante consulta con la propietaria y observación del proceso de entrega). \\
+			PI-04 & Personal de entrega / Cooperativa de encomiendas & Recibir información correcta sobre el destino de los pedidos y facilitar su entrega al destinatario correspondiente. & Bajo (participa en la distribución física sin intervenir en la gestión interna ni en las decisiones del sistema). & Baja (información obtenida mediante consulta con la propietaria y observación del proceso de entrega). \\
 			
-			PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
+			PI-05 & Familiar colaborador & Apoyar puntualmente en la elaboración artesanal cuando aumenta la carga de trabajo, sin asumir tareas administrativas. & Bajo (no utiliza el sistema ni define reglas comerciales). & Media (rol documentado mediante entrevista a la propietaria). \\
+			
 		\end{xltabular}
 	}
+	
 	
 	\subsection{Matriz poder--interés}
 	
@@ -376,11 +381,10 @@
 	
 	El familiar colaborador forma parte del entorno operativo del establecimiento, pero no interactúa directamente con la aplicación web. WhatsApp y las redes sociales se consideran canales externos de comunicación y recepción de información, no partes interesadas ni integraciones del sistema.
 	
+	
 	\subsection{Perspectivas del sílabo}
 	
-	La Tabla~\ref{tab:perspectivas} presenta los hallazgos preliminares
-	de la organización, considerando las ocho perspectivas establecidas
-	en el sílabo de Ingeniería de Requisitos.
+	La Tabla~\ref{tab:perspectivas} presenta los hallazgos preliminares de la organización considerando las ocho perspectivas establecidas en el sílabo de Ingeniería de Requerimientos. Cada perspectiva permite analizar el contexto del establecimiento desde un enfoque diferente y relacionarlo con las necesidades de la propuesta de software.
 	
 	{\footnotesize
 		\renewcommand{\arraystretch}{1.2}
@@ -405,46 +409,47 @@
 			
 			1 &
 			Uso &
-			La aplicación se plantea como herramienta de apoyo para que la propietaria registre y consulte clientes, productos terminados, pedidos, ventas, pagos, abonos y entregas. &
-			Visión y alcance preliminar. \\
+			La propietaria necesita organizar el registro y seguimiento de los pedidos personalizados, consultar los abonos recibidos y verificar las entregas pendientes. Los clientes realizan sus solicitudes y consultas mediante los canales de comunicación habituales del establecimiento. &
+			Registro del primer contacto, descripción de la organización y plan de elicitación. \\
 			
 			2 &
 			Sujeto &
-			La propietaria será la única usuaria del sistema; los clientes y participantes externos aportarán información sin acceder a la aplicación. &
-			Identificación de partes interesadas y acuerdo con la organización. \\
+			La propietaria concentra las actividades administrativas y comerciales del establecimiento y será la única usuaria de la aplicación. Los clientes intervienen proporcionando las características de sus pedidos, mientras que el familiar colaborador participa ocasionalmente en la elaboración artesanal. &
+			Identificación de las partes interesadas y descripción del entorno operativo. \\
 			
 			3 &
 			TI &
-			Se propone una aplicación web que requerirá conexión a internet. No se prevén integraciones bancarias ni con servicios externos de transporte. &
-			Visión, alcance y restricciones conocidas. \\
+			La comunicación con los clientes se realiza mediante canales externos como WhatsApp y redes sociales. También se contempla el uso de un cuaderno para registrar información del negocio. La propuesta considera una aplicación web que requerirá conexión a internet. &
+			Registro del primer contacto, descripción de la organización y restricciones conocidas. \\
 			
 			4 &
 			Desarrollo &
-			El proyecto se desarrollará dentro del período académico, mediante actividades planificadas de elicitación, análisis, especificación y validación. &
-			Cronograma hasta la semana 17. \\
+			El proyecto será desarrollado por un equipo de estudiantes durante el período académico de la asignatura. Se contemplan actividades de elicitación, análisis, especificación, elaboración de prototipos y validación de requisitos con la propietaria. &
+			Cronograma del PFC hasta la semana 17 y plan de elicitación. \\
 			
 			5 &
 			Negocio &
-			El sistema busca apoyar la gestión comercial del local, con prioridad en el registro y seguimiento de pedidos personalizados, pagos y entregas. &
-			Descripción de la organización, problema identificado y objetivos de negocio. \\
+			El establecimiento se dedica a la elaboración y comercialización de productos de manualidades. Entre sus actividades se encuentran la atención a clientes, la venta de productos terminados y la recepción de pedidos personalizados que requieren seguimiento hasta su entrega. &
+			Descripción de la organización, problema identificado y visión del sistema. \\
 			
 			6 &
 			Innovación &
-			Se plantea centralizar en una aplicación la información que actualmente puede recibirse y coordinarse mediante canales de comunicación externos. &
-			Visión preliminar y plan de comunicación. \\
+			Se plantea centralizar la información relacionada con clientes, pedidos, abonos y entregas, que actualmente puede encontrarse distribuida entre distintos medios de comunicación y registros utilizados en el establecimiento. &
+			Registro del primer contacto, problema identificado y alcance preliminar. \\
 			
 			7 &
 			Sociedad &
-			La recopilación de información de clientes y participantes deberá respetar la privacidad, el consentimiento informado y la protección de datos personales. &
-			Ética y protección de datos. \\
+			La propuesta involucra información relacionada con clientes y sus pedidos, por lo que su recopilación y tratamiento deben respetar la privacidad, el consentimiento informado y la protección de datos personales. &
+			Documentación de consentimiento informado, anonimización y custodia de evidencias. \\
 			
 			8 &
 			Técnica &
-			La propuesta contempla módulos web para clientes, productos terminados, pedidos personalizados, ventas, pagos, abonos, entregas y reportes. &
-			Alcance funcional preliminar. \\
+			Se propone una aplicación web con funcionalidades para gestionar clientes, productos terminados, pedidos personalizados, ventas, pagos, abonos, entregas y reportes. Los clientes no accederán directamente al sistema. &
+			Visión, alcance funcional preliminar y diagrama de contexto. \\
+			
 		\end{xltabular}
 	}
-	
+
 	% 6. Plan de elicitación
 	
 	\section{Plan de elicitación}
