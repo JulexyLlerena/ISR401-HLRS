@@ -27,6 +27,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{xltabular}
 
+% Permite cortar rutas y URLs largas en cualquier punto razonable
+\Urlmuskip=0mu plus 2mu
+\def\UrlBreaks{\do\/\do\-\do\_\do\.\do\:}
+\setlength{\emergencystretch}{3em}
+
 \setstretch{1.05}
 \setlength{\parskip}{4pt}
 
@@ -152,9 +157,10 @@
 	
 	El proyecto contempla el análisis de las necesidades relacionadas con la gestión comercial y administrativa de un emprendimiento dedicado a la elaboración y comercialización de productos de manualidades.
 	
-	Como punto de partida, se plantea estudiar aspectos relacionados con la gestión de pedidos, clientes, productos, ventas y demás actividades vinculadas al contexto del establecimiento, con el propósito de identificar posibles necesidades de información y oportunidades de mejora.
+	Como punto de partida, se plantea estudiar aspectos relacionados con la gestión de pedidos, clientes, productos, ventas y demás actividades vinculadas al contexto del establecimiento, con el propósito de identificar posibles necesidades de información y oportunidades de mesjora.
 	
-	Como problema preliminar, se plantea que el seguimiento de los pedidos personalizados, de los abonos y de las entregas podría no contar con un registro centralizado que permita consultar el estado de cada pedido y los saldos pendientes. Esta hipótesis de trabajo no se considera confirmada en esta etapa; deberá comprobarse mediante las técnicas de elicitación planificadas y la información que la organización autorice proporcionar.
+	
+    Como problema identificado, en el primer contacto realizado el 20/11/2026 la propietaria manifestó dificultades para dar seguimiento a los pedidos personalizados, a los abonos recibidos y a las entregas pendientes, debido a que esta información se encuentra distribuida entre WhatsApp y un cuaderno (Tabla~\ref{tab:perspectivas}; registro de primer contacto, secciones 3 y 4, página 1; Anexo~\ref{anx:manifiesto}). Las técnicas de elicitación planificadas permitirán profundizar en este problema, en particular en sus causas, su frecuencia y su efecto en el control de los pedidos, los abonos y las entregas.
 	
 	Por tanto, cualquier necesidad, dificultad o deficiencia identificada será documentada a partir de información verificable obtenida durante el levantamiento de requisitos, evitando divulgar datos internos o confidenciales del emprendimiento.
 	
@@ -805,11 +811,11 @@
 		\setlength{\tabcolsep}{3pt}
 		\begin{xltabular}{\textwidth}{
 				@{}
-				>{\raggedright\arraybackslash}p{2.5cm}
+				>{\raggedright\arraybackslash}p{3.1cm}
 				>{\raggedright\arraybackslash}X
-				>{\centering\arraybackslash}p{1.5cm}
-				>{\centering\arraybackslash}p{1cm}
-				>{\raggedright\arraybackslash}p{3cm}
+				>{\centering\arraybackslash}p{1.8cm}
+				>{\centering\arraybackslash}p{1.4cm}
+				>{\raggedright\arraybackslash}p{4.6cm}
 				@{}
 			}
 			\caption{Manifiesto de evidencias privadas.}\label{tab:manifiesto}\\
@@ -832,7 +838,7 @@
 			\bottomrule
 			\endfoot
 			
-			\makecell[l]{Carta\_Aceptación\\\_Anonimizada.pdf}
+			Carta\_\allowbreak Aceptación\_\allowbreak Anonimizada.pdf
 			&
 			Carta de aceptación
 			&
@@ -843,7 +849,7 @@
 			\seqsplit{B12DEEE5267923CB5FFB3FC127497E39AAE63FE68127EA781F7C3C950EC04876}
 			\\
 			
-			\makecell[l]{Registro\_Primer\\\_Contacto.pdf}
+			Registro\_\allowbreak Primer\_\allowbreak Contacto.pdf
 			&
 			Registro de primer contacto
 			&
